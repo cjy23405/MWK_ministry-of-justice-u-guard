@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="ic_noissue" transform="translate(-720 -1158)">
+        <circle id="타원_695" data-name="타원 695" cx="20" cy="20" r="20" transform="translate(720 1158)" style="fill:#e1e5eb"/>
+        <g id="그룹_3067" data-name="그룹 3067">
+            <path id="사각형_9919" data-name="사각형 9919" class="cls-2" transform="translate(738 1185)" d="M0 0h3.5v3.5H0z"/>
+            <path id="사각형_9920" data-name="사각형 9920" class="cls-2" transform="translate(738 1167)" d="M0 0h3.5v13.5H0z"/>
+        </g>
+    </g>
+</svg>

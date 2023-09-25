@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup window-popup--device-assign">
+        <form>
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">전자장치 배정</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>일체형 충전팩</th>
+                    <td></td>
+                    <th>전자장치 배정일시</th>
+                    <td>
+                      <!-- 2021.11.19 : mod : 버튼 추가 관련 수정 -->
+                      <div class="form-flex">
+                        <div class="form-flex-cell form-flex-cell--flexible">2021-06-29 10:06</div>
+                        <div class="form-flex-cell form-flex-cell--button">
+                          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--septenary">장치배정</a>
+                        </div>
+                      </div>
+                      <!-- //2021.11.19 : mod : 버튼 추가 관련 수정 -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>일체형 부착장치</th>
+                    <td>480607</td>
+                    <th>일체형부착장치 번호</th>
+                    <td>010-2044-5525</td>
+                  </tr>
+                  <tr>
+                    <th>일체형 재택장치</th>
+                    <td></td>
+                    <th>일체형재택장치 번호</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>환경설정</th>
+                    <td colspan="3">일체형 부착장치: 설정완료 일체형 재택장치:</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 2021.11.19 : mod : 버튼 추가 관련 수정 -->
+            <div class="board-bottom board-bottom--list">
+              <div class="board-bottom__left">
+                <div class="total-text">
+                  <p class="notice-box__item">인증키 : B8750C11764ACEEC</p>
+                </div>
+              </div>
+              <div class="board-bottom__right">
+                <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--senary">부착/분리</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">상태정보</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">환경설정</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- //2021.11.19 : mod : 버튼 추가 관련 수정 -->
+
+            <div class="survey-hr survey-hr--height-20"></div>
+
+            <!-- 2021.11.19 : mod : .board-detail-wrap 추가 -->
+            <section class="board-detail-wrap">
+              <!-- 2021.11.19 : add : 타이틀 추가 -->
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">장치배정</h3>
+              </div>
+              <!-- //2021.11.19 : add : 타이틀 추가 -->
+
+              <!-- 2021.11.19 : mod : .board-tab-panel 추가 -->
+              <div class="board-tab-panel">
+                <!-- 2021.11.19 : mod : .board-tab-panel__doc 추가 -->
+                <div class="board-tab-panel__doc">
+                  <div class="setting-board">
+                    <div class="setting-board__info">
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="checkboxTab" id="checkboxTab1" data-checkbox-tab="checkboxTab1" checked />
+                              <label for="checkboxTab1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">3G</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="checkboxTab" id="checkboxTab2" data-checkbox-tab="checkboxTab2" />
+                              <label for="checkboxTab2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">일체형</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="checkboxTab" id="checkboxTab3" data-checkbox-tab="checkboxTab3" />
+                              <label for="checkboxTab3" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">손목형</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //2021.11.19 : mod : .board-tab-panel__doc 추가 -->
+
+                <!-- 2021.11.19 : del : 여백 제거
+                <div class="survey-hr survey-hr--height-20"></div>
+                -->
+
+                <!-- 3G -->
+                <!-- 2021.11.19 : mod : board-tab-panel--last 클래스 값 추가 -->
+                <div class="board-tab-panel board-tab-panel--last" data-checkbox-tab-panel="checkboxTab1">
+                  <!-- 2021.11.19 : mod : board-detail-table--top-line 클래스 값 추가 -->
+                  <div class="board-detail-table board-detail-table--top-line">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>부착장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="부착장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>휴대용추적장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="휴대용추적장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>재택감독장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="재택감독장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>충전팩</th>
+                          <td>
+                            <div class="ui-input-block input-width-215">
+                              <input type="text" class="ui-input" title="충전팩" disabled />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //3G -->
+
+                <!-- 일체형 -->
+                <div class="board-tab-panel" data-checkbox-tab-panel="checkboxTab2">
+                  <!-- 2021.11.19 : mod : board-detail-table--top-line board-detail-table--bottom-line 클래스 값 추가 -->
+                  <div class="board-detail-table board-detail-table--top-line board-detail-table--bottom-line">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>휴대용추적장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="휴대용추적장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>재택감독장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="재택감독장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>충전팩</th>
+                          <td>
+                            <div class="ui-input-block input-width-215">
+                              <input type="text" class="ui-input" title="충전팩" disabled />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //일체형 -->
+
+                <!-- 손목형 -->
+                <div class="board-tab-panel" data-checkbox-tab-panel="checkboxTab3">
+                  <!-- 2021.11.19 : mod : board-detail-table--top-line board-detail-table--bottom-line 클래스 값 추가 -->
+                  <div class="board-detail-table board-detail-table--top-line board-detail-table--bottom-line">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>휴대용추적장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="휴대용추적장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>재택감독장치</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="재택감독장치" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>충전팩</th>
+                          <td>
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block input-width-215">
+                                  <input type="text" class="ui-input" title="충전팩" />
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <a
+                                  href=""
+                                  class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-plus ui-basic-button--icon-only"
+                                >
+                                  <span class="for-a11y">변경</span>
+                                </a>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--medium">
+                                <span class="color-red">*변경불가</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //손목형 -->
+              </div>
+              <!-- //2021.11.19 : mod : .board-tab-panel 추가 -->
+            </section>
+            <!-- //2021.11.19 : mod : .board-detail-wrap 추가 -->
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

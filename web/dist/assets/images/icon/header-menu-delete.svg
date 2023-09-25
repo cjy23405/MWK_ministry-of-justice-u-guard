@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#fff;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_erase_large" transform="translate(-966 -477)">
+        <path id="사각형_9412" data-name="사각형 9412" transform="translate(966 477)" style="fill:#e9ebf0;opacity:.003" d="M0 0h24v24H0z"/>
+        <circle id="타원_472" data-name="타원 472" cx="8" cy="8" r="8" transform="translate(970 481)" style="fill:#9ca5b1"/>
+        <g id="그룹_2276" data-name="그룹 2276" transform="translate(-770.974 212.026)">
+            <path id="선_48" data-name="선 48" class="cls-3" transform="translate(1745.992 273.992)" d="m0 0 5.963 5.963"/>
+            <path id="선_49" data-name="선 49" class="cls-3" transform="translate(1745.992 273.992)" d="M5.963 0 0 5.963"/>
+        </g>
+    </g>
+</svg>

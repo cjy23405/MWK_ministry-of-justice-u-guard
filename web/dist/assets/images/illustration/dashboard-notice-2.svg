@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2{fill:#ffc26c}.cls-2,.cls-4{stroke:#fff}.cls-2{stroke-width:1.5px}.cls-4,.cls-7{fill:none}.cls-4{stroke-linecap:round;stroke-width:2px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_notice_important" transform="translate(-3260 -664)">
+        <g id="사각형_16074" data-name="사각형 16074" class="cls-2" transform="translate(3277 666)">
+            <rect class="cls-6" width="6" height="8" rx="3"/>
+            <rect class="cls-7" x=".75" y=".75" width="4.5" height="6.5" rx="2.25"/>
+        </g>
+        <g id="타원_936" data-name="타원 936" class="cls-2" transform="translate(3273 694)">
+            <circle class="cls-6" cx="6.5" cy="6.5" r="6.5"/>
+            <circle class="cls-7" cx="6.5" cy="6.5" r="5.75"/>
+        </g>
+        <g id="합치기_137" data-name="합치기 137" style="fill:#ffc26c">
+            <path class="cls-6" d="M32 30.25H2c-.69 0-1.25-.561-1.25-1.25v-2.414c0-.69.56-1.25 1.25-1.25h1.938V13.812c0-3.489 1.359-6.769 3.826-9.236A12.977 12.977 0 0 1 17 .75c3.49 0 6.77 1.359 9.237 3.826a12.977 12.977 0 0 1 3.825 9.236v11.524H32c.69 0 1.25.56 1.25 1.25V29c0 .689-.56 1.25-1.25 1.25z" transform="translate(3263 670)"/>
+            <path d="M32 29.5a.5.5 0 0 0 .5-.5v-2.414a.5.5 0 0 0-.5-.5h-2.688V13.812c0-3.288-1.28-6.38-3.606-8.706A12.232 12.232 0 0 0 17 1.5c-3.289 0-6.38 1.28-8.706 3.606a12.232 12.232 0 0 0-3.606 8.706v12.274H2a.5.5 0 0 0-.5.5V29a.5.5 0 0 0 .5.5h30m0 1.5H2a2 2 0 0 1-2-2v-2.414a2 2 0 0 1 2-2h1.188V13.812C3.188 6.184 9.372 0 17 0c7.629 0 13.812 6.184 13.812 13.812v10.774H32a2 2 0 0 1 2 2V29a2 2 0 0 1-2 2z" style="fill:#fff;stroke:none" transform="translate(3263 670)"/>
+        </g>
+        <g id="그룹_5778" data-name="그룹 5778" transform="translate(-15 4)">
+            <g id="타원_937" data-name="타원 937" class="cls-2" transform="translate(3299 675)">
+                <circle class="cls-6" cx="9" cy="9" r="9"/>
+                <circle class="cls-7" cx="9" cy="9" r="8.25"/>
+            </g>
+            <path id="선_372" data-name="선 372" class="cls-4" transform="translate(3308 680.792)" d="M0 0v4.208"/>
+            <path id="선_373" data-name="선 373" class="cls-4" transform="translate(3308 688)" d="M0 0h0"/>
+        </g>
+        <path id="선_374" data-name="선 374" transform="translate(3267.5 695.35)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#fff" d="M15.5 0H0"/>
+    </g>
+</svg>

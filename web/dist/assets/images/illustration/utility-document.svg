@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="107" viewBox="0 0 268 107">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3{fill:#6d6e7c}.cls-1{opacity:.2}.cls-2{opacity:.4}.cls-3{opacity:.1}.cls-4{fill:#f3f5f9}.cls-4,.cls-6{stroke:#6d6e7c}.cls-6,.cls-9{fill:#cdd1de}.cls-8{fill:none;stroke:#fff;stroke-width:3px}
+        </style>
+    </defs>
+    <g id="ic_document" transform="translate(-666 -254.5)">
+        <g id="그룹_5884" data-name="그룹 5884" transform="translate(-65 -364)">
+            <circle id="타원_964" data-name="타원 964" class="cls-1" cx="5" cy="5" r="5" transform="translate(965 657)"/>
+            <circle id="타원_962" data-name="타원 962" class="cls-2" cx="5" cy="5" r="5" transform="translate(941 657)"/>
+            <circle id="타원_965" data-name="타원 965" class="cls-3" cx="5" cy="5" r="5" transform="translate(989 657)"/>
+        </g>
+        <g id="그룹_5885" data-name="그룹 5885" transform="translate(666 293)">
+            <circle id="타원_964-2" data-name="타원 964" class="cls-1" cx="5" cy="5" r="5" transform="translate(24)"/>
+            <circle id="타원_962-2" data-name="타원 962" class="cls-2" cx="5" cy="5" r="5" transform="translate(48)"/>
+            <circle id="타원_965-2" data-name="타원 965" class="cls-3" cx="5" cy="5" r="5"/>
+        </g>
+        <g id="그룹_5890" data-name="그룹 5890" transform="translate(132.913 22422)">
+            <path id="사각형_16208" data-name="사각형 16208" class="cls-4" d="M0 0h67.818v76.664H12a12 12 0 0 1-12-12V0z" transform="translate(608.13 -22167)"/>
+            <g id="그룹_5886" data-name="그룹 5886" transform="translate(619.539 -22140.895)" style="isolation:isolate">
+                <path id="패스_11014" data-name="패스 11014" class="cls-6" d="M-913.857 617.48a8.928 8.928 0 0 0-8.928 8.928v31.019c0 9.922-7.71 10.578-9.237 10.61h27.093v-41.629a8.928 8.928 0 0 0-8.928-8.928z" transform="translate(932.286 -617.48)"/>
+                <path id="패스_11015" data-name="패스 11015" class="cls-6" d="M-932.077 678.527h-.264s.096.004.264 0z" transform="translate(932.341 -627.97)"/>
+            </g>
+            <path id="패스_11257" data-name="패스 11257" class="cls-4" d="M-847.18 617.48h-63.887a9.938 9.938 0 0 1 9.938 9.938v60.017a9.938 9.938 0 0 0 9.938 9.938h53.949v-69.955a9.938 9.938 0 0 0-9.938-9.938z" transform="translate(1548.224 -22758.373)"/>
+            <path id="패스_11258" data-name="패스 11258" class="cls-6" d="M-874.564 699.5v2.033a9.941 9.941 0 0 1-7.9 9.727v.211h55.26a9.938 9.938 0 0 0 9.938-9.938V699.5z" transform="translate(1543.309 -22772.467)"/>
+            <g id="그룹_5887" data-name="그룹 5887" transform="translate(-274.564 -22467.721)">
+                <g id="다각형_67" data-name="다각형 67" style="fill:#f37f87">
+                    <path d="M27.709 25.534H3.532a1.483 1.483 0 0 1-1.305-.76 1.483 1.483 0 0 1 .02-1.511L14.333 3.116a1.488 1.488 0 0 1 1.287-.729c.531 0 1.012.273 1.286.729l12.088 20.147c.282.47.289 1.034.02 1.51-.27.477-.759.761-1.306.761z" style="stroke:none" transform="translate(938.988 336.704)"/>
+                    <path d="M15.62 2.887a.984.984 0 0 0-.857.486L2.675 23.52a.981.981 0 0 0-.013 1.007.981.981 0 0 0 .87.507H27.71a.981.981 0 0 0 .87-.507.981.981 0 0 0-.013-1.007L16.478 3.373a.984.984 0 0 0-.857-.486m0-1c.663 0 1.326.324 1.715.971l12.088 20.147c.8 1.333-.16 3.03-1.715 3.03H3.532c-1.554 0-2.514-1.697-1.715-3.03L13.906 2.858a1.982 1.982 0 0 1 1.715-.97z" style="fill:#f2464c;stroke:none" transform="translate(938.988 336.704)"/>
+                </g>
+                <path id="선_193" data-name="선 193" class="cls-8" transform="translate(955.084 346.396)" d="M0 0v7.6"/>
+                <path id="선_194" data-name="선 194" class="cls-8" transform="translate(955.084 355.942)" d="M0 0v2.603"/>
+            </g>
+            <path id="사각형_16209" data-name="사각형 16209" class="cls-9" transform="translate(658.587 -22095)" d="M0 0h42v3H0z"/>
+            <path id="사각형_16211" data-name="사각형 16211" class="cls-9" transform="translate(621.587 -22153)" d="M0 0h42v3H0z"/>
+            <path id="사각형_16210" data-name="사각형 16210" class="cls-9" transform="translate(658.587 -22087)" d="M0 0h24v3H0z"/>
+        </g>
+    </g>
+</svg>

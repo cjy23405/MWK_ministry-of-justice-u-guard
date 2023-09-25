@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="144">
+    <defs>
+        <clipPath id="clip-path">
+            <ellipse id="타원_855" data-name="타원 855" class="cls-1" cx="70" cy="72" rx="70" ry="72"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#bcc9d9}
+        </style>
+    </defs>
+    <g id="ic_default_image" style="clip-path:url(#clip-path)">
+        <g id="그룹_4468" data-name="그룹 4468">
+            <ellipse id="타원_487" data-name="타원 487" class="cls-1" cx="70" cy="72" rx="70" ry="72"/>
+            <path id="패스_3854" data-name="패스 3854" d="M23.906 0A23.906 23.906 0 1 1 0 23.906 23.906 23.906 0 0 1 23.906 0z" transform="translate(46.667 30.504)" style="fill:#d3dce8"/>
+            <path id="패스_3855" data-name="패스 3855" d="M89.656 58.812 73.718 11H17.937L2 58.812l48.646 21.273z" transform="translate(24 78.064)" style="stroke-width:5px;stroke:#d3dce8;stroke-linejoin:round;fill:#d3dce8"/>
+            <g id="타원_488" data-name="타원 488" style="stroke:#bcc9d9;fill:none;stroke-width:5px">
+                <ellipse cx="70" cy="72" rx="70" ry="72" style="stroke:none"/>
+                <ellipse cx="70" cy="72" rx="67.5" ry="69.5" style="fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

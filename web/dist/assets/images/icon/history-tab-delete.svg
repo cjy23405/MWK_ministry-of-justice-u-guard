@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#153863}.cls-3{stroke:none}.cls-4{fill:none}
+        </style>
+    </defs>
+    <g id="ic_delete" transform="translate(-1825 -94)">
+        <g id="사각형_6708" data-name="사각형 6708" class="cls-2">
+            <path class="cls-3" d="M0 0h10v1.5H0z" transform="rotate(45 793.952 2264.795)"/>
+            <path class="cls-4" d="M.5.5h9V1h-9z" transform="rotate(45 793.952 2264.795)"/>
+        </g>
+        <g id="사각형_6709" data-name="사각형 6709" class="cls-2">
+            <path class="cls-3" d="M0 0h1.5v10H0z" transform="rotate(45 796.957 2272.05)"/>
+            <path class="cls-4" d="M.5.5H1v9H.5z" transform="rotate(45 796.957 2272.05)"/>
+        </g>
+    </g>
+</svg>

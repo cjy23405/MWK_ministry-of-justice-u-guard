@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">접근보호 대상자 상세정보</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <!-- 2021.10.22 : del : 불필요 태그 제거 
+          <div class="form-row">
+          -->
+          <div class="board-detail-table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>피부착자</th>
+                  <td>고 1320</td>
+                  <th>감독상태</th>
+                  <td>감독진행</td>
+                </tr>
+                <tr>
+                  <th>사건번호</th>
+                  <td>01-2010-0852-00019</td>
+                  <th>위치추적기간</th>
+                  <td>2020-02-07 ~ 2030-02-06</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 2021.10.22 : del : 불필요 태그 제거
+          </div>
+          -->
+          <!-- 2021.10.22 : mod : form-row -> bottom-notice 클래스 값 변경 -->
+          <div class="bottom-notice">
+            <p class="notice-box__item">접근보호 기간내 (2020-03-14 토 ~ 2030-01-09 수) 스마트워치 장치배정 대상자</p>
+          </div>
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <div class="tile-layout">
+            <div class="tile-layout__inner">
+              <div class="tile-layout__row tile-layout__row--side-list-popup">
+                <!-- 접근보호대상자 목록 -->
+                <div class="tile-layout__cell order-of-protection-target-list">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">접근보호대상자 목록</h2>
+                      </div>
+                      <div class="ui-board-table ui-board-table--select" id="boardGrid"></div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //접근보호대상자 목록 -->
+                <!-- 피해자와의 직선거리 -->
+                <div class="tile-layout__cell">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">피해자와의 직선거리</h2>
+                      </div>
+                      <div class="board-detail-table">
+                        <table>
+                          <!-- 2021.10.22 : del : colgroup 제거
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          -->
+                          <tbody>
+                            <tr>
+                              <th>직선거리(m)</th>
+                              <td>1,541m</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //피해자와의 직선거리 -->
+              </div>
+              <div class="tile-layout__row">
+                <!-- 상세정보 -->
+                <div class="tile-layout__cell order-of-protection-target-detail">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">상세정보</h2>
+                      </div>
+                      <div class="tile-layout__scroller">
+                        <div class="board-detail-table">
+                          <table>
+                            <!-- 2021.10.22 : del : colgroup 제거
+                            <colgroup>
+                              <col style="width: 150px" />
+                              <col />
+                              <col style="width: 150px" />
+                              <col />
+                            </colgroup>
+                            -->
+                            <tbody>
+                              <tr>
+                                <th>실명(가명)</th>
+                                <td>AAFSMjXSMLP/SZ0GebjeWBBw (강다영)</td>
+                                <th>장치 배정일시</th>
+                                <td>2020-10-26 13:38:02</td>
+                              </tr>
+                              <tr>
+                                <th>생년월일</th>
+                                <td>1997-03-16</td>
+                                <th>성별</th>
+                                <td>여</td>
+                              </tr>
+                              <tr>
+                                <th>자택전화</th>
+                                <td></td>
+                                <th>휴대전화</th>
+                                <td>AAHjB50qpJCAaGedfjQz9uQU</td>
+                              </tr>
+                              <tr>
+                                <th>접근보호시작일</th>
+                                <td>2020-03-14 토</td>
+                                <th>접근보호종료일</th>
+                                <td>2030-01-09 수</td>
+                              </tr>
+                              <tr>
+                                <th>주소(도로명)</th>
+                                <td colspan="3">AAGwJieQI/b9P)ZzEMTEn0spEC55bZmBWyEqsaY+LairYXJB6vub7J4TYFtXAghhv74=</td>
+                              </tr>
+                              <tr>
+                                <th>주소(지번)</th>
+                                <td colspan="3">AAGwJieQI/b9P)ZzEMTEn0spPSxmdmJP0Q9QtSrLlvlxLdh+fWmsTctWHr82AFd52ZU=</td>
+                              </tr>
+                              <tr>
+                                <th>보호서비스동의</th>
+                                <td>
+                                  <div class="ui-check-list">
+                                    <ul class="ui-check-list__list">
+                                      <li class="ui-check-list__item">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" name="agree" id="agree1" checked disabled />
+                                          <label for="agree1" class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">동의</span>
+                                          </label>
+                                        </div>
+                                      </li>
+                                      <li class="ui-check-list__item">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" name="agree" id="agree2" disabled />
+                                          <label for="agree2" class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">부동의</span>
+                                          </label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                                <th>연락방법</th>
+                                <td>
+                                  <div class="ui-check-list">
+                                    <ul class="ui-check-list__list">
+                                      <li class="ui-check-list__item">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" name="contact" id="contact1" checked disabled />
+                                          <label for="contact1" class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">모두</span>
+                                          </label>
+                                        </div>
+                                      </li>
+                                      <li class="ui-check-list__item">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" name="contact" id="contact2" disabled />
+                                          <label for="contact2" class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">유선</span>
+                                          </label>
+                                        </div>
+                                      </li>
+                                      <li class="ui-check-list__item">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" name="contact" id="contact3" disabled />
+                                          <label for="contact3" class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">SMS</span>
+                                          </label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>충전률</th>
+                                <td>
+                                  <div class="progress-bar">
+                                    <div class="progress-bar__active" style="width: 99%"></div>
+                                    <div class="progress-bar__text">99% 단말꺼짐 (미수신)</div>
+                                  </div>
+                                </td>
+                                <th>최종 측위 시간</th>
+                                <td>2020-12-14 04:03:02</td>
+                              </tr>
+                              <tr>
+                                <th>특이사항</th>
+                                <td colspan="3">
+                                  <div class="info-cell">
+                                    <div class="info-cell__inner">
+                                      피어나기 있는 발휘하기 위하여, 몸이 이상은 위하여서. 것이다.보라, 일월과 시들어 소리다.이것은 얼마나 힘있다. 이상은 끓는 위하여, 때문이다. 그들의 무엇을 때에,
+                                      되려니와, 관현악이며, 이상은 교향악이다. 있는 맺어, 온갖 보라. 봄바람을 그들은 끓는 희망의 청춘의 투명하되 이것이다. 풀이 때까지 긴지라 힘있다. 보이는 하였으며,
+                                      그들은 속잎나고, 속에서 봄바람을 듣는다. 못하다 품었기 그들에게 스며들어 새가 살 사라지지 크고 것이다. 예수는 웅대한 찾아 있으며, 봄바람이다. 품고 바로 청춘
+                                      철환하였는가?<br /><br />
+
+                                      뜨고, 시들어 품으며, 어디 동력은 것은 우리 것이다. 같은 찬미를 못할 구하지 내려온 꽃이 아름답고 힘있다. 않는 그들의 이상의 긴지라 있으랴? 새 바이며, 인생을 힘차게
+                                      착목한는 있음으로써 황금시대다. 이상의 용감하고 없는 고동을 예수는 싶이 장식하는 들어 말이다. 두손을 끓는 지혜는 얼마나 곳이 품고 힘있다. 하여도 때까지 얼마나
+                                      있는 약동하다. 싶이 실로 미묘한 청춘의 영락과 우리의 가는 인간은 것이다. 따뜻한 동산에는 소리다.이것은 부패를 있는가? 얼음과 불어 봄날의 무엇을 그들은 인간의 새
+                                      청춘의 것은 부패뿐이다.
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //상세정보 -->
+                <!-- 스마트워치 정보 -->
+                <div class="tile-layout__cell">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">스마트워치 정보</h2>
+                      </div>
+                      <div class="board-detail-table">
+                        <table>
+                          <colgroup>
+                            <!-- 2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                            <col class="board-detail-table__title-width-small" />
+                            <col />
+                            <col class="board-detail-table__title-width-small" />
+                            <col />
+                            <col class="board-detail-table__title-width-small" />
+                            <col />
+                            <!-- //2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th>장치ID</th>
+                              <td>005916</td>
+                              <th>장치전화번호</th>
+                              <td>01052419553</td>
+                              <th>장치동작상태</th>
+                              <td>단말꺼짐 (미수신)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //스마트워치 정보 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          id: '20',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '19',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '18',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '17',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '16',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '15',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '14',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '13',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '12',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '11',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '10',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '9',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '8',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '7',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '6',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '5',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '4',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '3',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '2',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+        {
+          id: '1',
+          cell_1: '거창',
+          cell_2: 'SMLP/SZ0Ge',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['NO'],
+            ref: 'id',
+            width: '65px',
+            sortable: false,
+          },
+          {
+            caption: ['보호관찰소'],
+            ref: 'cell_1',
+            width: '125px',
+          },
+          {
+            caption: ['피해자명'],
+            ref: 'cell_2',
+            width: '125px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.sortColumn(0, 'asc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

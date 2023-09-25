@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">SMS 설정 (자동 발송)</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table board-detail-table--vertical-line board-detail-table--thead-line">
+              <table>
+                <colgroup>
+                  <!-- 2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                  <col class="board-detail-table__title-width" />
+                  <!-- //2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                  <col style="width: 231px" />
+                  <col style="width: 131px" />
+                  <col />
+                  <col style="width: 115px" />
+                </colgroup>
+                <thead>
+                  <th>제목</th>
+                  <th>시간(조건)</th>
+                  <th>전송주기</th>
+                  <th>SMS 내용</th>
+                  <th class="align-center">자동발송설정</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>충전팩 지참</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-select-block input-width-75">
+                            <select class="ui-select" title="시">
+                              <option value="">07</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">
+                          <div class="ui-select-block input-width-75">
+                            <select class="ui-select" title="분">
+                              <option value="">00</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>매일 1회</td>
+                    <td>외출 전 충전팩을 지참하시길 바랍니다.</td>
+                    <td class="align-center">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="auto1" />
+                        <label for="auto1" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="for-a11y">자동발송설정</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>배터리 잔류량 확인</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-select-block input-width-155">
+                            <select class="ui-select" title="잔류량">
+                              <option value="">35%</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">이하</div>
+                      </div>
+                    </td>
+                    <td>1시간</td>
+                    <td>배터리 잔류량이 35% 미만입니다. 충전해주세요.</td>
+                    <td class="align-center">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="auto2" />
+                        <label for="auto2" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="for-a11y">자동발송설정</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>야간귀가안내</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell form-flex-cell--flexible">야간귀가지도</div>
+                        <!-- 2021.10.18 : mod : 클래스 값 수정 및 "시" 텍스트 셀렉트 밖으로 이동 -->
+                        <div class="form-flex-cell">
+                          <div class="ui-select-block input-width-90">
+                            <select class="ui-select" title="시간">
+                              <option value="">00~05</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">시</div>
+                        <!-- //2021.10.18 : mod : 클래스 값 수정 및 "시" 텍스트 셀렉트 밖으로 이동 -->
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell form-flex-cell--flexible">
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="분">
+                              <option value="">00</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">분</div>
+                      </div>
+                    </td>
+                    <td>귀가시간이 다 되었습니다. 빠른 귀가 바랍니다.</td>
+                    <td class="align-center">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="auto3" />
+                        <label for="auto3" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="for-a11y">자동발송설정</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>발신번호</th>
+                    <td colspan="4">
+                      <div class="ui-input-block input-width-190">
+                        <input type="text" class="ui-input" title="발신번호" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <!-- 2021.10.22 : mod : 클래스명 수정 -->
+                    <a href="" class="ui-basic-button ui-basic-button--quinary">SMS수동 발송</a>
+                    <!-- //2021.10.22 : mod : 클래스명 수정 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

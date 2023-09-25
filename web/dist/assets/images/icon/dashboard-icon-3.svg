@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-4{fill:none}.cls-5,.cls-6{stroke:none}.cls-6{fill:#111}
+        </style>
+    </defs>
+    <g id="ic_police_40" transform="translate(-653 -495)">
+        <g id="그룹_5567" data-name="그룹 5567" transform="translate(6 -6)">
+            <path id="패스_3510" data-name="패스 3510" d="m244.248 477.845-8.825 3.489a1.7 1.7 0 0 0-.979 2.153l1.94 5.471h16.978l1.942-5.471a1.7 1.7 0 0 0-.979-2.153l-8.825-3.489a1.709 1.709 0 0 0-1.252 0z" transform="translate(422.126 32.955)" style="stroke:#111;stroke-miterlimit:10;stroke-width:1.5px;fill:none"/>
+            <g id="패스_4016" data-name="패스 4016" class="cls-4">
+                <path class="cls-5" d="M0 0h19.247a7.187 7.187 0 0 1-7.187 7.187H7.187A7.187 7.187 0 0 1 0 0z" transform="translate(657.323 524.132)"/>
+                <path class="cls-6" d="M1.7 1.5a5.697 5.697 0 0 0 5.487 4.187h4.873A5.697 5.697 0 0 0 17.546 1.5H1.701M0 0h19.247a7.187 7.187 0 0 1-7.187 7.187H7.187A7.187 7.187 0 0 1 0 0z" transform="translate(657.323 524.132)"/>
+            </g>
+            <g id="패스_4017" data-name="패스 4017" class="cls-4">
+                <path class="cls-5" d="M2.667 0A2.667 2.667 0 1 1 0 2.667 2.667 2.667 0 0 1 2.667 0z" transform="translate(664.225 513.802)"/>
+                <path class="cls-6" d="M2.667 1.5a1.168 1.168 0 0 0 0 2.333c.643 0 1.166-.523 1.166-1.166 0-.644-.523-1.167-1.166-1.167m0-1.5a2.667 2.667 0 1 1 0 5.333 2.667 2.667 0 0 1 0-5.333z" transform="translate(664.225 513.802)"/>
+            </g>
+        </g>
+    </g>
+</svg>

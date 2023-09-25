@@ -1,0 +1,13 @@
+<svg id="ic_menu_12_navy" xmlns="http://www.w3.org/2000/svg" width="28.002" height="24" viewBox="0 0 28.002 24">
+    <defs>
+        <style>
+            .cls-2{fill:#153863}
+        </style>
+    </defs>
+    <path id="사각형_17536" data-name="사각형 17536" transform="translate(.002)" style="fill:transparent" d="M0 0h28v24H0z"/>
+    <g id="그룹_6278" data-name="그룹 6278" transform="translate(-372 -1055.998)">
+        <path id="패스_11347" data-name="패스 11347" class="cls-2" d="M21.5 0h-15a.5.5 0 0 0-.5.5v21a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5m-4.875 7.5A2.375 2.375 0 1 1 19 5.125 2.375 2.375 0 0 1 16.625 7.5" transform="translate(372 1057)"/>
+        <path id="패스_11348" data-name="패스 11348" class="cls-2" d="M.577 5.993a.542.542 0 0 0-.577.5v2.458h3v1.5H0v2h3v1.5H0v2.507a.542.542 0 0 0 .577.5L4.5 18.087V4.836z" transform="translate(372 1057)"/>
+        <path id="패스_11349" data-name="패스 11349" class="cls-2" d="M27.423 6 23.5 4.867v13.266L27.423 17a.542.542 0 0 0 .577-.5v-2.549h-3v-1.5h3v-2h-3v-1.5h3V6.5a.543.543 0 0 0-.577-.5" transform="translate(372 1057)"/>
+    </g>
+</svg>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">KPIS 면담정보 프로파일</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="setting-board setting-board--popup setting-board--white">
+              <div class="setting-board__info setting-board__info--no-margin">
+                <dl class="setting-board__info-item">
+                  <dt class="setting-board__info-key">상황코드</dt>
+                  <dd class="setting-board__info-val">전자감독 전화지도</dd>
+                </dl>
+                <dl class="setting-board__info-item">
+                  <dt class="setting-board__info-key">상황일자</dt>
+                  <dd class="setting-board__info-val">2020-12-12</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="survey-hr survey-hr--height-20"></div>
+
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+                <div class="tile-layout__row tile-layout__row--side-list-popup">
+                  <!-- 면담정보 내용 -->
+                  <div class="tile-layout__cell">
+                    <div class="board-detail-table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>면담정보 내용</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="info-cell info-cell--height-550">
+                                <div class="info-cell__inner">
+                                  <div class="result-text">
+                                    ■ 일시: 2020-12-12 17:03<br />
+                                    ■ 대상: 본인<br />
+                                    ■ 출장지<br />
+                                    주거지:<br />
+                                    ■ 면담시간 준수여부:<br />
+                                    ■ 신상정보 변동여부<br />
+                                    ■ 지도감독<br />
+                                    면담태도: 양호<br />
+                                    지도감독에 대한 보호관찰관 의견:<br />
+                                    정서상태:<br />
+                                    경제상태:<br />
+                                    동거긴유무:<br />
+                                    동거인관계:<br />
+                                    근무형태:<br />
+                                    *대상자가 휴일에 담당자에게 연락함<br />
+                                    - 대상자는 금일 여자친구와 데이트 후 종로에서 숙박 할 예정임을 설명함<br />
+                                    &gt; 여자친구와 미래 계획(연애,결혼 등)을 나눌 예정임<br />
+                                    - 대상자 추후 문자로 숙박 장소 보내옴<br />
+                                    &gt; 서울 종로구 종로14길 4, 우미관<br />
+                                    ■ 장치점검<br />
+                                    ■ 차기보호관찰
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //면담정보 내용 -->
+                </div>
+                <div class="tile-layout__row">
+                  <!-- 정보 -->
+                  <div class="tile-layout__cell">
+                    <div class="board-detail-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>면담대상</th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="면담대상">
+                                  <option value="">본인</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th>면담일시</th>
+                            <td>
+                              <div class="ui-input-block ui-input-block--date input-width-date">
+                                <input type="text" class="ui-input js-datepicker" title="면담일시" value="2021-12-10" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th><div class="color-red">정서상태</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="정서상태">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th><div class="color-red">경제상태</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="경제상태">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>건강상태</th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="건강상태">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th><div class="color-red">면담태도(피부착자)</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="면담태도(피부착자)">
+                                  <option value="">좋음</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th><div class="color-red">동거인유무</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="동거인유무">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th><div class="color-red">동거인관계</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="동거인관계">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th><div class="color-red">근무형태</div></th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="근무형태">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th>직업훈련(중)</th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="직업훈련(중)">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>정신질환(치료중)</th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="정신질환(치료중)">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                            <th>재범위험성평가</th>
+                            <td>
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="재범위험성평가">
+                                  <option value="-1" disabled selected></option>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">
+                              <div class="board-detail-table">
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th>※ 비정형 분석 결과 ※</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <!-- 2022.03.16 : mod : info-cell--height-280에서 info-cell--height-340로 클래스 변경 -->
+                                        <div class="info-cell info-cell--height-340">
+                                          <div class="info-cell__inner">
+                                            <div class="result-text">
+                                              정서상태:<br />
+                                              건강상태:<br />
+                                              경제상태:<br />
+                                              면담태도(피부착자): 좋음(1건-양호, 면담태도(1));<br />
+                                              동거인유무:<br />
+                                              동거인관계:<br />
+                                              직업훈련(중):<br />
+                                              근무형태:<br />
+                                              재범위험성평가:<br />
+                                              정신질환(치료중):<br />
+                                              면담태도(관찰자):
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //정보 -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quinary">프로파일 예시</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

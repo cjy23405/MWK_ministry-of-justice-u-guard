@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">미귀가자 사전보고 이력</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="board-top">
+            <div class="board-top__left">
+              <!-- 2021.11.05 : mod : 구성 변경 -->
+              <div class="form-flex">
+                <div class="form-flex-cell">
+                  <div class="ui-select-block input-width-regular">
+                    <select class="ui-select" title="설정">
+                      <option value="">안내 설정 없음</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-flex-cell">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--small">저장</button>
+                </div>
+              </div>
+              <!-- //2021.11.05 : mod : 구성 변경 -->
+            </div>
+          </div>
+          <div class="ui-board-table ui-board-table--tight ui-board-table--5-rows" id="boardGrid"></div>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add">등록</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          cell_1: '2021-09-23',
+          cell_2: '재택 미설치',
+          cell_3: '없음',
+          cell_4: '',
+          cell_5: true,
+          cell_6: true,
+          cell_7: true,
+          cell_8: true,
+          cell_9: true,
+          cell_10: '',
+          cell_11: '홍길동',
+        },
+        {
+          cell_1: '2021-09-23',
+          cell_2: '사유',
+          cell_3: '행선지',
+          cell_4: '',
+          cell_5: false,
+          cell_6: false,
+          cell_7: false,
+          cell_8: false,
+          cell_9: false,
+          cell_10: '',
+          cell_11: '홍길동',
+        },
+        {
+          cell_1: '2021-09-23',
+          cell_2: '사유',
+          cell_3: '행선지',
+          cell_4: '',
+          cell_5: false,
+          cell_6: false,
+          cell_7: false,
+          cell_8: false,
+          cell_9: false,
+          cell_10: '',
+          cell_11: '홍길동',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['입력일'],
+            ref: 'cell_1',
+            width: '105px',
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+            },
+          },
+          {
+            caption: ['미귀가 사유'],
+            ref: 'cell_2',
+            width: '110px',
+          },
+          {
+            caption: ['행선지'],
+            ref: 'cell_3',
+            width: '90px',
+          },
+          {
+            caption: ['지도'],
+            ref: 'cell_4',
+            width: '105px',
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-pin ui-board-table__button">지도</button>';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['00~01'],
+            ref: 'cell_5',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return strValue ? '<span class="lights lights--charcoal"><span class="for-a11y">유</span></span>' : '';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['01~02'],
+            ref: 'cell_6',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return strValue ? '<span class="lights lights--charcoal"><span class="for-a11y">유</span></span>' : '';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['02~03'],
+            ref: 'cell_7',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return strValue ? '<span class="lights lights--charcoal"><span class="for-a11y">유</span></span>' : '';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['03~04'],
+            ref: 'cell_8',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return strValue ? '<span class="lights lights--charcoal"><span class="for-a11y">유</span></span>' : '';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['05~06'],
+            ref: 'cell_9',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return strValue ? '<span class="lights lights--charcoal"><span class="for-a11y">유</span></span>' : '';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['이탈이력'],
+            ref: 'cell_10',
+            width: '75px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-board-table__button">이력</button>';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['등록자'],
+            ref: 'cell_11',
+            width: '85px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

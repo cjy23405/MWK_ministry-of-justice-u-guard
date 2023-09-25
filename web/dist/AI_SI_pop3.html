@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">일탈 이력 보기</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">조회기간</dt>
+                    <dd class="search-bar__val">
+                      <div class="form-flex js-datepicker-range">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block ui-input-block--date input-width-date">
+                            <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block ui-input-block--date input-width-date">
+                            <input type="text" class="ui-input js-datepicker-range__max" title="마지막 날짜" value="2021-12-10" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-medium">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary" data-datepicker-range="-1day">1일</button>
+                        </div>
+                        <div class="form-flex-cell">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary" data-datepicker-range="-7days">1주</button>
+                        </div>
+                        <div class="form-flex-cell">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary" data-datepicker-range="-1month">1개월</button>
+                        </div>
+                        <div class="form-flex-cell">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary" data-datepicker-range="-3months">3개월</button>
+                        </div>
+                        <div class="form-flex-cell">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary" data-datepicker-range="-6months">6개월</button>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="tile-layout">
+            <div class="tile-layout__inner">
+              <div class="tile-layout__row tile-layout__row--time-list">
+                <!-- 시간대 목록 -->
+                <div class="tile-layout__cell">
+                  <div class="ui-board-table ui-board-table--6-rows ui-board-table--select" id="boardGrid1"></div>
+
+                  <div class="board-bottom">
+                    <div class="board-bottom__left">
+                      <div class="ui-buttons ui-buttons--left ui-buttons--auto">
+                        <ul class="ui-buttons__list">
+                          <li class="ui-buttons__item">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-pin">GIS</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //시간대 목록 -->
+              </div>
+              <div class="tile-layout__row">
+                <!-- 일탈 목록 -->
+                <div class="tile-layout__cell">
+                  <div class="ui-board-table ui-board-table--6-rows" id="boardGrid2"></div>
+
+                  <div class="board-bottom board-bottom--list">
+                    <div class="board-bottom__right">
+                      <div class="pagination">
+                        <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                          <span class="for-a11y">처음 페이지</span>
+                        </button>
+                        <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                          <span class="for-a11y">이전 페이지</span>
+                        </button>
+                        <div class="pagination__fraction">
+                          <div class="pagination__fraction-currunt">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                            </div>
+                          </div>
+                          <div class="pagination__fraction-slash">/</div>
+                          <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                        </div>
+                        <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                          <span class="for-a11y">다음 페이지</span>
+                        </button>
+                        <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                          <span class="for-a11y">마지막 페이지</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //일탈 목록 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data1 = [
+        {
+          cell_1: '시간대',
+          cell_2: '6',
+        },
+      ];
+
+      var grid_data2 = [
+        {
+          cell_1: '시각',
+          cell_2: '구주소',
+          cell_3: '도로명주소',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns1 = [
+        {
+          caption: [''],
+          ref: 'check',
+          width: '60px',
+          type: 'checkbox',
+          sortable: false,
+          style: 'text-align: center;',
+          fixedstyle: 'text-align: center !important;',
+        },
+        {
+          caption: ['시간대'],
+          ref: 'cell_1',
+          width: '100px',
+        },
+        {
+          caption: ['발생 건 수'],
+          ref: 'cell_2',
+          width: '115px',
+        },
+      ];
+
+      var columns2 = [
+        {
+          caption: ['시각'],
+          ref: 'cell_1',
+          width: '150px',
+        },
+        {
+          caption: ['구주소'],
+          ref: 'cell_2',
+          width: '200px',
+        },
+        {
+          caption: ['도로명주소'],
+          ref: 'cell_3',
+          width: '200px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid1',
+            parentid: 'boardGrid1',
+            jsonref: 'grid_data1',
+            columns: columns1,
+            emptyrecords: '데이터가 없습니다.',
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid1').data('grid', datagrid);
+            datagrid.setFixedcellcheckbox(0, 0);
+          }
+        );
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid2',
+            parentid: 'boardGrid2',
+            jsonref: 'grid_data2',
+            columns: columns2,
+            emptyrecords: '데이터가 없습니다.',
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid2').data('grid', datagrid);
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

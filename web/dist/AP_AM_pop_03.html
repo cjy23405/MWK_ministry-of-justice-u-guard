@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">접근보호 대상자 장치 환경설정</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">스마트워치 상태정보</h3>
+              </div>
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>접근보호대상자</th>
+                      <td>AAE+jKsePZswJsmkl6HlaAmo</td>
+                      <th>충전률</th>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="progress-bar__active" style="width: 69%"></div>
+                          <div class="progress-bar__text">69% 단말꺼짐 (미수신)</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>장치ID</th>
+                      <td>005774</td>
+                      <th>장치전화번호</th>
+                      <td>01020044061</td>
+                    </tr>
+                    <tr>
+                      <th>생산일자</th>
+                      <td>20190101</td>
+                      <th>장치동작상태</th>
+                      <td>단말꺼짐 ( 미수신 )</td>
+                    </tr>
+                    <tr>
+                      <th>최종발생이벤트</th>
+                      <td></td>
+                      <th>최종발생일시</th>
+                      <td>20201116105809</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">스마트워치 설정측위 정보</h3>
+                <div class="board-detail-head__right">
+                  <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--senary">기본주기 변경</a>
+                      </li>
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--senary">현재주기 변경요청</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>기본 측위주기</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="기본 측위주기" value="20" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <th>최종 측위시간</th>
+                      <td>2020-11-16 10:58:06</td>
+                    </tr>
+                    <tr>
+                      <th>현재 측위주기</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="현재 측위주기" value="1" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <th>변경 측위주기</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="변경 측위주기" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">스마트워치 접근거리별 측위주기 및 경보발생 기준</h3>
+                <div class="board-detail-head__right">
+                  <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary">저장</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--thead-line">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width" />
+                    <col style="width: 300px" />
+                    <col style="width: 160px" />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th>거리기준(이상/미만)</th>
+                      <th>측위주기(분)</th>
+                      <th>경보단계</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>위험주기</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="위험주기 기준거리 (이상)" value="0" disabled />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                          <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="위험주기 기준거리 (이하)" value="50" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="위험주기 측위주기" value="1" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" disabled>
+                            <option value="">위험경보</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주의거리</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="주의거리 기준거리 (이상)" value="50" disabled />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                          <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="주의거리 기준거리 (이하)" value="50" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="주의거리 측위주기" value="1" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" disabled>
+                            <option value="">주의경보</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>참조거리</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="참조거리 기준거리 (이상)" value="100" disabled />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                          <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="참조거리 기준거리 (이하)" value="50" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">M</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-100">
+                              <input type="text" class="ui-input" title="참조거리 측위주기" value="2" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" disabled>
+                            <option value="">참조경보</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">스마트워치 긴급통화(SOS) 정보</h3>
+                <div class="board-detail-head__right">
+                  <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--senary">HotKey 변경</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Hot Key1</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="Hot Key1" />
+                        </div>
+                      </td>
+                      <th>Hot Key2</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="Hot Key2" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <div class="board-detail-head__left">
+                  <h3 class="board-detail-head__title">스마트워치 제어요청</h3>
+                  <div class="board-detail-head__text"><span class="color-gray">* 제어요청에 대한 응답은 최대 5분간의 지연이 있을 수 있습니다.</span></div>
+                </div>
+              </div>
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--thead-line">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width" />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>요청구분</th>
+                      <th>요청일시</th>
+                      <th>응답일시</th>
+                      <th>제어상태</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>스마트워치 재시작</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>강제측위</th>
+                      <td>2020-11-16 10:26:15</td>
+                      <td>2020-11-16 19:27:02</td>
+                      <td>처리완료</td>
+                    </tr>
+                    <tr>
+                      <th>측위주기 변경</th>
+                      <td>2020-11-16 11:28:09</td>
+                      <td>2020-11-16 10:58:09</td>
+                      <td>처리중</td>
+                    </tr>
+                    <tr>
+                      <th>원격 SOS</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <div class="ui-buttons">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">제어요청결과확인</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">스마트워치 재시작</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">강제측위 요청</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">원격 SOS 요청</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">닫기</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

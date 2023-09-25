@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="106" viewBox="0 0 268 106">
+    <defs>
+        <style>
+            .cls-3,.cls-6,.cls-7{stroke:#157d69}.cls-3{fill:#b0d3d0}.cls-6{fill:#6cbeb3}.cls-6,.cls-7{stroke-miterlimit:10}.cls-13,.cls-7{fill:none}.cls-10,.cls-11,.cls-9{fill:#30b59c}.cls-9{opacity:.2}.cls-10{opacity:.4}.cls-11{opacity:.1}.cls-12{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_fix" transform="translate(-666 -255)">
+        <g id="사각형_10059" data-name="사각형 10059" style="stroke:#157d69;fill:#86bdb6">
+            <path class="cls-12" d="M0 0h30v18.5H0z" transform="translate(785 337)"/>
+            <path class="cls-13" d="M.5.5h29V18H.5z" transform="translate(785 337)"/>
+        </g>
+        <g id="사각형_10057" data-name="사각형 10057" transform="translate(734 255)" style="fill:#f3f5f9;stroke:#157d69">
+            <rect class="cls-12" width="132" height="85" rx="6"/>
+            <rect class="cls-13" x=".5" y=".5" width="131" height="84" rx="5.5"/>
+        </g>
+        <g id="사각형_10058" data-name="사각형 10058" class="cls-3">
+            <path class="cls-12" d="M0 0h132v10a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V0z" transform="translate(734 324)"/>
+            <path class="cls-13" d="M1 .5h130a.5.5 0 0 1 .5.5v9a5.5 5.5 0 0 1-5.5 5.5H6A5.5 5.5 0 0 1 .5 10V1A.5.5 0 0 1 1 .5z" transform="translate(734 324)"/>
+        </g>
+        <circle id="타원_702" data-name="타원 702" cx="21" cy="21" r="21" transform="translate(779 272)" style="opacity:.5;fill:#b0d3d0"/>
+        <g id="사각형_10060" data-name="사각형 10060" class="cls-3">
+            <path class="cls-12" d="M3 0h58a3 3 0 0 1 3 3v4H0V3a3 3 0 0 1 3-3z" transform="translate(768 354)"/>
+            <path class="cls-13" d="M3 .5h58A2.5 2.5 0 0 1 63.5 3v3a.5.5 0 0 1-.5.5H1A.5.5 0 0 1 .5 6V3A2.5 2.5 0 0 1 3 .5z" transform="translate(768 354)"/>
+        </g>
+        <rect id="사각형_16075" data-name="사각형 16075" width="15.851" height="2.439" rx="1.219" transform="translate(792 259.561)" style="fill:#b0d3d0"/>
+        <g id="그룹_5878" data-name="그룹 5878" transform="translate(0 2)">
+            <path id="패스_11250" data-name="패스 11250" class="cls-6" d="m41.229 6.621-2.507 2.506A2.655 2.655 0 0 1 35 9.163a2.712 2.712 0 0 1 .013-3.839l2.458-2.457a.48.48 0 0 0-.163-.786 8.341 8.341 0 0 0-10.544 11.436L13.517 26.764A8.341 8.341 0 0 0 2.08 37.312a.48.48 0 0 0 .786.163l2.458-2.457A2.711 2.711 0 0 1 9.163 35a2.655 2.655 0 0 1-.035 3.718l-2.507 2.511a.48.48 0 0 0 .163.786 8.344 8.344 0 0 0 10.549-11.439l13.243-13.243A8.344 8.344 0 0 0 42.015 6.784a.48.48 0 0 0-.786-.163z" transform="translate(777.947 268.74)"/>
+            <path id="패스_11252" data-name="패스 11252" class="cls-6" d="m15.349 14.516 2-2a.479.479 0 0 0-.106-.758L9.472 7.422a2.849 2.849 0 0 0-3.4.474l-.772.771a2.849 2.849 0 0 0-.474 3.4l4.333 7.774a.479.479 0 0 0 .758.106l2-2 8.353 9.227 8.484 11.677a48.08 48.08 0 0 0 4.9 5.737l1.381 1.381a5.893 5.893 0 0 0 8.333-8.333l-1.381-1.381a48.08 48.08 0 0 0-5.737-4.9l-11.674-8.486z" transform="translate(775.455 264.066)"/>
+            <path id="선_366" data-name="선 366" class="cls-7" transform="translate(800.898 292.105)" d="M0 6.249 6.249 0"/>
+            <path id="패스_11253" data-name="패스 11253" d="m17.927 9.6-1.381-1.386a48.107 48.107 0 0 0-5.737-4.9L6.249 0 0 6.249l3.313 4.561a47.931 47.931 0 0 0 4.9 5.737l1.38 1.381A5.893 5.893 0 0 0 17.927 9.6" transform="translate(800.962 292.168)" style="fill:#6cbeb3;stroke:#157d69"/>
+            <path id="선_367" data-name="선 367" class="cls-7" transform="translate(807.534 298.742)" d="m0 0 7.956 7.956"/>
+        </g>
+        <g id="그룹_5884" data-name="그룹 5884" transform="translate(-65 -364)">
+            <circle id="타원_964" data-name="타원 964" class="cls-9" cx="5" cy="5" r="5" transform="translate(965 657)"/>
+            <circle id="타원_962" data-name="타원 962" class="cls-10" cx="5" cy="5" r="5" transform="translate(941 657)"/>
+            <circle id="타원_965" data-name="타원 965" class="cls-11" cx="5" cy="5" r="5" transform="translate(989 657)"/>
+        </g>
+        <g id="그룹_5885" data-name="그룹 5885" transform="translate(666 293)">
+            <circle id="타원_964-2" data-name="타원 964" class="cls-9" cx="5" cy="5" r="5" transform="translate(24)"/>
+            <circle id="타원_962-2" data-name="타원 962" class="cls-10" cx="5" cy="5" r="5" transform="translate(48)"/>
+            <circle id="타원_965-2" data-name="타원 965" class="cls-11" cx="5" cy="5" r="5"/>
+        </g>
+    </g>
+</svg>

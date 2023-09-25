@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup js-ui-tab-panel">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">전자장치 관리 부착/분리</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>감독상태</th>
+                    <td>감독진행</td>
+                  </tr>
+                  <tr>
+                    <th>선택</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell form-flex-cell--flexible">
+                          <div class="ui-check-list">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="removalType" id="removalType1" />
+                                  <label for="removalType1" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">부착</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="removalType" id="removalType2" checked />
+                                  <label for="removalType2" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">분리</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--button">
+                          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--septenary">전자장치</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="survey-hr survey-hr--height-20"></div>
+
+            <div class="board-detail-table board-detail-table--thead-line board-detail-table--top-line">
+              <table>
+                <colgroup>
+                  <col class="board-detail-table__title-width-small" />
+                  <col />
+                  <col class="board-detail-table__title-width-small" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>일시</th>
+                    <td>2021-08-12 15:35:00</td>
+                    <th>장소</th>
+                    <td>
+                      <div class="ui-select-block input-width-215">
+                        <select class="ui-select" title="장소">
+                          <option value="">보호관찰소</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>현장처리자</th>
+                    <td colspan="3">
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="auto-search js-auto-search input-width-215">
+                            <p class="for-a11y">타이핑시 검색 결과가 아래에 노출 되며 선택 시 자동 입력 됩니다.</p>
+                            <div class="ui-input-block auto-search__input">
+                              <input type="text" class="ui-input js-auto-search__input" title="현장처리자" placeholder="이름" />
+                            </div>
+                            <div class="auto-search__layer">
+                              <div class="auto-search__layer-contents">
+                                <p class="auto-search__empty">데이터가 없습니다.</p>
+                                <ul class="auto-search__list">
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="홍길동 | test | 광주보호관찰소">
+                                      <mark>김</mark>길동 | test | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김서연 | test2 | 광주보호관찰소">
+                                      <mark>김</mark>서연 | test2 | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김민준 | test3 | 의정부"><mark>김</mark>민준 | test3 | 의정부</button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김시우 | test4 | 광주보호관찰소">
+                                      <mark>김</mark>시우 | test4 | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김다은 | test5 | 중앙관제센터">
+                                      <mark>김</mark>다은 | test5 | 중앙관제센터
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김윤아 | test6 | 광주보호관찰소">
+                                      <mark>김</mark>윤아 | test6 | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김은우 | test7 | 광주보호관찰소">
+                                      <mark>김</mark>은우 | test7 | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                  <li class="auto-search__item">
+                                    <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="강한김 | test8 | 광주보호관찰소">
+                                      강한<mark>김</mark> | test8 | 광주보호관찰소
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--medium">
+                          <span class="color-red">*장치를 분리할 실제 담당자를 작성하시기 바랍니다.</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사유</th>
+                    <td colspan="3">
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval1" />
+                              <label for="reasonForRemoval1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">집행정지</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval2" />
+                              <label for="reasonForRemoval2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">소재불명</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval3" />
+                              <label for="reasonForRemoval3" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">일시분리</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval4" />
+                              <label for="reasonForRemoval4" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">종료</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval5" />
+                              <label for="reasonForRemoval5" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">임시해제</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval6" />
+                              <label for="reasonForRemoval6" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">군법적용</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="reasonForRemoval" id="reasonForRemoval7" />
+                              <label for="reasonForRemoval7" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">기타(분리)</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th rowspan="4">전자장치 선택</th>
+                    <td rowspan="2">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="removalDevice1" checked />
+                        <label for="removalDevice1" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">일체형 부착장치</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <div class="form-flex form-flex--medium-large">
+                        <div class="form-flex-cell">480607</div>
+                        <div class="form-flex-cell">010-2044-5525</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="board-detail-table__first-cell">
+                      <div class="ui-file-input ui-file-input--text">
+                        <div class="ui-file-input__inner">
+                          <input type="file" class="ui-file-input__input" id="removalDeviceFile1" data-file-watch="removalDeviceFile1" />
+                          <div class="ui-input ui-file-input__watch" data-file-watch-target="removalDeviceFile1"></div>
+                          <label for="removalDeviceFile1" class="ui-file-input__label">찾아보기</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="removalDevice2" />
+                        <label for="removalDevice2" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">일체형 재택장치</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="board-detail-table__first-cell">
+                      <div class="ui-file-input ui-file-input--text">
+                        <div class="ui-file-input__inner">
+                          <input type="file" class="ui-file-input__input" id="removalDeviceFile2" data-file-watch="removalDeviceFile2" />
+                          <div class="ui-input ui-file-input__watch" data-file-watch-target="removalDeviceFile2"></div>
+                          <label for="removalDeviceFile2" class="ui-file-input__label">찾아보기</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>상세사유</th>
+                    <td colspan="3">
+                      <div class="ui-input-block">
+                        <textarea class="ui-input input-height-small" title="상세사유"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>전자장치 상태</th>
+                    <td colspan="3"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quinary">분리사유 선택 기준</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

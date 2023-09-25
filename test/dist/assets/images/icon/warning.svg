@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+    <defs>
+        <style>
+            .cls-2{stroke:#f2464c;fill:none;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_warning" transform="translate(-594 -785)">
+        <g id="타원_720" data-name="타원 720" transform="translate(594 785)" style="stroke:#f2464c;fill:#fff">
+            <circle cx="7" cy="7" r="7" style="stroke:none"/>
+            <circle cx="7" cy="7" r="6.5" style="fill:none"/>
+        </g>
+        <g id="그룹_3130" data-name="그룹 3130">
+            <path id="선_190" data-name="선 190" class="cls-2" transform="translate(601 788.5)" d="M0 0v5"/>
+            <path id="선_191" data-name="선 191" class="cls-2" transform="translate(601 794.5)" d="M0 0v1.5"/>
+        </g>
+    </g>
+</svg>

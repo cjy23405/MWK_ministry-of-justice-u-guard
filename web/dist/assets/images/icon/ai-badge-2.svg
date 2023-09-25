@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-2,.cls-6{fill:none}.cls-2{stroke:#111;stroke-width:1.5px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_repeat" transform="translate(-553 -173)">
+        <path id="사각형_17666" data-name="사각형 17666" transform="translate(553 173)" style="fill:transparent" d="M0 0h50v50H0z"/>
+        <g id="그룹_12023" data-name="그룹 12023" transform="translate(98)">
+            <g id="그룹_11978" data-name="그룹 11978" transform="translate(-262 -186.299)">
+                <g id="사각형_17665" data-name="사각형 17665" class="cls-2" transform="translate(729 371.299)">
+                    <rect class="cls-5" width="26" height="26" rx=".5"/>
+                    <rect class="cls-6" x=".75" y=".75" width="24.5" height="24.5" rx=".25"/>
+                </g>
+                <path id="선_394" data-name="선 394" class="cls-2" transform="translate(742.145 371.449)" d="M0 0v6.35"/>
+                <path id="선_396" data-name="선 396" class="cls-2" transform="translate(742 389.299)" d="M0 0v7"/>
+                <path id="선_395" data-name="선 395" class="cls-2" transform="translate(750.468 371.449)" d="M0 0v24.535"/>
+                <path id="선_393" data-name="선 393" class="cls-2" transform="translate(733.5 371.449)" d="M0 0v24.535"/>
+                <g id="패스_12076" data-name="패스 12076" style="fill:none">
+                    <path class="cls-5" d="M3.346 0a3.406 3.406 0 0 1 3.346 3.463v2.392H0V3.463A3.406 3.406 0 0 1 3.346 0z" transform="translate(738.654 376.861)"/>
+                    <path d="M3.346 1.5C2.328 1.5 1.5 2.38 1.5 3.463v.892h3.692v-.892c0-1.083-.828-1.963-1.846-1.963m0-1.5c1.848 0 3.346 1.55 3.346 3.463v2.392H0V3.463C0 1.55 1.498 0 3.346 0z" style="fill:#111;stroke:none" transform="translate(738.654 376.861)"/>
+                </g>
+                <g id="사각형_17606" data-name="사각형 17606" class="cls-2" transform="translate(737 381.299)">
+                    <rect class="cls-5" width="10" height="9" rx=".5"/>
+                    <rect class="cls-6" x=".75" y=".75" width="8.5" height="7.5" rx=".25"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

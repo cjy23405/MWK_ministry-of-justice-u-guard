@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">경보 처리</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-wrap">
+              <div class="ui-board-table ui-board-table--5-rows ui-board-table--select" id="boardGrid"></div>
+            </div>
+
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>이행일시</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <th rowspan="5">관제센터 조치내용</th>
+                      <td rowspan="5">
+                        <div class="ui-input-block">
+                          <!-- 2022.03.16 : mod : input-height-238에서 input-height-190로 클래스 변경 -->
+                          <textarea class="ui-input input-height-190" title="관제센터 조치내용"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>처리상태</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+                                <label for="radio1-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">종료</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+                                <label for="radio1-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">보호관찰담당자 이관</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이관구분</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio2" id="radio2-1" />
+                                <label for="radio2-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">상황통보</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio2" id="radio2-2" />
+                                <label for="radio2-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">이관</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이관일시</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>조치내용</th>
+                      <td>
+                        <div class="ui-check-list ui-check-list--quarter">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-1" />
+                                <label for="radio3-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">P측위 오차</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-2" />
+                                <label for="radio3-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">측위복원</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-3" />
+                                <label for="radio3-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">기처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-4" />
+                                <label for="radio3-4" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">특별관제</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-5" />
+                                <label for="radio3-5" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">이동중 발생</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-6" />
+                                <label for="radio3-6" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">복원</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-7" />
+                                <label for="radio3-7" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">이탈측위</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio3" id="radio3-8" />
+                                <label for="radio3-8" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">장치교체</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width" />
+                    <col />
+                    <col class="board-detail-table__title-width" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>경찰출동여부</th>
+                      <td colspan="3">
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio4" id="radio4-1" />
+                                <label for="radio4-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">Y</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio4" id="radio4-2" />
+                                <label for="radio4-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">N</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        경찰출동 최조요청<br />
+                        시각
+                      </th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                      <th>경찰출동 도착시각</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 2021.11.19 : add : 항목 추가 -->
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>경보처리 구분</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio6" id="radio6-1" />
+                                <label for="radio6-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">전담직원</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio6" id="radio6-2" />
+                                <label for="radio6-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">신속대응팀</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <th rowspan="8">관찰관 조치내용</th>
+                      <td rowspan="8">
+                        <div class="ui-input-block">
+                          <!-- 2022.03.16 : mod : input-height-349에서 input-height-280으로 클래스 변경 -->
+                          <textarea class="ui-input input-height-280" title="관찰관 조치내용"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>경보발생 원인</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio7" id="radio7-1" />
+                                <label for="radio7-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">과실</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio7" id="radio7-2" />
+                                <label for="radio7-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">고의</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio7" id="radio7-3" />
+                                <label for="radio7-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">기타</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>경보처리 방법</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio8" id="radio8-1" />
+                                <label for="radio8-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">전화지도</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio8" id="radio8-2" />
+                                <label for="radio8-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">출석지도</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio8" id="radio8-3" />
+                                <label for="radio8-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">현장출동</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio8" id="radio8-4" />
+                                <label for="radio8-4" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">기타</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>공조기관 요청</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio9" id="radio9-1" />
+                                <label for="radio9-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">Y</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio9" id="radio9-2" />
+                                <label for="radio9-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">N</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>현장출동 도착시각</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        현장출동시 피부착자<br />
+                        대면조치 여부
+                      </th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio10" id="radio10-1" />
+                                <label for="radio10-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">Y</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio10" id="radio10-2" />
+                                <label for="radio10-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">N</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이관경보 복원시각</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>처리시각</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>조치내용</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio11" id="radio11-1" />
+                                <label for="radio11-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">P측위 오차</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio11" id="radio11-2" />
+                                <label for="radio11-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">이동중 발생</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio11" id="radio11-3" />
+                                <label for="radio11-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">측위복원</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio11" id="radio11-4" />
+                                <label for="radio11-4" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">복원</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <th rowspan="2">기타</th>
+                      <td rowspan="2">
+                        <div class="ui-input-block">
+                          <!-- 2022.03.16 : mod :  input-height-76에서 input-height-55로 클래스 변경-->
+                          <textarea class="ui-input input-height-55" title="기타"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>전자장치 교체여부</th>
+                      <td>
+                        <div class="form-flex form-flex--medium-large">
+                          <div class="form-flex-cell">
+                            <div class="ui-check-list">
+                              <ul class="ui-check-list__list">
+                                <li class="ui-check-list__item">
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio" name="radio12" id="radio12-1" />
+                                    <label for="radio12-1" class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">Y</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio" name="radio12" id="radio12-2" />
+                                    <label for="radio12-2" class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">N</span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell"><div class="form-flex-hr"></div></div>
+                          <div class="form-flex-cell">
+                            <div class="ui-check-list">
+                              <ul class="ui-check-list__list">
+                                <li class="ui-check-list__item">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-1" />
+                                    <label for="checkbox1-1" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">부착</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-2" />
+                                    <label for="checkbox1-2" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">휴대</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-3" />
+                                    <label for="checkbox1-3" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">재택</span>
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //2021.11.19 : add : 항목 추가 -->
+
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>소견</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio5" id="radio5-1" />
+                                <label for="radio5-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">준수</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio5" id="radio5-2" />
+                                <label for="radio5-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">기타</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="radio5" id="radio5-3" />
+                                <label for="radio5-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">위반</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">삭제</button>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quinary">경보처리 입력 항목 선택 기준</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          cell_1: '48060721080314443034',
+          cell_2: '2021-08-13 15:16',
+          cell_3: '기타정보',
+          cell_4: '미처리',
+          cell_5: '재택감독장치 Hotkey 조회결과',
+        },
+        {
+          cell_1: '48060721080314443034',
+          cell_2: '2021-08-13 15:16',
+          cell_3: '기타정보',
+          cell_4: '미처리',
+          cell_5: '재택감독장치 Hotkey 조회결과',
+        },
+        {
+          cell_1: '48060721080314443034',
+          cell_2: '2021-08-13 15:16',
+          cell_3: '기타정보',
+          cell_4: '미처리',
+          cell_5: '재택감독장치 Hotkey 조회결과',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['경보ID'],
+            ref: 'cell_1',
+            width: '250px',
+          },
+          {
+            caption: ['경보일시'],
+            ref: 'cell_2',
+            width: '170px',
+          },
+          {
+            caption: ['경보구분'],
+            ref: 'cell_3',
+            width: '140px',
+          },
+          {
+            caption: ['처리상태'],
+            ref: 'cell_4',
+            width: '140px',
+          },
+          {
+            caption: ['경보내용'],
+            ref: 'cell_5',
+            width: '425px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

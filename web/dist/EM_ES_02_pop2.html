@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-transfer-device-file-upload-result">이관 장치파일 업로드 결과</a>
+
+    <!-- layer: 이관 장치파일 업로드 결과 -->
+    <div class="layer-wrap layer-transfer-device-file-upload-result" data-layer="layer-transfer-device-file-upload-result">
+      <div class="layer-container">
+        <section class="ui-layer ui-layer--medium">
+          <div class="ui-layer__head">
+            <div class="ui-layer-header">
+              <h2 class="ui-layer-header__title">이관 장치파일 업로드 결과</h2>
+              <button type="button" class="ui-button ui-layer-header__close" data-role="layerClose">
+                <span class="for-a11y">레이어 닫기</span>
+              </button>
+            </div>
+          </div>
+          <div class="ui-layer__body">
+            <div class="ui-layer__body-inner">
+              <div class="ui-board-table ui-board-table--outline" id="boardGrid"></div>
+            </div>
+          </div>
+          <div class="ui-layer__foot">
+            <div class="ui-layer__foot-right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary" data-role="layerClose">취소</button>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--small">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 이관 장치파일 업로드 결과 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '5',
+          cell_1: '507160',
+          cell_2: '$코드$',
+          cell_3: '$보호관찰소$',
+          cell_4: '$코드$',
+          cell_5: '$보호관찰소$',
+        },
+        {
+          id: '4',
+          cell_1: '507160',
+          cell_2: '$코드$',
+          cell_3: '$보호관찰소$',
+          cell_4: '$코드$',
+          cell_5: '$보호관찰소$',
+        },
+        {
+          id: '3',
+          cell_1: '507160',
+          cell_2: '$코드$',
+          cell_3: '$보호관찰소$',
+          cell_4: '$코드$',
+          cell_5: '$보호관찰소$',
+        },
+        {
+          id: '2',
+          cell_1: '507160',
+          cell_2: '$코드$',
+          cell_3: '$보호관찰소$',
+          cell_4: '$코드$',
+          cell_5: '$보호관찰소$',
+        },
+        {
+          id: '1',
+          cell_1: '507160',
+          cell_2: '$코드$',
+          cell_3: '$보호관찰소$',
+          cell_4: '$코드$',
+          cell_5: '$보호관찰소$',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['장치ID'],
+          ref: 'cell_1',
+          width: '100px',
+        },
+        {
+          caption: ['CODE'],
+          ref: 'cell_2',
+          width: '150px',
+        },
+        {
+          caption: ['이관관찰소'],
+          ref: 'cell_3',
+          width: '175px',
+        },
+        {
+          caption: ['CODE'],
+          ref: 'cell_4',
+          width: '150px',
+        },
+        {
+          caption: ['수령관찰소'],
+          ref: 'cell_5',
+          width: '100px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid').data('grid', datagrid);
+          }
+        );
+
+        // 레이어 열린 후 그리드 리사이즈
+        $('.layer-transfer-device-file-upload-result').on('layerAfterOpened', function () {
+          var $this = $(this);
+          var grid = $this.find('.ui-board-table').data('grid');
+
+          if (grid) {
+            grid.resize();
+          }
+        });
+
+        uiJSLayer.open('layer-transfer-device-file-upload-result'); // 퍼블리셔 테스트 소스 입니다.
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

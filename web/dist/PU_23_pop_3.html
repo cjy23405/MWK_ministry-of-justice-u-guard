@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">범죄 사실 관리</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+                <div class="tile-layout__row tile-layout__row--side-list">
+                  <!-- 목록 -->
+                  <div class="tile-layout__cell">
+                    <div class="ui-board-table ui-board-table--select ui-board-table--height-472" id="boardGrid"></div>
+                  </div>
+                  <!-- //목록 -->
+                </div>
+                <div class="tile-layout__row">
+                  <!-- 입력폼 -->
+                  <div class="tile-layout__cell">
+                    <div class="tile-layout__contents">
+                      <section class="board-detail-wrap">
+                        <div class="board-detail-head">
+                          <h2 class="board-detail-head__title">범죄 사실 등록</h2>
+                        </div>
+
+                        <div class="board-detail-table">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>출처구분</th>
+                                <td>
+                                  <div class="ui-select-block">
+                                    <select class="ui-select" title="출처구분">
+                                      <option value="">출입금지구역</option>
+                                      <option value="">option 2</option>
+                                      <option value="">option 3</option>
+                                      <option value="">option 4</option>
+                                      <option value="">option 5</option>
+                                    </select>
+                                  </div>
+                                </td>
+                                <th>부착명령 구분</th>
+                                <td>
+                                  <div class="ui-select-block">
+                                    <select class="ui-select" title="부착명령 구분">
+                                      <option value="">구분1</option>
+                                      <option value="">option 2</option>
+                                      <option value="">option 3</option>
+                                      <option value="">option 4</option>
+                                      <option value="">option 5</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>문서(사건)번호</th>
+                                <td>
+                                  <div class="ui-input-block">
+                                    <input type="text" class="ui-input" title="문서(사건)번호" />
+                                  </div>
+                                </td>
+                                <th>문서 등록일</th>
+                                <td>
+                                  <div class="ui-input-block ui-input-block--date input-width-date">
+                                    <input type="text" class="ui-input js-datepicker" title="문서 등록일" value="2021-12-10" />
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="board-top board-top--tab-panel board-top--top-line">
+                          <div class="board-top__right">
+                            <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                              <ul class="ui-buttons__list">
+                                <li class="ui-buttons__item">
+                                  <button
+                                    type="button"
+                                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary ui-basic-button--icon ui-basic-button--icon-add-2"
+                                    id="templateFormAdd"
+                                  >
+                                    사건 추가
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-section-group" id="templateForm">
+                          <!--
+                          <div class="empty-text"><p class="empty-text__message">사건을 추가해주세요.</p></div>
+                          <section class="form-section">
+                            <div class="form-section-head">
+                              <div class="form-section-head__left">
+                                <h3 class="form-section-head__title">사건 : 1/1</h3>
+                              </div>
+                              <div class="form-section-head__right">
+                                <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                                  <ul class="ui-buttons__list">
+                                    <li class="ui-buttons__item">
+                                      <button type="button" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-delete">삭제</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="board-detail-table">
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <th>
+                                      범죄일시<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                                    </th>
+                                    <td>
+                                      <div class="form-flex">
+                                        <div class="form-flex-cell">
+                                          <div class="ui-input-block ui-input-block--date input-width-date">
+                                            <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                                          </div>
+                                        </div>
+                                        <div class="form-flex-cell form-flex-cell--date-medium">
+                                          <div class="ui-select-block input-width-date-select">
+                                            <select class="ui-select" title="시">
+                                              <option value="">00</option>
+                                              <option value="">01</option>
+                                              <option value="">02</option>
+                                              <option value="">03</option>
+                                              <option value="">04</option>
+                                              <option value="">05</option>
+                                              <option value="">06</option>
+                                              <option value="">07</option>
+                                              <option value="">08</option>
+                                              <option value="">09</option>
+                                              <option value="">10</option>
+                                              <option value="">11</option>
+                                              <option value="">12</option>
+                                              <option value="">13</option>
+                                              <option value="">14</option>
+                                              <option value="">15</option>
+                                              <option value="">16</option>
+                                              <option value="">17</option>
+                                              <option value="">18</option>
+                                              <option value="">19</option>
+                                              <option value="">20</option>
+                                              <option value="">21</option>
+                                              <option value="">22</option>
+                                              <option value="">23</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-flex-cell">시</div>
+                                        <div class="form-flex-cell form-flex-cell--date-medium">
+                                          <div class="ui-select-block input-width-date-select">
+                                            <select class="ui-select" title="분">
+                                              <option value="">00</option>
+                                              <option value="">01</option>
+                                              <option value="">02</option>
+                                              <option value="">03</option>
+                                              <option value="">04</option>
+                                              <option value="">05</option>
+                                              <option value="">06</option>
+                                              <option value="">07</option>
+                                              <option value="">08</option>
+                                              <option value="">09</option>
+                                              <option value="">10</option>
+                                              <option value="">11</option>
+                                              <option value="">12</option>
+                                              <option value="">13</option>
+                                              <option value="">14</option>
+                                              <option value="">15</option>
+                                              <option value="">16</option>
+                                              <option value="">17</option>
+                                              <option value="">18</option>
+                                              <option value="">19</option>
+                                              <option value="">20</option>
+                                              <option value="">21</option>
+                                              <option value="">22</option>
+                                              <option value="">23</option>
+                                              <option value="">24</option>
+                                              <option value="">25</option>
+                                              <option value="">26</option>
+                                              <option value="">27</option>
+                                              <option value="">28</option>
+                                              <option value="">29</option>
+                                              <option value="">30</option>
+                                              <option value="">31</option>
+                                              <option value="">32</option>
+                                              <option value="">33</option>
+                                              <option value="">34</option>
+                                              <option value="">35</option>
+                                              <option value="">36</option>
+                                              <option value="">37</option>
+                                              <option value="">38</option>
+                                              <option value="">39</option>
+                                              <option value="">40</option>
+                                              <option value="">41</option>
+                                              <option value="">42</option>
+                                              <option value="">43</option>
+                                              <option value="">44</option>
+                                              <option value="">45</option>
+                                              <option value="">46</option>
+                                              <option value="">47</option>
+                                              <option value="">48</option>
+                                              <option value="">49</option>
+                                              <option value="">50</option>
+                                              <option value="">51</option>
+                                              <option value="">52</option>
+                                              <option value="">53</option>
+                                              <option value="">54</option>
+                                              <option value="">55</option>
+                                              <option value="">56</option>
+                                              <option value="">57</option>
+                                              <option value="">58</option>
+                                              <option value="">59</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-flex-cell">분</div>
+                                        <div class="form-flex-cell form-flex-cell--date-medium">
+                                          <div class="ui-select-block input-width-date-select">
+                                            <select class="ui-select" title="초">
+                                              <option value="">00</option>
+                                              <option value="">01</option>
+                                              <option value="">02</option>
+                                              <option value="">03</option>
+                                              <option value="">04</option>
+                                              <option value="">05</option>
+                                              <option value="">06</option>
+                                              <option value="">07</option>
+                                              <option value="">08</option>
+                                              <option value="">09</option>
+                                              <option value="">10</option>
+                                              <option value="">11</option>
+                                              <option value="">12</option>
+                                              <option value="">13</option>
+                                              <option value="">14</option>
+                                              <option value="">15</option>
+                                              <option value="">16</option>
+                                              <option value="">17</option>
+                                              <option value="">18</option>
+                                              <option value="">19</option>
+                                              <option value="">20</option>
+                                              <option value="">21</option>
+                                              <option value="">22</option>
+                                              <option value="">23</option>
+                                              <option value="">24</option>
+                                              <option value="">25</option>
+                                              <option value="">26</option>
+                                              <option value="">27</option>
+                                              <option value="">28</option>
+                                              <option value="">29</option>
+                                              <option value="">30</option>
+                                              <option value="">31</option>
+                                              <option value="">32</option>
+                                              <option value="">33</option>
+                                              <option value="">34</option>
+                                              <option value="">35</option>
+                                              <option value="">36</option>
+                                              <option value="">37</option>
+                                              <option value="">38</option>
+                                              <option value="">39</option>
+                                              <option value="">40</option>
+                                              <option value="">41</option>
+                                              <option value="">42</option>
+                                              <option value="">43</option>
+                                              <option value="">44</option>
+                                              <option value="">45</option>
+                                              <option value="">46</option>
+                                              <option value="">47</option>
+                                              <option value="">48</option>
+                                              <option value="">49</option>
+                                              <option value="">50</option>
+                                              <option value="">51</option>
+                                              <option value="">52</option>
+                                              <option value="">53</option>
+                                              <option value="">54</option>
+                                              <option value="">55</option>
+                                              <option value="">56</option>
+                                              <option value="">57</option>
+                                              <option value="">58</option>
+                                              <option value="">59</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-flex-cell">초</div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>
+                                      범죄 사실 내용<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                                    </th>
+                                    <td>
+                                      <div class="form-row">
+                                        <div class="ui-input-block">
+                                          <textarea class="ui-input input-height-small-medium" title="범죄 사실 내용" data-maxlength="2000" data-text-count="#discriptionCount1"></textarea>
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="basic-text color-gray align-right"><span id="discriptionCount1">0</span>/2000자</div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                          -->
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <!-- //입력폼 -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '9',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '8',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '7',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '6',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '5',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '4',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '3',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '2',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+        {
+          id: '1',
+          cell_1: '$구분$',
+          cell_2: '부착 본건',
+          cell_3: '2010 노1293',
+          cell_4: '5',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['번호'],
+            ref: 'id',
+            width: '65px',
+            sortable: false,
+          },
+          {
+            caption: ['출처구분'],
+            ref: 'cell_1',
+            width: '110px',
+          },
+          {
+            caption: ['부착명령 구분'],
+            ref: 'cell_2',
+            width: '140px',
+          },
+          {
+            caption: ['문서(사건)번호'],
+            ref: 'cell_3',
+            width: '150px',
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-board-table__link js-prevent-default">' + strValue + '</a>';
+            },
+          },
+          {
+            caption: ['사건'],
+            ref: 'cell_4',
+            width: '85px',
+          },
+        ];
+
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+
+        datagrid.setFixedcellcheckbox(0, 0);
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+
+        // ##### 사건 입력 #####
+        var today = moment().format('YYYY-MM-DD');
+
+        function createTimeOption(max) {
+          var html = '';
+          for (var i = 0; i <= max; i++) {
+            html += '<option value="' + i + '">' + (i < 10 ? '0' : '') + i + '</option>';
+          }
+          return html;
+        }
+
+        var templateForm = new UiTemplateForm({
+          container: '#templateForm',
+          addButton: '#templateFormAdd',
+          defaultData: {
+            data_1: today,
+            data_2: '0',
+            data_3: '0',
+            data_4: '0',
+            data_5: '',
+          },
+          initData: [
+            // 초기 세팅 데이터
+            {
+              data_1: '2019-08-04',
+              data_2: '3',
+              data_3: '42',
+              data_4: '16',
+              data_5: '범죄 사실 내용 범죄 사실 내용 범죄 사실 내용',
+            },
+            {
+              data_1: '2020-07-12',
+              data_2: '4',
+              data_3: '35',
+              data_4: '58',
+              data_5: '범죄 사실 내용 범죄 사실 내용 범죄 사실 내용',
+            },
+          ],
+          afterAddReRender: true, // 템플릿 추가 후 재 렌더링이 필요한 경우 추가 (템플릿에 사용 된 templateFormObject.getData().length 값을 업데이트하기 위해)
+          empty: '<div class="empty-text"><p class="empty-text__message">사건을 추가해주세요.</p></div>', // 데이터가 없을 때 보여줄 화면
+          template: function (data, index, templateFormObject) {
+            // defaultData 의 키 값과 name 값이 매칭 되어 데이터가 연동 됨.
+            return (
+              '<section class="form-section">' +
+              '<div class="form-section-head">' +
+              '<div class="form-section-head__left">' +
+              '<h3 class="form-section-head__title">사건 : ' +
+              (index + 1) +
+              '/' +
+              templateFormObject.getData().length +
+              '</h3>' +
+              '</div>' +
+              '<div class="form-section-head__right">' +
+              '<div class="ui-buttons ui-buttons--right ui-buttons--auto">' +
+              '<ul class="ui-buttons__list">' +
+              '<li class="ui-buttons__item">' +
+              '<button type="button" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-delete ' +
+              templateFormObject.className.removeButton +
+              '">삭제</button>' +
+              '</li>' +
+              '</ul>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '<div class="board-detail-table">' +
+              '<table>' +
+              '<tbody>' +
+              '<tr>' +
+              '<th>' +
+              '범죄일시<span class="ui-require"><span class="for-a11y">(필수)</span></span>' +
+              '</th>' +
+              '<td>' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-input-block ui-input-block--date input-width-date">' +
+              '<input type="text" class="ui-input js-datepicker" title="날짜" name="data_1" />' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="시" name="data_2">' +
+              createTimeOption(23) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">시</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="분" name="data_3">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">분</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="초" name="data_4">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">초</div>' +
+              '</div>' +
+              '</td>' +
+              '</tr>' +
+              '<tr>' +
+              '<th>' +
+              '범죄 사실 내용<span class="ui-require"><span class="for-a11y">(필수)</span></span>' +
+              '</th>' +
+              '<td>' +
+              '<div class="form-row">' +
+              '<div class="ui-input-block">' +
+              '<textarea class="ui-input input-height-small-medium" title="범죄 사실 내용" data-maxlength="2000" data-text-count="#discriptionCount' +
+              index +
+              '" name="data_5"></textarea>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-row">' +
+              '<div class="basic-text color-gray align-right"><span id="discriptionCount' +
+              index +
+              '">0</span>/2000자</div>' +
+              '</div>' +
+              '</td>' +
+              '</tr>' +
+              '</tbody>' +
+              '</table>' +
+              '</div>' +
+              '</section>'
+            );
+          },
+          onInit: function (templateFormObject) {
+            // 처음 셋팅 될 때 발생
+            console.log('onInit', templateFormObject);
+          },
+          onBeforeAdd: function (data, templateFormObject) {
+            // 템플릿 추가 되기 직전에 발생
+            console.log('onBeforeAdd', data, templateFormObject);
+          },
+          onAdd: function (data, templateFormObject) {
+            // 템플릿 추가 되고 직후에 발생
+            console.log('onAdd', data, templateFormObject);
+          },
+          onBeforeRemove: function (data, templateFormObject) {
+            // 템플릿 제거 되기 직전에 발생
+            console.log('onBeforeRemove', data, templateFormObject);
+          },
+          onRemove: function (data, templateFormObject) {
+            // 템플릿 제거 되고 직후에 발생
+            console.log('onRemove', data, templateFormObject);
+          },
+          onDataUpdate: function (oldDataArray, newDataArray, templateFormObject) {
+            // 사용자 액션으로 데이터가 변경 된 후에 발생 (이 callback은 dataChange, replaceData 메소드로 변경시엔 발생하지 않음.)
+            console.log('onDataUpdate', oldDataArray, newDataArray, templateFormObject);
+          },
+          onSelected: function (data, index, templateFormObject) {
+            // templateFormObject.className.checkbox 클래스값을 가진 체크박스 선택 시 발생
+            console.log('onSelected', data, index, templateFormObject);
+          },
+          onUnSelected: function (data, index, templateFormObject) {
+            // templateFormObject.className.checkbox 클래스값을 가진 체크박스 선택 해제 시 발생
+            console.log('onUnSelected', data, index, templateFormObject);
+          },
+          onRender: function (templateFormObject) {
+            // 템플릿 dom 이 재 렌더링 된 후 발생 (초기 세팅 / 추가 / 제거 / dataChange 메소드 / replaceData 메소드)
+            console.log('onRender', templateFormObject);
+          },
+        });
+
+        // 데이터 변경 메소드 (index, data)
+        /*
+        templateForm.dataChange(0, {
+          data_5: '테스트 데이터',
+        });
+        */
+
+        // 데이터 추가 메소드 (data)
+        /*
+        templateForm.add({
+          data_1: '2021-02-03',
+          data_2: '22',
+          data_3: '35',
+          data_4: '45',
+          data_5: '메소드로 추가 메소드로 추가',
+        });
+        */
+
+        // 데이터 제거 메소드 (indexArray)
+        // templateForm.remove([0, 1]);
+
+        // 데이터 전부 제거 메소드
+        // templateForm.removeAll();
+
+        // 데이터 목록 변경 메소드 (dataArray)
+        /*
+        templateForm.replaceData([
+          {
+            data_1: '2017-08-03',
+            data_2: '12',
+            data_3: '35',
+            data_4: '45',
+            data_5: '1111111111111111111',
+          },
+          {
+            data_1: '2018-03-03',
+            data_2: '11',
+            data_3: '35',
+            data_4: '45',
+            data_5: '2222222222222222222222',
+          },
+          {
+            data_1: '2019-04-03',
+            data_2: '23',
+            data_3: '35',
+            data_4: '45',
+            data_5: '3333333333333333333333',
+          },
+          {
+            data_1: '2020-07-03',
+            data_2: '20',
+            data_3: '35',
+            data_4: '45',
+            data_5: '444444444444444444444',
+          },
+          {
+            data_1: '2021-01-03',
+            data_2: '18',
+            data_3: '35',
+            data_4: '45',
+            data_5: '555555555555555555',
+          },
+        ]);
+         */
+
+        // 데이터 Get
+        console.log('getData', templateForm.getData());
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

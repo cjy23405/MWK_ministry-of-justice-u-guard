@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <!-- 2021.09.27 : mod : form 태그 위치 변경 -->
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">UGAURD 이용자 만족도 설문조사</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="survey-form">
+              <!-- 2021.10.18 : add : 참여 후 케이스 추가 -->
+              <!-- Case : 참여 후 -->
+              <div class="board-detail-table board-detail-table--outline">
+                <table>
+                  <colgroup>
+                    <!-- 2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                    <col class="board-detail-table__title-width-small" />
+                    <col />
+                    <col class="board-detail-table__title-width-small" />
+                    <col />
+                    <!-- //2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>이름</th>
+                      <td>$이름$</td>
+                      <th>참여자수</th>
+                      <td>총 60</td>
+                    </tr>
+                    <tr>
+                      <th>등록일시</th>
+                      <td>YYYY-MM-DD HH:MM</td>
+                      <th>설문기간</th>
+                      <td>YYYY-MM-DD ~ YYYY-MM-DD (설문종료)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="survey-hr"></div>
+              <!-- //Case : 참여 후 -->
+              <!-- //2021.10.18 : add : 참여 후 케이스 추가 -->
+
+              <ul class="basic-list">
+                <li class="basic-list__item">
+                  <div class="basic-list__symbol">-</div>
+                  <div class="basic-list__contnets">본 설무조사는 위치추적시스템에 대한 내부이용자의 만족도를 조사하여 시스템의 품질을 개선하고 이용자의 만족도를 향상시키기 위한 설문조사입니다.</div>
+                </li>
+                <li class="basic-list__item">
+                  <div class="basic-list__symbol">-</div>
+                  <div class="basic-list__contnets">본 석문작성자 및 응답내용은 만족도조사 이외의 목적으로 사용하거나 또는 공개하지 않습니다.</div>
+                </li>
+                <li class="basic-list__item">
+                  <div class="basic-list__symbol">-</div>
+                  <div class="basic-list__contnets">본 설문조사는 약 2분정도가 소요되며, 바쁘시더라도 부디 많은 분들꼐서 설문에 응하여 가감 없는 평가를 해주시기 바랍니다.</div>
+                </li>
+                <li class="basic-list__item">
+                  <div class="basic-list__symbol">-</div>
+                  <div class="basic-list__contnets">설문조사의 신뢰성 제고를 위해 위치추적중앙관제센터 기술보안팀/행정지원실 직원은 본 설문에 응할 수 없음</div>
+                </li>
+              </ul>
+
+              <div class="survey-hr"></div>
+
+              <section class="survey-section">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title">1. 위치추적시스템(U-Guard) 사용 시, 온라인 응답 및 처리속도에 만족하십니까?</h2>
+                </div>
+
+                <div class="survey-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>매우만족</th>
+                        <th>만족</th>
+                        <th>보통</th>
+                        <th>불만족</th>
+                        <th>매우 불만족</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey1" id="survey1-1" />
+                            <label for="survey1-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">매우만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey1" id="survey1-2" />
+                            <label for="survey1-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey1" id="survey1-3" />
+                            <label for="survey1-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">보통</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey1" id="survey1-4" />
+                            <label for="survey1-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">불만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey1" id="survey1-5" />
+                            <label for="survey1-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">매우 불만족</span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="survey-section">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title">2. 위치추적시스템(U-Guard)은 필요한 정보를 쉽게 찾을 수 있도록 메뉴의 구성에 만족하십니까?</h2>
+                </div>
+
+                <div class="survey-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>매우만족</th>
+                        <th>만족</th>
+                        <th>보통</th>
+                        <th>불만족</th>
+                        <th>매우 불만족</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey2" id="survey2-1" />
+                            <label for="survey2-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">매우만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey2" id="survey2-2" />
+                            <label for="survey2-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey2" id="survey2-3" />
+                            <label for="survey2-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">보통</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey2" id="survey2-4" />
+                            <label for="survey2-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">불만족</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey2" id="survey2-5" />
+                            <label for="survey2-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="for-a11y">매우 불만족</span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <!-- 2021.10.18 : add : 문항 케이스 추가 -->
+              <section class="survey-section">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title">3. 유가드 시스템에서 입력 시 가장 많은 시간이 소요되는 메뉴는 무엇인가요?</h2>
+                </div>
+                <div class="ui-check-list">
+                  <ul class="ui-check-list__list">
+                    <li class="ui-check-list__item">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" name="survey4-1" id="survey4-1-1" />
+                        <label for="survey4-1-1" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">체크1</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="ui-check-list__item">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" name="survey4-1" id="survey4-1-2" />
+                        <label for="survey4-1-2" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">체크2</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="ui-check-list__item">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" name="survey4-1" id="survey4-1-3" />
+                        <label for="survey4-1-3" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">체크3</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="ui-check-list__item">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" name="survey4-1" id="survey4-1-4" />
+                        <label for="survey4-1-4" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">체크4</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section class="survey-section">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title">4. 질문이 출력됩니다. <span class="color-red">(필수)</span></h2>
+                </div>
+                <div class="survey-section__body">
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">4-1. 서브 질문이 추가됩니다. <span class="color-blue">(필수)</span></h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey5-1" id="survey5-1-1" />
+                            <label for="survey5-1-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 일일감독소견</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey5-1" id="survey5-1-2" />
+                            <label for="survey5-1-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 이관경보 처리 후 입력</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey5-1" id="survey5-1-3" />
+                            <label for="survey5-1-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 대상자 지도 감독</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </section>
+
+              <section class="survey-section">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title">5. 질문이 추가됩니다.</h2>
+                </div>
+                <div class="survey-box">
+                  가이드 설명이 들어가는 영역입니다. 테두리 영역이 쳐져있는 화면이 필요합니다.<br />
+                  가이드 설명이 들어가는 영역입니다. 테두리 영역이 쳐져있는 화면이 필요합니다.
+                </div>
+                <div class="ui-check-list">
+                  <ul class="ui-check-list__list">
+                    <li class="ui-check-list__item">
+                      <div class="ui-radio-block">
+                        <input type="radio" class="ui-radio" name="survey6-1" id="survey6-1-1" />
+                        <label for="survey6-1-1" class="ui-label">
+                          <span class="ui-radio-object"></span>
+                          <span class="ui-label__text">① 일일감독소견</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="ui-check-list__item">
+                      <div class="ui-radio-block">
+                        <input type="radio" class="ui-radio" name="survey6-1" id="survey6-1-2" />
+                        <label for="survey6-1-2" class="ui-label">
+                          <span class="ui-radio-object"></span>
+                          <span class="ui-label__text">② 이관경보 처리 후 입력</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="ui-check-list__item">
+                      <div class="ui-radio-block">
+                        <input type="radio" class="ui-radio" name="survey6-1" id="survey6-1-3" />
+                        <label for="survey6-1-3" class="ui-label">
+                          <span class="ui-radio-object"></span>
+                          <span class="ui-label__text">③ 대상자 지도 감독</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- //2021.10.18 : add : 문항 케이스 추가 -->
+
+              <section class="survey-section survey-section--addition">
+                <div class="survey-section__head">
+                  <h2 class="survey-section__title survey-section__title--dot">만족스러운 부분</h2>
+                </div>
+                <div class="survey-section__body">
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">1. 분리형 장치에 비해 훼손이 어려워졌다고 생각하십니까?</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-1" id="survey3-1-1" />
+                            <label for="survey3-1-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 매우 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-1" id="survey3-1-2" />
+                            <label for="survey3-1-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-1" id="survey3-1-3" />
+                            <label for="survey3-1-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 보통이다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-1" id="survey3-1-4" />
+                            <label for="survey3-1-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-1" id="survey3-1-5" />
+                            <label for="survey3-1-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑤ 전혀 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">2. 분리형장치에 비해 경보가 감소하였다고 생각하십니까?</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-2" id="survey3-2-1" />
+                            <label for="survey3-2-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 매우 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-2" id="survey3-2-2" />
+                            <label for="survey3-2-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-2" id="survey3-2-3" />
+                            <label for="survey3-2-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 보통이다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-2" id="survey3-2-4" />
+                            <label for="survey3-2-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-2" id="survey3-2-5" />
+                            <label for="survey3-2-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑤ 전혀 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">3. 휴대장치 미소지로 인해 대상자의 사용편의가 향상되었다고 생각하십니까?</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-3" id="survey3-3-1" />
+                            <label for="survey3-3-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 매우 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-3" id="survey3-3-2" />
+                            <label for="survey3-3-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-3" id="survey3-3-3" />
+                            <label for="survey3-3-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 보통이다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-3" id="survey3-3-4" />
+                            <label for="survey3-3-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-3" id="survey3-3-5" />
+                            <label for="survey3-3-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑤ 전혀 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">4. 분리형장치에 비해 대상자들의 만족도가 높다고 생각하십니까?</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-4" id="survey3-4-1" />
+                            <label for="survey3-4-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 매우 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-4" id="survey3-4-2" />
+                            <label for="survey3-4-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 그렇다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-4" id="survey3-4-3" />
+                            <label for="survey3-4-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 보통이다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-4" id="survey3-4-4" />
+                            <label for="survey3-4-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-4" id="survey3-4-5" />
+                            <label for="survey3-4-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑤ 전혀 그렇지 않다.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">5. 대상자들에게 일체형과 분리형 장치를 선택할 기회를 준다면 어떤 것을 선택할 것이라고 생각하십니까?</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-5" id="survey3-5-1" />
+                            <label for="survey3-5-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 일체형 전자장치</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-5" id="survey3-5-2" />
+                            <label for="survey3-5-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 분리형 전자장치.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">6. 기타</h3>
+                    </div>
+                    <div class="ui-input-block">
+                      <textarea class="ui-input input-height-small" title="기타"></textarea>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">1. 유가드 시스템에 각종 정보 입력을 위해 투여되는 총시간은 얼마인가요(일기준)</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-1" />
+                            <label for="survey3-7-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 30분~1시간 미만</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-2" />
+                            <label for="survey3-7-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 1시간 이상~2시간 미만</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-3" />
+                            <label for="survey3-7-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 2시간 이상~3시간 미만</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-4" />
+                            <label for="survey3-7-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 3시간 이상~4시간 미만</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-5" />
+                            <label for="survey3-7-5" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑤ 4시간 이상~5시간 미만</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-7" id="survey3-7-6" />
+                            <label for="survey3-7-6" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">⑥ 5시간 이상.</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section class="survey-section survey-section--child">
+                    <div class="survey-section__head">
+                      <h3 class="survey-section__title">2. 유가드 시스템 입력 시 가장 많은 시간이 소요되는 메뉴는 무엇인가요.</h3>
+                    </div>
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-8" id="survey3-8-1" />
+                            <label for="survey3-8-1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">① 일일감독소견</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-8" id="survey3-8-2" />
+                            <label for="survey3-8-2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">② 이관경보 처리 후 입력</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-8" id="survey3-8-3" />
+                            <label for="survey3-8-3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">③ 대상자 지도 감독</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="survey3-8" id="survey3-8-4" />
+                            <label for="survey3-8-4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">④ 기타</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <!-- 2021.10.18 : add : 확인 버튼 추가 -->
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">확인</button>
+                </li>
+                <!-- //2021.10.18 : add : 확인 버튼 추가 -->
+                <li class="ui-buttons__item">
+                  <button type="submit" class="ui-button ui-basic-button">제출하기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

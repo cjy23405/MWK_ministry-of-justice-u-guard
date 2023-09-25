@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="ic_menu_6_w" transform="translate(2.301 .25)">
+        <g id="그룹_2770" data-name="그룹 2770" transform="translate(496.948 -92.162)">
+            <path id="패스_3912" data-name="패스 3912" class="cls-2" d="M-486.19 103.352v4.31h2.69v-7.5h-7.5v2.69h4.31a.5.5 0 0 1 .5.5z"/>
+            <path id="사각형_9335" data-name="사각형 9335" class="cls-2" transform="translate(-490.941 104.352)" d="M0 0h3.251v3.251H0z"/>
+            <path id="패스_3913" data-name="패스 3913" class="cls-2" d="M-477.25 94.412a.5.5 0 0 0-.5-.5h-3.858v-2h-1.5v2h-3.392v-2h-1.5v2h-3.391v-2h-1.5v2h-3.86a.5.5 0 0 0-.5.5v3.859h-2v1.5h2v3.391h-2v1.5h2v3.391h-2v1.5h2v3.859a.5.5 0 0 0 .5.5h3.86v2h1.5v-2H-488v2h1.5v-2h3.391v2h1.5v-2h3.858a.5.5 0 0 0 .5-.5v-18.5zm-5.25 4.25a.5.5 0 0 1 .5.5v9.5a.5.5 0 0 1-.5.5h-9.5a.5.5 0 0 1-.5-.5v-9.5a.5.5 0 0 1 .5-.5z"/>
+            <path id="사각형_9336" data-name="사각형 9336" class="cls-2" transform="translate(-477.249 98.271)" d="M0 0h2v1.5H0z"/>
+            <path id="사각형_9337" data-name="사각형 9337" class="cls-2" transform="translate(-477.249 103.162)" d="M0 0h2v1.5H0z"/>
+            <path id="사각형_9338" data-name="사각형 9338" class="cls-2" transform="translate(-477.249 108.053)" d="M0 0h2v1.5H0z"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-4,.cls-8{fill:none}.cls-4{stroke:#111;stroke-width:1.5px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_alcohol" transform="translate(-553 -445)">
+        <path id="사각형_17680" data-name="사각형 17680" transform="translate(553 445)" style="fill:transparent" d="M0 0h50v50H0z"/>
+        <g id="그룹_12027" data-name="그룹 12027" transform="translate(98)">
+            <g id="그룹_11960" data-name="그룹 11960" transform="translate(-262.745 -171.618)">
+                <g id="합치기_139" data-name="합치기 139" style="fill:none">
+                    <path class="cls-6" d="M.5 30.595a.5.5 0 0 1-.5-.5v-18.48a2 2 0 0 1 2-2h.778V.5a.5.5 0 0 1 .5-.5h4.554a.5.5 0 0 1 .5.5v9.116h.778a2 2 0 0 1 2 2v18.478a.5.5 0 0 1-.5.5z" transform="rotate(45 -381.379 1218.115)"/>
+                    <path d="M9.609 29.095v-17.48a.5.5 0 0 0-.5-.5H6.83V1.5H4.277v9.616H2a.5.5 0 0 0-.5.5v17.479h8.109m1 1.5H.5a.5.5 0 0 1-.499-.5v-18.48a2 2 0 0 1 2-2h.777V.5a.5.5 0 0 1 .5-.5h4.555a.5.5 0 0 1 .5.5v9.116h.777a2 2 0 0 1 2 2v18.478a.5.5 0 0 1-.5.5z" style="fill:#111;stroke:none" transform="rotate(45 -381.379 1218.115)"/>
+                </g>
+                <g id="사각형_17564" data-name="사각형 17564" class="cls-4">
+                    <path class="cls-6" d="M0 0h11.109v7.935H0z" transform="rotate(45 -402.166 1209.504)"/>
+                    <path class="cls-8" d="M.75.75h9.609v6.435H.75z" transform="rotate(45 -402.166 1209.504)"/>
+                </g>
+                <path id="선_369" data-name="선 369" class="cls-4" transform="rotate(45 -387.475 1220.64)" d="M0 0h3.808"/>
+            </g>
+        </g>
+    </g>
+</svg>

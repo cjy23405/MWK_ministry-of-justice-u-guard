@@ -1,0 +1,14 @@
+<svg id="ic_menu_3_n" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-3{fill:#a1afc0}
+        </style>
+    </defs>
+    <g id="사각형_6740" data-name="사각형 6740" transform="translate(1 1)" style="stroke:#a1afc0;stroke-width:1.5px;fill:none">
+        <rect width="22" height="18" rx=".5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="20.5" height="16.5" rx=".25" style="fill:none"/>
+    </g>
+    <path id="사각형_6741" data-name="사각형 6741" class="cls-3" transform="translate(1 13.5)" d="M0 0h22v1.5H0z"/>
+    <path id="사각형_6744" data-name="사각형 6744" class="cls-3" transform="translate(7 21.5)" d="M0 0h10v1.5H0z"/>
+    <path id="사각형_6743" data-name="사각형 6743" class="cls-3" transform="translate(11.25 19)" d="M0 0h1.5v3H0z"/>
+</svg>

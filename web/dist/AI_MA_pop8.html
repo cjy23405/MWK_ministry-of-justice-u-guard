@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">경보 상태 안내</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <section class="board-detail-wrap">
+            <div class="board-detail-head board-detail-head--notice">
+              <p class="notice-box__item">
+                경보 발생 시, AI 분석 시스템에 의해 <span class="color-blue font-weight-medium">일부 경보를 자동으로 처리</span>합니다. 이 때, 완전 자동 처리 위험이 예상되는 경보에 대해서는 반자동으로
+                처리하며, 관제직원은 <span class="color-blue font-weight-medium">자동이관 유보</span> 및 <span class="color-blue font-weight-medium">자동종료 유보</span> 메뉴에서 조치내용을 확인 한 후
+                처리해 주셔야 합니다.
+              </p>
+            </div>
+
+            <div class="only-image">
+              <img src="./assets/images/etc/ai-guide-1.svg" class="only-image__img" />
+              <div class="for-a11y">
+                <section>
+                  <h2>Case 1</h2>
+                  <ol>
+                    <li>1. 실시간 경보현황</li>
+                    <li>실시간 AI 분석</li>
+                    <li>자동 처리 대상 분류 (완전 자동)</li>
+                    <li>경보 처리 완료 ("4. 종료 이력" or "5. 이관 이력")</li>
+                  </ol>
+                </section>
+                <section>
+                  <h2>Case 2</h2>
+                  <ol>
+                    <li>1. 실시간 경보현황</li>
+                    <li>실시간 AI 분석</li>
+                    <li>자동 처리 대상 분류 (반자동)</li>
+                    <li>"2. 자동이관 유보" or "3. 자동종료 유보"</li>
+                    <li>경보 처리 (조치내용 자동 입력)</li>
+                    <li>경보 처리 완료 ("4. 종료 이력" or "5. 이관 이력")</li>
+                  </ol>
+                </section>
+                <section>
+                  <h2>Case 3</h2>
+                  <ol>
+                    <li>1. 실시간 경보현황</li>
+                    <li>실시간 AI 분석</li>
+                    <li>자동 처리 대상 분류 (수동)</li>
+                    <li>경보 처리 (조치내용 수동 입력)</li>
+                    <li>경보 처리 완료 ("4. 종료 이력" or "5. 이관 이력")</li>
+                  </ol>
+                </section>
+              </div>
+            </div>
+
+            <div class="board-detail-table board-detail-table--vertical-line board-detail-table--thead-line board-detail-table--top-line board-detail-table--bottom-line">
+              <table>
+                <colgroup>
+                  <col style="width: 160px" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>메뉴</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="number-box">1</div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">실시간 경보현황</div>
+                      </div>
+                    </td>
+                    <td>경보 발생 현황을 확인하고, 자동 처리가 되지 않은 경보에 대해 경보 처리를 합니다.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="number-box">2</div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">자동이관 유보</div>
+                      </div>
+                    </td>
+                    <td>자동이관 처리 후보 경보를 확인할 수 있습니다. 자동으로 입력된 조치내용을 확인한 후 이관 처리해 주시기 바랍니다.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="number-box">3</div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">자동종료 유보</div>
+                      </div>
+                    </td>
+                    <td>자동종료 처리 후보 경보를 확인할 수 있습니다. 자동으로 입력된 조치내용을 확인한 후 이관 처리해 주시기 바랍니다.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="number-box">4</div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">종료 이력</div>
+                      </div>
+                    </td>
+                    <td>자동 또는 수동으로 종료처리한 경보 이력을 조회할 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="number-box">5</div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--flexible">이관 이력</div>
+                      </div>
+                    </td>
+                    <td>자동 또는 수동으로 이관처리한 경보 이력을 조회할 수 있습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

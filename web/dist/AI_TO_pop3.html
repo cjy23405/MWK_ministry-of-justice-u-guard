@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">알림 설정</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table board-detail-table--vertical-line">
+              <table>
+                <colgroup>
+                  <col />
+                  <col style="width: 190px" />
+                  <col style="width: 170px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>알림 수신 여부</th>
+                    <th>설정 값</th>
+                    <th>추가 알림</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice1" />
+                          <label for="notice1" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">1:1전자감독 경보 발생</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition1-1" />
+                              <label for="noticeAddition1-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition1-2" />
+                              <label for="noticeAddition1-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice2" />
+                          <label for="notice2" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">집중관제 대상자 경보</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition2-1" />
+                              <label for="noticeAddition2-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition2-2" />
+                              <label for="noticeAddition2-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice3" />
+                          <label for="notice3" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">이관 경보 처리 완료</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition3-1" />
+                              <label for="noticeAddition3-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition3-2" />
+                              <label for="noticeAddition3-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice4" />
+                          <label for="notice4" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">이관 경보 시간내 미처리</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-select-block">
+                        <select class="ui-select" title="설정 값">
+                          <option value="">1시간</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition4-1" />
+                              <label for="noticeAddition4-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition4-2" />
+                              <label for="noticeAddition4-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice5" />
+                          <label for="notice5" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">경보 자동 종료</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-input-block">
+                        <div class="ui-select-block input-width-small">
+                          <select class="ui-select" title="설정 값">
+                            <option value="">발생 즉시</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition5-1" />
+                              <label for="noticeAddition5-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition5-2" />
+                              <label for="noticeAddition5-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice6" />
+                          <label for="notice6" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">경보 자동 이관</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-select-block">
+                        <select class="ui-select" title="설정 값">
+                          <option value="">발생 즉시</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition6-1" />
+                              <label for="noticeAddition6-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition6-2" />
+                              <label for="noticeAddition6-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice7" />
+                          <label for="notice7" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">미처리 이관 경보 발생</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition7-1" />
+                              <label for="noticeAddition7-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition7-2" />
+                              <label for="noticeAddition7-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice8" />
+                          <label for="notice8" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">출국금지자 재신청 업무</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition8-1" />
+                              <label for="noticeAddition8-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition8-2" />
+                              <label for="noticeAddition8-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice9" />
+                          <label for="notice9" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">공항/항만 진입 대상자 발생</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition9-1" />
+                              <label for="noticeAddition9-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition9-2" />
+                              <label for="noticeAddition9-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice10" />
+                          <label for="notice10" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">과거 범죄지 동일 시간대 방문</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition10-1" />
+                              <label for="noticeAddition10-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition10-2" />
+                              <label for="noticeAddition10-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice11" />
+                          <label for="notice11" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">재범위험성 평가 결과 급변</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block input-width-70">
+                            <input type="number" class="ui-input" title="설정 값" value="5" pattern="\d*" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">점 이상</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition11-1" />
+                              <label for="noticeAddition11-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition11-2" />
+                              <label for="noticeAddition11-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui-check-list">
+                        <div class="ui-checkbox-block">
+                          <input type="checkbox" class="ui-checkbox" id="notice12" />
+                          <label for="notice12" class="ui-label">
+                            <span class="ui-checkbox-object"></span>
+                            <span class="ui-label__text">미귀가자 발생</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition12-1" />
+                              <label for="noticeAddition12-1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">팝업</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="noticeAddition12-2" />
+                              <label for="noticeAddition12-2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이메일</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

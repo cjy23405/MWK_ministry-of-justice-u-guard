@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">권한 변경 이력</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">보호관찰소</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block input-width-medium">
+                        <select class="ui-select" title="보호관찰소">
+                          <option value="">전체</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key search-bar__key--dot-only">
+                      <span class="for-a11y">사용자</span>
+                    </dt>
+                    <dd class="search-bar__val">
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-check-list">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter1" id="filter1-1" />
+                                  <label for="filter1-1" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">사용자ID</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter1" id="filter1-2" />
+                                  <label for="filter1-2" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">사용자명</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter1" id="filter1-3" />
+                                  <label for="filter1-3" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">작업자</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--medium-large">
+                          <div class="ui-input-block input-width-medium">
+                            <input type="text" class="ui-input" title="사용자명" />
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="board-top">
+            <div class="board-top__right">
+              <div class="ui-select-block input-width-small">
+                <select class="ui-select" title="목록 개수">
+                  <option value="">10개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                  <option value="">100개씩 보기</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-board-table" id="boardGrid"></div>
+
+          <div class="board-bottom board-bottom--list">
+            <div class="board-bottom__left">
+              <p class="total-text">조회건수&nbsp;&nbsp;<span class="total-text__count">4</span>&nbsp;&nbsp;건</p>
+            </div>
+            <div class="board-bottom__right">
+              <div class="pagination">
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                  <span class="for-a11y">처음 페이지</span>
+                </button>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                  <span class="for-a11y">이전 페이지</span>
+                </button>
+                <div class="pagination__fraction">
+                  <div class="pagination__fraction-currunt">
+                    <div class="ui-input-block">
+                      <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                    </div>
+                  </div>
+                  <div class="pagination__fraction-slash">/</div>
+                  <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                </div>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                  <span class="for-a11y">다음 페이지</span>
+                </button>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                  <span class="for-a11y">마지막 페이지</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '9',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '8',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '7',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '6',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '5',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '4',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '3',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '2',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+        {
+          id: '1',
+          cell_1: '08038',
+          cell_2: '감사2',
+          cell_3: '광주보호관찰소',
+          cell_4: '전담보호관찰관',
+          cell_5: '보호관찰소 권한권리',
+          cell_6: '권한등록',
+          cell_7: 'altest03c',
+          cell_8: '김찬수(엔텔스)',
+          cell_9: '2021-08-10 15:05:06',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['사용자ID'],
+          ref: 'cell_1',
+          width: '120px',
+        },
+        {
+          caption: ['사용자명'],
+          ref: 'cell_2',
+          width: '120px',
+        },
+        {
+          caption: ['소속'],
+          ref: 'cell_3',
+          width: '160px',
+        },
+        {
+          caption: ['권한명'],
+          ref: 'cell_4',
+          width: '160px',
+        },
+        {
+          caption: ['작업 메뉴'],
+          ref: 'cell_5',
+          width: '160px',
+        },
+        {
+          caption: ['수행'],
+          ref: 'cell_6',
+          width: '110px',
+        },
+        {
+          caption: ['작업자ID'],
+          ref: 'cell_7',
+          width: '120px',
+        },
+        {
+          caption: ['작업자명'],
+          ref: 'cell_8',
+          width: '150px',
+        },
+        {
+          caption: ['작업시간'],
+          ref: 'cell_9',
+          width: '170px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

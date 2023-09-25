@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 2021.11.12 : mod : window-popup--dark 클래스 값 추가 -->
+      <div class="window-popup window-popup--dark">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">시간대별 위반 현황</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <div class="search-bar__item">
+                    <div class="search-bar__key search-bar__key--dot-only"></div>
+                    <div class="search-bar__val">
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox" id="filter1" />
+                        <label for="filter1" class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                          <span class="ui-label__text">잠그기</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key search-bar__key--dot-only">
+                      <span class="for-a11y">기간 조건</span>
+                    </dt>
+                    <dd class="search-bar__val">
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-check-list">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter2" id="filter2-1" data-checkbox-tab="filter2-1" checked />
+                                  <label for="filter2-1" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">일</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter2" id="filter2-2" data-checkbox-tab="filter2-2" />
+                                  <label for="filter2-2" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">월</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-radio-block">
+                                  <input type="radio" class="ui-radio" name="filter2" id="filter2-3" data-checkbox-tab="filter2-3" />
+                                  <label for="filter2-3" class="ui-label">
+                                    <span class="ui-radio-object"></span>
+                                    <span class="ui-label__text">년</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--medium-large" data-checkbox-tab-panel="filter2-1">
+                          <div class="ui-input-block ui-input-block--date input-width-date">
+                            <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--medium-large" data-checkbox-tab-panel="filter2-2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-select-block input-width-year-select">
+                                <select class="ui-select" title="년">
+                                  <option value="">2021</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">년</div>
+                            <div class="form-flex-cell form-flex-cell--date-medium">
+                              <div class="ui-select-block input-width-date-select">
+                                <select class="ui-select" title="월">
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">월</div>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--medium-large" data-checkbox-tab-panel="filter2-3">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-select-block input-width-year-select">
+                                <select class="ui-select" title="년">
+                                  <option value="">2021</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">년</div>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="tile-layout__contents">
+            <div class="ui-chart ui-chart--height-425" id="chartArea"></div>
+          </div>
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <div class="tile-layout__contents">
+            <div class="status-info">
+              <section class="status-info__item">
+                <div class="status-info__head">
+                  <h2 class="status-info__title">오늘</h2>
+                  <p class="status-info__date">09월 15일 17시 00분</p>
+                </div>
+                <div class="status-count">
+                  <!-- DD : 카운팅 최대 값 9,999 제한 -->
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">전체</dt>
+                    <dd class="status-count__val">
+                      <span class="color-blue">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">위험</dt>
+                    <dd class="status-count__val">
+                      <span class="color-pastel-red">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">주의</dt>
+                    <dd class="status-count__val">
+                      <span class="color-yellow">9,999</span>
+                    </dd>
+                  </dl>
+                </div>
+              </section>
+              <section class="status-info__item">
+                <div class="status-info__head">
+                  <h2 class="status-info__title">이번달</h2>
+                  <p class="status-info__date">08월 15일~09월 15일</p>
+                </div>
+                <div class="status-count">
+                  <!-- DD : 카운팅 최대 값 9,999 제한 -->
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">전체</dt>
+                    <dd class="status-count__val">
+                      <span class="color-blue">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">위험</dt>
+                    <dd class="status-count__val">
+                      <span class="color-pastel-red">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">주의</dt>
+                    <dd class="status-count__val">
+                      <span class="color-yellow">9,999</span>
+                    </dd>
+                  </dl>
+                </div>
+              </section>
+              <section class="status-info__item">
+                <div class="status-info__head">
+                  <h2 class="status-info__title">올해</h2>
+                  <p class="status-info__date">01월 01일~09월 15일</p>
+                </div>
+                <div class="status-count">
+                  <!-- DD : 카운팅 최대 값 9,999 제한 -->
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">전체</dt>
+                    <dd class="status-count__val">
+                      <span class="color-blue">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">위험</dt>
+                    <dd class="status-count__val">
+                      <span class="color-pastel-red">9,999</span>
+                    </dd>
+                  </dl>
+                  <dl class="status-count__item">
+                    <dt class="status-count__key">주의</dt>
+                    <dd class="status-count__val">
+                      <span class="color-yellow">9,999</span>
+                    </dd>
+                  </dl>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        // Chart
+        var chartData = [
+          {
+            day: '01',
+            value_1: 1096,
+            value_2: 946,
+            total: 2042,
+          },
+          {
+            day: '02',
+            value_1: 695,
+            value_2: 1775,
+            total: 2470,
+          },
+          {
+            day: '03',
+            value_1: 396,
+            value_2: 31,
+            total: 427,
+          },
+          {
+            day: '04',
+            value_1: 1502,
+            value_2: 2400,
+            total: 3902,
+          },
+          {
+            day: '05',
+            value_1: 1014,
+            value_2: 1716,
+            total: 2730,
+          },
+          {
+            day: '06',
+            value_1: 1010,
+            value_2: 1400,
+            total: 2410,
+          },
+          {
+            day: '07',
+            value_1: 1262,
+            value_2: 1768,
+            total: 3030,
+          },
+          {
+            day: '08',
+            value_1: 1083,
+            value_2: 2178,
+            total: 3261,
+          },
+          {
+            day: '09',
+            value_1: 863,
+            value_2: 2178,
+            total: 3041,
+          },
+          {
+            day: '10',
+            value_1: 112,
+            value_2: 895,
+            total: 1007,
+          },
+          {
+            day: '11',
+            value_1: 1495,
+            value_2: 929,
+            total: 2424,
+          },
+          {
+            day: '12',
+            value_1: 365,
+            value_2: 51,
+            total: 416,
+          },
+          {
+            day: '13',
+            value_1: 1220,
+            value_2: 2320,
+            total: 3540,
+          },
+          {
+            day: '14',
+            value_1: 847,
+            value_2: 588,
+            total: 1435,
+          },
+          {
+            day: '15',
+            value_1: 204,
+            value_2: 14,
+            total: 218,
+          },
+          {
+            day: '16',
+            value_1: 378,
+            value_2: 2183,
+            total: 2561,
+          },
+          {
+            day: '17',
+            value_1: 1702,
+            value_2: 1130,
+            total: 2832,
+          },
+          {
+            day: '18',
+            value_1: 412,
+            value_2: 859,
+            total: 1271,
+          },
+          {
+            day: '19',
+            value_1: 25,
+            value_2: 1406,
+            total: 1431,
+          },
+          {
+            day: '20',
+            value_1: 1163,
+            value_2: 895,
+            total: 2058,
+          },
+          {
+            day: '21',
+            value_1: 1022,
+            value_2: 1826,
+            total: 2848,
+          },
+          {
+            day: '22',
+            value_1: 775,
+            value_2: 860,
+            total: 1635,
+          },
+          {
+            day: '23',
+            value_1: 282,
+            value_2: 2254,
+            total: 2536,
+          },
+          {
+            day: '24',
+            value_1: 1305,
+            value_2: 2260,
+            total: 3565,
+          },
+          {
+            day: '25',
+            value_1: 517,
+            value_2: 2273,
+            total: 2790,
+          },
+          {
+            day: '26',
+            value_1: 1727,
+            value_2: 565,
+            total: 2292,
+          },
+          {
+            day: '27',
+            value_1: 1323,
+            value_2: 1142,
+            total: 2465,
+          },
+          {
+            day: '28',
+            value_1: 470,
+            value_2: 1222,
+            total: 1692,
+          },
+          {
+            day: '29',
+            value_1: 2255,
+            value_2: 41,
+            total: 2296,
+          },
+          {
+            day: '30',
+            value_1: 1789,
+            value_2: 943,
+            total: 2732,
+          },
+          {
+            day: '31',
+            value_1: 2231,
+            value_2: 723,
+            total: 2954,
+          },
+        ];
+
+        var chartOptions = function () {
+          return {
+            type: 'serial',
+            titles: [
+              {
+                size: 13,
+                color: '#c0c0c1', // 2021.11.12 : mod : color 값 변경
+                bold: false,
+              },
+            ],
+            categoryAxis: {
+              axisAlpha: 1,
+              axisColor: '#434445', // 2021.11.12 : mod : color 값 변경
+              gridAlpha: 1,
+              gridColor: '#434445', // 2021.11.12 : mod : color 값 변경
+              minHorizontalGap: 20,
+            },
+            valueAxes: [
+              {
+                title: '건수',
+                titleColor: '#c0c0c1', // 2021.11.12 : mod : color 값 변경
+                titleBold: false,
+                minimum: 0,
+                axisAlpha: 1,
+                axisColor: '#434445', // 2021.11.12 : mod : color 값 변경
+                gridAlpha: 1,
+                gridColor: '#434445', // 2021.11.12 : mod : color 값 변경
+                minVerticalGap: 20,
+              },
+            ],
+            colors: ['#658aff', '#f57175', '#ffc26c'], // 2021.11.12 : mod : color 값 변경
+            fontSize: 13,
+            color: '#989999', // 2021.11.12 : mod : color 값 변경
+            fontFamily: '"SpoqaHanSansNeo", "맑은고딕", "Malgun Gothic", "돋움", Dotum, "Apple Gothic", sans-serif',
+            marginTop: 40,
+            marginBottom: 40,
+            marginRight: 20,
+            marginLeft: 85,
+            autoMargins: false,
+            chartCursor: {
+              enabled: true,
+              cursorColor: '#fff', // 2021.11.12 : mod : color 값 변경
+              color: '#111', // 2021.11.12 : add : 속성 추가
+            },
+            legend: {
+              color: '#fff', // 2021.11.12 : mod : color 값 변경
+              markerType: 'circle',
+              markerSize: 8,
+              align: 'center',
+              valueText: '',
+              valueWidth: 0,
+              verticalGap: 0,
+              equalWidths: false,
+              horizontalGap: 10,
+              autoMargins: false,
+              marginTop: 5,
+              marginBottom: 20,
+              marginLeft: -20,
+            },
+            graphs: [
+              {
+                title: '전체',
+                valueField: 'total',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '위험',
+                valueField: 'value_1',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '주의',
+                valueField: 'value_2',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+            ],
+          };
+        };
+
+        AmCharts.makeChart(
+          'chartArea',
+          $.extend({}, chartOptions(), {
+            dataProvider: chartData,
+            categoryField: 'day',
+            titles: [
+              $.extend({}, chartOptions().titles[0], {
+                text: '2021년 09월',
+              }),
+            ],
+          })
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

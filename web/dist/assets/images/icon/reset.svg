@@ -1,0 +1,54 @@
+<svg id="ic_btn_reload" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="24" viewBox="0 0 20 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e9ebf0;
+        opacity: 0.003;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3, .cls-7 {
+        fill: none;
+      }
+
+      .cls-3, .cls-5 {
+        stroke: #111;
+      }
+
+      .cls-3 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_9410" data-name="사각형 9410" class="cls-1" width="20" height="24" transform="translate(1695.804 375)"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_10" data-name="마스크 그룹 10" class="cls-2" transform="translate(-1695.804 -375)">
+    <g id="타원_499" data-name="타원 499" class="cls-3" transform="translate(1701.804 378.268) rotate(30)">
+      <circle class="cls-6" cx="7" cy="7" r="7"/>
+      <circle class="cls-7" cx="7" cy="7" r="6.25"/>
+    </g>
+    <rect id="사각형_7242" data-name="사각형 7242" class="cls-4" width="8" height="4" transform="translate(1702.268 386) rotate(-30)"/>
+    <g id="그룹_2704" data-name="그룹 2704" transform="matrix(0.966, -0.259, 0.259, 0.966, -56.641, 485.643)">
+      <g id="사각형_7243" data-name="사각형 7243" class="cls-5" transform="translate(1727 357)">
+        <rect class="cls-6" width="5" height="1.5"/>
+        <rect class="cls-7" x="0.5" y="0.5" width="4" height="0.5"/>
+      </g>
+      <g id="사각형_7244" data-name="사각형 7244" class="cls-5" transform="translate(1732 353.5) rotate(90)">
+        <rect class="cls-6" width="5" height="1.5"/>
+        <rect class="cls-7" x="0.5" y="0.5" width="4" height="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

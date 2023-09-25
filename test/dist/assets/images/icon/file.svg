@@ -1,0 +1,14 @@
+<svg id="ic_file" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#b7c3d6}
+        </style>
+    </defs>
+    <path id="사각형_6969" data-name="사각형 6969" style="fill:none" d="M0 0h24v24H0z"/>
+    <g id="그룹_2576" data-name="그룹 2576" transform="translate(-319.519 -394.912)">
+        <path id="패스_3874" data-name="패스 3874" class="cls-2" d="M334.131 402.9h4.377l-4.975-4.975v4.375a.6.6 0 0 0 .598.6z"/>
+        <path id="패스_3875" data-name="패스 3875" class="cls-2" d="M332.533 397.912v4.388a1.6 1.6 0 0 0 1.6 1.6h4.388v11.011a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1z"/>
+        <path id="선_69" data-name="선 69" transform="translate(333.519 397.912)" style="fill:#a7b7ce" d="M0 0"/>
+        <path id="패스_3876" data-name="패스 3876" d="M333.533 397.912h-.014l.014.014z" style="fill:#fff"/>
+    </g>
+</svg>

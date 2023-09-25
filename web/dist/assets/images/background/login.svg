@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+        <linearGradient id="b" x1=".715" y1="-.477" x2=".335" y2="1.25" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#6a84d9"/>
+            <stop offset=".519" stop-color="#2d4dbb"/>
+            <stop offset="1" stop-color="#4f75ec"/>
+        </linearGradient>
+        <linearGradient id="c" x1=".392" y1="-1.303" x2=".557" y2=".691" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#153085"/>
+            <stop offset=".264" stop-color="#2242a7"/>
+            <stop offset=".548" stop-color="#2d4db4"/>
+            <stop offset=".802" stop-color="#5071d9"/>
+            <stop offset="1" stop-color="#4264d0"/>
+        </linearGradient>
+        <linearGradient id="d" x1="1.215" y1="-.269" x2="-.517" y2="1.847" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#20398b"/>
+            <stop offset=".264" stop-color="#294395"/>
+            <stop offset=".548" stop-color="#2e4aa2"/>
+            <stop offset=".802" stop-color="#3b59b7"/>
+            <stop offset="1" stop-color="#4264d0"/>
+        </linearGradient>
+        <clipPath id="a">
+            <path data-name="사각형 16727" transform="rotate(180 -2461.395 -11798.3)" style="fill:#003cff" d="M0 0h1920v1080H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 3173" transform="translate(6842.79 24676.6)" style="clip-path:url(#a)">
+        <path data-name="사각형 10053" transform="rotate(180 -2461.395 -11798.3)" style="fill:url(#b)" d="M0 0h1920v1080H0z"/>
+        <path data-name="패스 4173" d="M393.4 835.731a141.72 141.72 0 0 0 181.384 71.013l123.367-49.917V0H0z" transform="rotate(180 -3104.947 -11722.366)" style="opacity:.4;fill:url(#c)"/>
+        <path data-name="패스 4174" d="M463.738 73.242a127.52 127.52 0 0 0-176.476-57.618L0 172.43v650.893h816.825z" transform="rotate(180 -2385.489 -12034.476)" style="opacity:.2;fill:url(#d)"/>
+    </g>
+</svg>

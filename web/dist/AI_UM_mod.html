@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="ko" id="ie9"><![endif]-->
+<!--[if !IE]>-->
+<html lang="ko">
+  <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AI 기반 전자감독 서비스</title>
+    <!-- SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <!-- //SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery.mCustomScrollbar.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/common.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <div class="btns-box">
+          <button type="button" class="btn-refresh"><img src="./assets/legacy/ai/images/ico_reload.png" alt="새로고침" /></button>
+          <a href="#" class="btn-setting"><img src="./assets/legacy/ai/images/ico_settings.png" alt="설정" /></a>
+        </div>
+        <div class="info-list">
+          <div class="info-list-item">
+            <span class="item">집중 관제</span>
+            <div class="value">
+              집중중앙그룹
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 1</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">중앙그룹</span>
+            <div class="value">전체</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">대전그룹</span>
+            <div class="value">선택없음</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">보호관찰소</span>
+            <div class="value">
+              서울남부
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 3</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">데이터 수신 주기</span>
+            <div class="value">30초</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">테스트 데이터</span>
+            <div class="value">사용</div>
+          </div>
+        </div>
+        <div class="aside">
+          <div class="ai">
+            <!-- off -->
+            <div class="tooltip-wrap status-off is-active">
+              <!-- 활성화 is-active 클래스 추가 -->
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_off.png" alt="OFF AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 중단되었습니다.</p>
+              </div>
+            </div>
+            <!-- //off -->
+            <!-- on -->
+            <div class="tooltip-wrap status-on">
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_on.png" alt="ON AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 동작중입니다.</p>
+              </div>
+            </div>
+            <!-- //on -->
+          </div>
+          <div class="item-input-has-btn">
+            <div class="item-input">
+              <input type="text" placeholder="피부착자 검색" />
+            </div>
+            <button type="button" class="btn btn-primary">조회</button>
+          </div>
+          <div class="notice">
+            <div class="notice-group">
+              <button type="button" class="btn-notice">
+                <img src="./assets/legacy/ai/images/ico_alarm.png" alt="알림" />
+                <!-- 2021.12.10 : add : 카운팅 위치 변경 -->
+                <span class="btn-notice-count">35</span>
+                <!-- //2021.12.10 : add : 카운팅 위치 변경 -->
+              </button>
+              <div class="notice-center">
+                <div class="notice-top">
+                  <span class="title">알림센터</span>
+                  <div class="btns-box fixed">
+                    <a href="#" class="btn-expand"><img src="./assets/legacy/ai/images/ico_unfold.png" alt="확대" /></a>
+                    <button type="button" class="btn-close"><img src="./assets/legacy/ai/images/ico_18px_cancle.png" alt="알림센터 닫기" /></button>
+                  </div>
+                </div>
+                <div class="notice-md">
+                  <!-- 2021.12.10 : del : 전체삭제 위치 변경
+                  <div class="btns-box">
+                    <button type="button" class="btn btn-point-white">전체삭제</button>
+                  </div>
+                  -->
+                  <div class="notice-list-box scroll-y">
+                    <ul class="notice-list">
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">[1:1] 홍길동 (인천서부 관찰소) 경보 발생</span>
+                          <span class="text">부착장치 훼손(본체)</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">4건의 경보가 자동으로 종료 처리되었습니다.</span>
+                          <span class="text">종료 이력을 확인해 주시기 바랍니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">일 이내 출국금지자 재신청 필요</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2건</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">과거 범죄 발생지에 동일 시간대에 방문했습니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">재범위험성 평가 점수 9점 증가</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">미귀가자가 5명 발생하였습니다.</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2명</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="notice-btm">
+                  <!-- 2021.12.24 : mod : 클래스 값 변경 -->
+                  <button type="button" class="btn btn-point-white-2">전체삭제</button>
+                  <!-- //2021.12.24 : mod : 클래스 값 변경 -->
+                  <a href="#" class="btn-setting">알림설정</a>
+                </div>
+              </div>
+            </div>
+            <!-- 2021.12.10 : del : 카운팅 위치 변경
+            <a href="#" class="link-notice">35</a>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- //header -->
+
+      <!-- contents -->
+      <div class="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <ul class="lnb-list">
+            <li class="lnb-item is-active"><a href="#" class="lnb-link">실시간 경보현황</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">집중 관제</a></li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동이관 유보<span class="num">5</span></a>
+            </li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동종료 유보<span class="num">99+</span></a>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">이관 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">종료 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">보호관찰 대시보드</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">미처리 이관 경보</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">경보 처리 결과</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">대상자 요약 정보</a></li>
+            <li class="lnb-item has-2depth is-active">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item is-active"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item has-2depth">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">범죄 이력 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">검찰 사건 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">AI 분석 데이터</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">상황관제</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">사용자 메뉴 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">연계 시스템 관리</a></li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- 공통영역 x -->
+        <div class="contents">
+          <div class="page-head">
+            <div class="page-head__left">
+              <h2 class="page-head__title">사용자메뉴관리</h2>
+            </div>
+            <div class="page-head__right">
+              <p class="page-head__location">
+                <span class="page-head__location__item">HOME</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">AI보호관찰관</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">사용자메뉴관리</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-group grid-layout-row">
+            <div class="grid-layout-col">
+              <div class="grid-layout-col type-tree-width">
+                <div class="grid-layout-auto-contents">
+                  <!-- 트리 메뉴 -->
+                  <div class="grid-con-no-line">
+                    <div class="ui-tree-wrap">
+                      <div class="ui-tree ui-tree--menu">
+                        <div class="ui-tree__doc">
+                          <div class="ui-tree__id-line"></div>
+                          <ul class="ui-tree__list">
+                            <li class="ui-tree__item is-opened">
+                              <div class="ui-tree__block ui-tree__block--directory">
+                                <button type="button" class="ui-tree__link">
+                                  메뉴
+                                  <span class="ui-tree__id">M00000000</span>
+                                </button>
+                              </div>
+                              <div class="ui-tree__layer">
+                                <ul class="ui-tree__list">
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        실시간 경보현황
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        집중 관제
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        자동이관 유보
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        자동종료 유보
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        이관 이력
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        종료 이력
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        보호관찰 대시보드
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        미처리 이관 경보
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        경보 처리 결과
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        대상자 요약 정보
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <!-- DD : 해당 디렉토리면 is-opened 클래스 값 추가 -->
+                                  <li class="ui-tree__item is-opened">
+                                    <div class="ui-tree__block ui-tree__block--directory">
+                                      <button type="button" class="ui-tree__link">
+                                        범죄예방업무
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </button>
+                                    </div>
+                                    <div class="ui-tree__layer">
+                                      <ul class="ui-tree__list">
+                                        <!-- DD : 해당 화면이면 is-active 클래스 값 추가 -->
+                                        <li class="ui-tree__item is-active">
+                                          <div class="ui-tree__block">
+                                            <a href="" class="ui-tree__link">
+                                              상황근무 일지
+                                              <span class="ui-tree__id">M00000000</span>
+                                            </a>
+                                          </div>
+                                        </li>
+                                        <li class="ui-tree__item">
+                                          <div class="ui-tree__block">
+                                            <a href="" class="ui-tree__link">
+                                              주간 업무수행 일지
+                                              <span class="ui-tree__id">M00000000</span>
+                                            </a>
+                                          </div>
+                                        </li>
+                                        <li class="ui-tree__item">
+                                          <div class="ui-tree__block">
+                                            <a href="" class="ui-tree__link">
+                                              야간 업무수행 일지
+                                              <span class="ui-tree__id">M00000000</span>
+                                            </a>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        범죄 이력 관리
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        검찰 사건 관리
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        AI 분석 데이터
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        상황관제
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        사용자 메뉴 관리
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                  <li class="ui-tree__item">
+                                    <div class="ui-tree__block">
+                                      <a href="" class="ui-tree__link">
+                                        연계 시스템 관리
+                                        <span class="ui-tree__id">M00000000</span>
+                                      </a>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="ui-tree-wrap__foot">
+                        <button type="button" class="btn btn-point">하위메뉴 생성</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //트리 메뉴 -->
+
+                  <!-- 상세 -->
+                  <div class="grid-con-no-line">
+                    <div class="list-top-info">
+                      <div class="btns-box fixed">
+                        <button type="button" class="btn btn-point-white-2">취소</button>
+                        <button type="button" class="btn btn-point">저장</button>
+                      </div>
+                    </div>
+
+                    <div class="basic-section">
+                      <div class="tbl-list align-left type-slim-input-margin">
+                        <table>
+                          <colgroup>
+                            <col style="width: 100px" />
+                            <col />
+                            <col style="width: 100px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th>메뉴 ID</th>
+                              <td>M8900010</td>
+                              <th class="type-no-left-line">상위메뉴 ID</th>
+                              <td>M9000000</td>
+                            </tr>
+                            <tr>
+                              <th>메뉴명</th>
+                              <td colspan="3">
+                                <div class="item-input">
+                                  <input type="text" value="피부착자관리" />
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>페이지 경로</th>
+                              <td colspan="3">
+                                <div class="item-input">
+                                  <input type="text" value="/PU_viw.html" />
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>메뉴구분여부</th>
+                              <td>
+                                <div class="item-select">
+                                  <select name="" id="">
+                                    <option value="">Y</option>
+                                    <option value="">N</option>
+                                  </select>
+                                </div>
+                              </td>
+                              <th class="type-no-left-line">하위메뉴여부</th>
+                              <td>
+                                <div class="item-select">
+                                  <select name="" id="">
+                                    <option value="">Y</option>
+                                    <option value="">N</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>메뉴설명</th>
+                              <td colspan="3">
+                                <div class="item-input">
+                                  <textarea>
+기존 피부착자관리
+Cnt:: ClientMgnt100.xfdl
+Ajs:: AIProb999WebUrlForm.xfdl
+기존 피부착자관리
+Cnt:: ClientMgnt100.xfdl
+Ajs:: AIProb999WebUrlForm.xfdl
+                                  </textarea>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //상세 -->
+                </div>
+              </div>
+
+              <div class="grid-margin"></div>
+
+              <div class="grid-layout-col">
+                <div class="grid-layout-auto-contents ui-tree-contents">
+                  <!-- 관리 -->
+                  <div class="grid-con-no-line">
+                    <div class="list-search-box has-btn type-basic type-list-page type-one-btn">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="bullet" colspan="4">
+                              <div class="form-group">
+                                <div class="item-radio width-auto">
+                                  <input type="radio" name="search1" id="search1-1" checked />
+                                  <label for="search1-1"><span class="radio-ico"></span>메뉴 ID</label>
+                                </div>
+                                <span class="item-margin-2"></span>
+                                <div class="item-radio width-auto">
+                                  <input type="radio" name="search1" id="search1-2" checked />
+                                  <label for="search1-2"><span class="radio-ico"></span>메뉴명</label>
+                                </div>
+                                <span class="item-margin-2"></span>
+                                <div class="item-input">
+                                  <input type="text" />
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btns-box">
+                        <button type="button" class="btn btn-primary btn-ico-search-2">조회</button>
+                      </div>
+                    </div>
+
+                    <div class="list-top-info">
+                      <div class="btns-box fixed">
+                        <button type="button" class="btn btn-point">저장</button>
+                      </div>
+                    </div>
+
+                    <div class="ui-board-table ui-board-table--14-rows" id="boardGrid"></div>
+                  </div>
+                  <!-- //관리 -->
+
+                  <!-- 하단 트리 -->
+                  <div class="grid-con-no-line">
+                    <div class="js-tab-menu">
+                      <div class="slide-tab">
+                        <div class="slide-tab__scroller scroll-x">
+                          <ul class="tab-menu">
+                            <li class="tab-item is-active">
+                              <button type="button" class="tab-item-btn" data-tab="tab1">시스템관리자</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab2">본부</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab3">유지보수팀</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab4">중앙관제센터</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab5">전자장치담당자</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab6">전자장치담당자2</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab7">무도실무관</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab8">센터장</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab9">전담보호관찰관</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab10">기관담당자</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab11">리포트담당자</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab12">기관아이디</button>
+                            </li>
+                            <li class="tab-item">
+                              <button type="button" class="tab-item-btn" data-tab="tab13">전담경보팀</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- 시스템관리자 -->
+                      <div data-tab-content="tab1">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div class="ui-tree__doc">
+                            <div class="ui-tree__id-line"></div>
+                            <ul class="ui-tree__list">
+                              <li class="ui-tree__item is-opened">
+                                <div class="ui-tree__block ui-tree__block--directory">
+                                  <button type="button" class="ui-tree__link">
+                                    메뉴
+                                    <span class="ui-tree__id">M00000000</span>
+                                  </button>
+                                </div>
+                                <div class="ui-tree__layer">
+                                  <ul class="ui-tree__list">
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          실시간 경보현황
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          집중 관제
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          자동이관 유보
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          자동종료 유보
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          이관 이력
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          종료 이력
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          보호관찰 대시보드
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          미처리 이관 경보
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          경보 처리 결과
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          대상자 요약 정보
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <!-- DD : 해당 디렉토리면 is-opened 클래스 값 추가 -->
+                                    <li class="ui-tree__item is-opened">
+                                      <div class="ui-tree__block ui-tree__block--directory">
+                                        <button type="button" class="ui-tree__link">
+                                          범죄예방업무
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </button>
+                                      </div>
+                                      <div class="ui-tree__layer">
+                                        <ul class="ui-tree__list">
+                                          <!-- DD : 해당 화면이면 is-active 클래스 값 추가 -->
+                                          <li class="ui-tree__item is-active">
+                                            <div class="ui-tree__block">
+                                              <a href="" class="ui-tree__link">
+                                                상황근무 일지
+                                                <span class="ui-tree__id">M00000000</span>
+                                              </a>
+                                            </div>
+                                          </li>
+                                          <li class="ui-tree__item">
+                                            <div class="ui-tree__block">
+                                              <a href="" class="ui-tree__link">
+                                                주간 업무수행 일지
+                                                <span class="ui-tree__id">M00000000</span>
+                                              </a>
+                                            </div>
+                                          </li>
+                                          <li class="ui-tree__item">
+                                            <div class="ui-tree__block">
+                                              <a href="" class="ui-tree__link">
+                                                야간 업무수행 일지
+                                                <span class="ui-tree__id">M00000000</span>
+                                              </a>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          범죄 이력 관리
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          검찰 사건 관리
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          AI 분석 데이터
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          상황관제
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          사용자 메뉴 관리
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="ui-tree__item">
+                                      <div class="ui-tree__block">
+                                        <a href="" class="ui-tree__link">
+                                          연계 시스템 관리
+                                          <span class="ui-tree__id">M00000000</span>
+                                        </a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //시스템관리자 -->
+
+                      <!-- 본부 -->
+                      <div data-tab-content="tab2">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>본부</div>
+                        </div>
+                      </div>
+                      <!-- //본부 -->
+
+                      <!-- 유지보수팀 -->
+                      <div data-tab-content="tab3">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>유지보수팀</div>
+                        </div>
+                      </div>
+                      <!-- //유지보수팀 -->
+
+                      <!-- 중앙관제센터 -->
+                      <div data-tab-content="tab4">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>중앙관제센터</div>
+                        </div>
+                      </div>
+                      <!-- //중앙관제센터 -->
+
+                      <!-- 전자장치담당자 -->
+                      <div data-tab-content="tab5">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>전자장치담당자</div>
+                        </div>
+                      </div>
+                      <!-- //전자장치담당자 -->
+
+                      <!-- 전자장치담당자2 -->
+                      <div data-tab-content="tab6">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>전자장치담당자2</div>
+                        </div>
+                      </div>
+                      <!-- //전자장치담당자2 -->
+
+                      <!-- 무도실무관 -->
+                      <div data-tab-content="tab7">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>무도실무관</div>
+                        </div>
+                      </div>
+                      <!-- //무도실무관 -->
+
+                      <!-- 센터장 -->
+                      <div data-tab-content="tab8">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>센터장</div>
+                        </div>
+                      </div>
+                      <!-- //센터장 -->
+
+                      <!-- 전담보호관찰관 -->
+                      <div data-tab-content="tab9">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>전담보호관찰관</div>
+                        </div>
+                      </div>
+                      <!-- //전담보호관찰관 -->
+
+                      <!-- 기관담당자 -->
+                      <div data-tab-content="tab10">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>기관담당자</div>
+                        </div>
+                      </div>
+                      <!-- //기관담당자 -->
+
+                      <!-- 리포트담당자 -->
+                      <div data-tab-content="tab11">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>리포트담당자</div>
+                        </div>
+                      </div>
+                      <!-- //리포트담당자 -->
+
+                      <!-- 기관아이디 -->
+                      <div data-tab-content="tab12">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>기관아이디</div>
+                        </div>
+                      </div>
+                      <!-- //기관아이디 -->
+
+                      <!-- 전담경보팀 -->
+                      <div data-tab-content="tab13">
+                        <div class="ui-tree ui-tree--menu ui-tree--bottom-tab">
+                          <div>전담경보팀</div>
+                        </div>
+                      </div>
+                      <!-- //전담경보팀 -->
+                    </div>
+                  </div>
+                  <!-- //하단 트리 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //공통영역 x -->
+      </div>
+      <!-- //contents -->
+    </div>
+
+    <!-- SBGrid -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <!-- //SBGrid -->
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/ui.js"></script>
+    <!-- SBGrid -->
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+        {
+          cell_1: '메뉴 ID',
+          cell_2: '메뉴명',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['메뉴 ID'],
+          ref: 'cell_1',
+          width: '600px',
+        },
+        {
+          caption: ['메뉴명'],
+          ref: 'cell_2',
+          width: '695px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridLegacyProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid').data('grid', datagrid);
+          }
+        );
+      });
+    </script>
+    <!-- //SBGrid -->
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">경보알림</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="setting-board setting-board--popup setting-board--white">
+            <div class="setting-board__info setting-board__info--no-margin">
+              <dl class="setting-board__info-item">
+                <dt class="setting-board__info-key">경보명</dt>
+                <dd class="setting-board__info-val">부착 장치 훼손</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <div class="profile">
+            <div class="profile__photo">
+              <div class="profile-image-wrap">
+                <!-- DD : 이미지 에러시 .profile-image 에 is-error 클래스값 추가 -->
+                <a href="" class="profile-image">
+                  <img src="./assets/images/_dummy/profile .png" alt="" class="profile-image__img" onerror="this.parentNode.className += ' is-error';" />
+                </a>
+              </div>
+
+              <div class="watch-status watch-status--red">집중I급</div>
+              <!--
+              <div class="watch-status watch-status--yellow">집중II급</div>
+              <div class="watch-status watch-status--blue">집중III급</div>
+              <div class="watch-status watch-status--purple">집중IV급</div>
+              <div class="watch-status watch-status--red">집중</div>
+              <div class="watch-status watch-status--yellow">전담관리</div>
+              <div class="watch-status watch-status--blue">임시해제</div>
+              -->
+            </div>
+            <div class="profile__info">
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width-small" />
+                    <col />
+                    <col class="board-detail-table__title-width-small" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>피부착자</th>
+                      <td colspan="3">홍길동</td>
+                    </tr>
+                    <tr>
+                      <th>주민번호</th>
+                      <td>111111-111111</td>
+                      <th>경보발생일시</th>
+                      <td>2021-12-03 12:03:57</td>
+                    </tr>
+                    <tr>
+                      <th>사건번호</th>
+                      <td>11-2222-3333-44444</td>
+                      <th>이관일시</th>
+                      <td>2021-12-03 12:03:57</td>
+                    </tr>
+                    <tr>
+                      <th>보호관찰소</th>
+                      <td>서울 보호관찰소</td>
+                      <th>담당관/자</th>
+                      <td>한상경(5)/ 이현준(7)</td>
+                    </tr>
+                    <tr>
+                      <th>위치</th>
+                      <td colspan="3">경기도 평택시 XXX</td>
+                    </tr>
+                    <tr>
+                      <th>소견</th>
+                      <td colspan="3">준수</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <section class="board-detail-wrap">
+            <div class="board-detail-head">
+              <h3 class="board-detail-head__title">조치내용</h3>
+            </div>
+
+            <!-- Case : 데이터 없을 때 -->
+            <div class="empty-data input-height-small-medium">
+              <div class="header-dropdown__empty">
+                <p class="header-dropdown__empty-text header-dropdown__empty-text--no-icon">데이터가 없습니다.</p>
+              </div>
+            </div>
+            <!-- //Case : 데이터 없을 때 -->
+
+            <!-- Case : 데이터 있을 때 -->
+            <div class="info-cell input-height-small-medium">
+              <div class="board-detail-contents">
+                <div class="basic-text">조치내용이 출력됩니다.</div>
+              </div>
+            </div>
+            <!-- //Case : 데이터 있을 때 -->
+          </section>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary">더 이상 띄우지 않기</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button">닫기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

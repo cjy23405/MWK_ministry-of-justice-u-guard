@@ -1,0 +1,10 @@
+<svg id="ic_cancle_20" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_13785" data-name="사각형 13785" style="fill:transparent" d="M0 0h20v20H0z"/>
+    <path id="선_343" data-name="선 343" class="cls-2" transform="rotate(45 -3.397 6.996)" d="M0 0h17.11"/>
+    <path id="선_344" data-name="선 344" class="cls-2" transform="rotate(45 2.652 21.598)" d="M0 0v17.11"/>
+</svg>

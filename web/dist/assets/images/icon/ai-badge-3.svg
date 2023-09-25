@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_psychosis" transform="translate(-553 -241)">
+        <path id="사각형_17640" data-name="사각형 17640" transform="translate(553 241)" style="fill:transparent" d="M0 0h50v50H0z"/>
+        <g id="그룹_12024" data-name="그룹 12024" transform="translate(98)">
+            <g id="합치기_144" data-name="합치기 144" style="fill:none">
+                <path class="cls-5" d="M4.036 9a.5.5 0 0 1-.5-.5V5.464H.5a.5.5 0 0 1-.5-.5v-.928a.5.5 0 0 1 .5-.5h3.036V.5a.5.5 0 0 1 .5-.5h.929a.5.5 0 0 1 .5.5v3.035H8.5a.5.5 0 0 1 .5.5v.929a.5.5 0 0 1-.5.5H5.465V8.5a.5.5 0 0 1-.5.5z" transform="translate(477 258)"/>
+                <path d="M4.964 9a.5.5 0 0 0 .5-.5V5.464H8.5a.5.5 0 0 0 .5-.5v-.928a.5.5 0 0 0-.5-.5H5.465V.5a.5.5 0 0 0-.5-.5h-.93a.5.5 0 0 0-.499.5v3.035H.5a.5.5 0 0 0-.5.5v.93a.5.5 0 0 0 .5.499h3.036V8.5a.5.5 0 0 0 .5.5h.928m0 1.5h-.928c-1.103 0-2-.897-2-2V6.964H.5c-1.103 0-2-.897-2-2v-.928c0-1.103.897-2 2-2h1.536V.5c0-1.103.897-2 2-2h.928c1.103 0 2 .897 2 2v1.535H8.5c1.103 0 2 .898 2 2v.93c0 1.102-.897 1.999-2 1.999H6.965V8.5c0 1.103-.898 2-2 2z" style="fill:#111;stroke:none" transform="translate(477 258)"/>
+            </g>
+            <path id="패스_12044" data-name="패스 12044" d="M1487.658 525.711s3.894-5.2 12.827-2.108c0 0 8.628 3.163 3.971 13.479a15.649 15.649 0 0 1-1.375 2.409 7.536 7.536 0 0 0-1.068 5.2l.059 2.275a.649.649 0 0 1-.654.662h-9.361a.529.529 0 0 1-.531-.5l-.128-2.514h-4.809s-1.68 0-.993-1.883a2.788 2.788 0 0 0-.323-1.751 1.469 1.469 0 0 1-.3-.982l.242-2.337s-2.062-.577-1.146-1.932l2.062-3.163.076-3.427a7.736 7.736 0 0 1 1.451-3.428z" transform="translate(-1014.335 -269.623)" style="stroke:#110c0c;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1.5px;fill:none"/>
+        </g>
+    </g>
+</svg>

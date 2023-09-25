@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">면담확인사항</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body js-ui-tab-panel">
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">상황</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block input-width-small">
+                        <select class="ui-select" title="상황">
+                          <option value="">전체</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">이행일시</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block ui-input-block--date input-width-date">
+                        <input type="text" class="ui-input js-datepicker" title="이행일시" value="2021-12-10" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="fill-tab">
+            <ul class="fill-tab__list">
+              <li class="fill-tab__item">
+                <a href="" class="fill-tab__link" data-tab-open="tab1">요약</a>
+              </li>
+              <li class="fill-tab__item">
+                <a href="" class="fill-tab__link" data-tab-open="tab2">상세</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 요약 -->
+          <div class="fill-tab-panel" data-tab="tab1">
+            <div class="setting-board setting-board--popup">
+              <div class="setting-board__info setting-board__info--align-top">
+                <div class="setting-board__info-row">
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">일탈 탐지 경보</dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">24시간 재택 측위</dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">부정장소 진입 경보</dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                </div>
+                <div class="setting-board__info-row">
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">유흥지체류여부경보</dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">
+                      생활패턴 이탈 후<br />
+                      1시간 이상 배회
+                    </dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                </div>
+                <div class="setting-board__info-row">
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">이전번죄유사상황경보</dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                  <dl class="setting-board__info-item">
+                    <dt class="setting-board__info-key">
+                      1시간 이상 방향성없이<br />
+                      차량으로 이동
+                    </dt>
+                    <dd class="setting-board__info-val"><span class="font-weight-medium color-blue">0</span>회</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="survey-hr survey-hr--height-20"></div>
+
+            <div class="board-detail-table board-detail-table--tight board-detail-table--vertical-line board-detail-table--thead-line">
+              <table>
+                <colgroup>
+                  <col class="board-detail-table__title-width" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>상황명</th>
+                    <th>00</th>
+                    <th>01</th>
+                    <th>02</th>
+                    <th>03</th>
+                    <th>04</th>
+                    <th>05</th>
+                    <th>06</th>
+                    <th>07</th>
+                    <th>08</th>
+                    <th>09</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                    <th>16</th>
+                    <th>17</th>
+                    <th>18</th>
+                    <th>19</th>
+                    <th>20</th>
+                    <th>21</th>
+                    <th>22</th>
+                    <th>23</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>일탈 탐지 경보</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>유흥지체류여부경보</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>이전범죄유사상황경보</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>24시간 재택 측위</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>생활패턴 이탈 후<br />1시간 이상 배회</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>1시간 이상 방향성없이<br />차량으로 이동</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>부정장소 진입 경보</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //요약 -->
+
+          <!-- 상세 -->
+          <div class="fill-tab-panel" data-tab="tab2">
+            <div class="ui-board-table ui-board-table--8-rows" id="boardGrid"></div>
+          </div>
+          <!-- //상세 -->
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__left">
+            <div class="ui-buttons ui-buttons--left">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <a href="" class="ui-basic-button ui-basic-button--secondary">다운로드</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '1',
+          cell_1: '$발생일시$',
+          cell_2: '$상황명$',
+          cell_3: '비고가 출력됩니다.',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['발생일시'],
+          ref: 'cell_1',
+          width: '300px',
+        },
+        {
+          caption: ['상황명'],
+          ref: 'cell_2',
+          width: '300px',
+        },
+        {
+          caption: ['비고'],
+          ref: 'cell_3',
+          width: '475px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid').data('grid', datagrid);
+          }
+        );
+
+        // 탭 변경 시 그리드 리사이즈
+        $('.window-popup__body.js-ui-tab-panel').on('uiTabPanelChange', function () {
+          var $this = $(this);
+          var $activePanel = $this.find('.fill-tab-panel.js-tabpanel-opened');
+          var grid = $activePanel.find('.ui-board-table').data('grid');
+
+          if (grid) {
+            grid.resize();
+          }
+        });
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">전자장치 사진 재등록 대상</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="notice-box notice-box--top">
+            <p class="notice-box__item">전자장치 사진 등록 후 3개월이 지난 대상자 명단입니다.</p>
+            <p class="notice-box__item">담당자 분들께서는 전자장치 사진을 업데이트 해주시기 바랍니다.</p>
+          </div>
+
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">피부착자</dt>
+                    <dd class="search-bar__val">
+                      <div class="header-search header-search--filter input-width-regular">
+                        <div class="ui-input-block header-search__input">
+                          <input type="text" class="ui-input" title="피부착자" />
+                        </div>
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '13',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '12',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '11',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '10',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '9',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '8',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '7',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '6',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '5',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '4',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '3',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '2',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+        {
+          id: '1',
+          cell_1: '고일석',
+          cell_2: '11-2222-3333-55555',
+          cell_3: '2G',
+          cell_4: '2021-12-03',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['피부착자'],
+          ref: 'cell_1',
+          width: '100px',
+        },
+        {
+          caption: ['사건번호'],
+          ref: 'cell_2',
+          width: '255px',
+        },
+        {
+          caption: ['장치타입'],
+          ref: 'cell_3',
+          width: '200px',
+        },
+        {
+          caption: ['사진등록일'],
+          ref: 'cell_4',
+          width: '200px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

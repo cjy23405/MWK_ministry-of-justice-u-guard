@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">(2021-09-03) 행선지 이탈 이력</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.emptyrecords = '데이터가 없습니다.';
+        SBGridProperties.columns = [
+          {
+            caption: ['측정 시간'],
+            ref: 'cell_1',
+            width: '180px',
+          },
+          {
+            caption: ['측정방법'],
+            ref: 'cell_2',
+            width: '180px',
+          },
+          {
+            caption: ['주소'],
+            ref: 'cell_3',
+            width: '440px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<svg id="ic_delete" xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #4951a5;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <rect id="사각형_6645" data-name="사각형 6645" class="cls-1" width="20" height="24"/>
+  <line id="선_76" data-name="선 76" class="cls-2" x2="8.5" transform="translate(4 4.5)"/>
+  <g id="그룹_2644" data-name="그룹 2644" transform="translate(9.677 12) rotate(90)">
+    <line id="선_48" data-name="선 48" class="cls-2" x2="3.177" y2="3.177"/>
+    <line id="선_49" data-name="선 49" class="cls-2" x1="3.177" y2="3.177"/>
+  </g>
+  <g id="사각형_7232" data-name="사각형 7232" class="cls-3" transform="translate(2 6.5)">
+    <rect class="cls-4" width="12" height="14" rx="1"/>
+    <rect class="cls-1" x="0.75" y="0.75" width="10.5" height="12.5" rx="0.25"/>
+  </g>
+</svg>

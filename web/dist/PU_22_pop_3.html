@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">주소 검색</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup search-bar--fix-width-key">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <div class="search-bar__item">
+                    <div class="ui-check-list">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="filterType" id="filterType1" data-checkbox-tab="filterTab1" checked />
+                            <label for="filterType1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">도로명주소</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="filterType" id="filterType2" data-checkbox-tab="filterTab2" />
+                            <label for="filterType2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">지번주소</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 도로명주소 -->
+                <div class="search-bar__row-group" data-checkbox-tab-panel="filterTab1">
+                  <div class="search-bar__row">
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">광역시도</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="광역시도">
+                            <option value="-1" disabled selected>광역시도</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">시군구</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="시군구">
+                            <option value="-1" disabled selected>시군구</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="search-bar__row">
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">도로검색</dt>
+                      <dd class="search-bar__val">
+                        <div class="header-search header-search--filter">
+                          <div class="ui-input-block header-search__input">
+                            <input type="text" class="ui-input" title="도로검색" />
+                          </div>
+                          <button type="button" class="ui-button header-search__submit">
+                            <span class="for-a11y">검색</span>
+                          </button>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">도로명</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="도로명">
+                            <option value="-1" disabled selected>도로검색 후 선택하세요</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="search-bar__row">
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">건물번지</dt>
+                      <dd class="search-bar__val">
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="건물번지 1" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="건물번지 2" />
+                            </div>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- //도로명주소 -->
+
+                <!-- 지번주소 -->
+                <div class="search-bar__row-group" data-checkbox-tab-panel="filterTab2">
+                  <div class="search-bar__row">
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">광역시도</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="광역시도">
+                            <option value="-1" disabled selected>광역시도</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">시군구</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="시군구">
+                            <option value="-1" disabled selected>시군구</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="search-bar__row">
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">읍면동</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="읍면동">
+                            <option value="-1" disabled selected>읍면동</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="search-bar__item search-bar__item--bipartite">
+                      <dt class="search-bar__key">번지</dt>
+                      <dd class="search-bar__val">
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="번지 1" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="번지 2" />
+                            </div>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="search-bar__row"><div class="search-bar__item"></div></div>
+                </div>
+                <!-- //지번주소 -->
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">닫기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '지번주소',
+          cell_2: '도로명주소',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['번호'],
+            ref: 'id',
+            width: '65px',
+            sortable: false,
+          },
+          {
+            caption: ['지번주소'],
+            ref: 'cell_1',
+            width: '380px',
+          },
+          {
+            caption: ['도로명주소'],
+            ref: 'cell_2',
+            width: '365px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

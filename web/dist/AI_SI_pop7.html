@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">뱃지 관리</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table board-detail-table--vertical-line">
+              <table>
+                <colgroup>
+                  <col style="width: 190px" />
+                  <col style="width: 160px" />
+                  <col style="width: 200px" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>뱃지 유형</th>
+                    <th class="align-center">이미지</th>
+                    <th>설정</th>
+                    <th>설정 안내</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>출국허가</td>
+                    <td>
+                      <div class="ai-badge ai-badge--1"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting1-1" disabled />
+                              <label for="setting1-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting1-2" disabled />
+                              <label for="setting1-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>직접 설정해 주시기 바랍니다.</td>
+                  </tr>
+                  <tr>
+                    <td>재범</td>
+                    <td>
+                      <div class="ai-badge ai-badge--2"></div>
+                    </td>
+                    <td></td>
+                    <td>자동으로 설정됩니다.</td>
+                  </tr>
+                  <tr>
+                    <td>정신병력</td>
+                    <td>
+                      <div class="ai-badge ai-badge--3"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting3-1" disabled />
+                              <label for="setting3-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting3-2" disabled />
+                              <label for="setting3-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>청구전조사서 정보를 토대로 추천하며, 수정하실 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>약물의존도</td>
+                    <td>
+                      <div class="ai-badge ai-badge--4"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting4-1" disabled />
+                              <label for="setting4-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting4-2" disabled />
+                              <label for="setting4-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>청구전조사서 정보를 토대로 추천하며, 수정하실 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>훼손전력</td>
+                    <td>
+                      <div class="ai-badge ai-badge--5"></div>
+                    </td>
+                    <td></td>
+                    <td>자동으로 설정됩니다.</td>
+                  </tr>
+                  <tr>
+                    <td>알코올 의존도</td>
+                    <td>
+                      <div class="ai-badge ai-badge--6"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting6-1" disabled />
+                              <label for="setting6-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting6-2" disabled />
+                              <label for="setting6-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>청구전조사서 정보를 토대로 추천하며, 수정하실 수 있습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>폭력성향</td>
+                    <td>
+                      <div class="ai-badge ai-badge--7"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting7-1" disabled />
+                              <label for="setting7-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting7-2" disabled />
+                              <label for="setting7-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>직접 설정해 주시기 바랍니다.</td>
+                  </tr>
+                  <tr>
+                    <td>주변부착미인지</td>
+                    <td>
+                      <div class="ai-badge ai-badge--8"></div>
+                    </td>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting8-1" disabled />
+                              <label for="setting8-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">미해당</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" id="setting8-2" disabled />
+                              <label for="setting8-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">해당</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>직접 설정해 주시기 바랍니다.</td>
+                  </tr>
+                  <tr>
+                    <td>소아성애 의심</td>
+                    <td>
+                      <div class="ai-badge ai-badge--9"></div>
+                    </td>
+                    <td></td>
+                    <td>자동으로 설정됩니다.</td>
+                  </tr>
+                  <tr>
+                    <td>13세미만 피해자</td>
+                    <td>
+                      <div class="ai-badge ai-badge--10"></div>
+                    </td>
+                    <td></td>
+                    <td>자동으로 설정됩니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list"></ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">취소</button>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

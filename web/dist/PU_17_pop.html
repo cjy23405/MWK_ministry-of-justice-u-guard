@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">추가 정보 수정</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>부착부위</th>
+                    <td>
+                      <div class="ui-check-list ui-check-list--with-input">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter1" id="filter1-1" checked />
+                              <label for="filter1-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">발목</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter1" id="filter1-2" />
+                              <label for="filter1-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">손목</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>재택설치가능여부</th>
+                    <td>
+                      <div class="ui-check-list ui-check-list--with-input">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter2" id="filter2-1" checked />
+                              <label for="filter2-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">유</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter2" id="filter2-2" />
+                              <label for="filter2-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">무</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>피부트러블</th>
+                    <td>
+                      <div class="ui-check-list ui-check-list--with-input">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter3" id="filter3-1" />
+                              <label for="filter3-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">유</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="filter3" id="filter3-2" checked />
+                              <label for="filter3-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">무</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>인상착의 등</th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-small-medium" title="내용" data-text-count="#discriptionCount1">
+-키: 165cm
+-몸무게: 68kg
+-문신모양/위치: 없음
+-정신병력: 없음
+-범행시간대: 01:30 / 05:30
+-피해자연령: 18세(여, 아는 사람) / 17세(여, 모르는 사람)
+-그 밖에 외형적 특징: 수전증 있음
+                          </textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="basic-text color-gray align-right">현재 <span id="discriptionCount1">0</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>특이사항</th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-small-medium" title="내용" data-text-count="#discriptionCount2">
+<A팀>
+
+*부착장치: 2020. 2. 7. (ID:491316) / 충전팩 903560
+*차량번호:
+- 순용도: 양호(장치 불만 등 민원제기 없음)
+- 직업:  청소 용역(빌딩)
+- 가족관계: 친부(고일석, 010-6560-1112), 친모 관계 원만
+ > 공개 고지 명령 때문에 담안선교회에서 생활하고 있고, 매주 금요일 부모집 방문
+                          </textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="basic-text color-gray align-right">현재 <span id="discriptionCount2">0</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="ko" id="ie9"><![endif]-->
+<!--[if !IE]>-->
+<html lang="ko">
+  <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AI 기반 전자감독 서비스</title>
+    <!-- SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <!-- //SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery.mCustomScrollbar.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/common.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <div class="btns-box">
+          <button type="button" class="btn-refresh"><img src="./assets/legacy/ai/images/ico_reload.png" alt="새로고침" /></button>
+        </div>
+        <div class="info-list">
+          <div class="info-list-item">
+            <span class="item">보호관찰소</span>
+            <div class="value">서울남부</div>
+          </div>
+          <div class="info-list-item no-wrap">
+            <span class="item">보호관찰소</span>
+            <div class="item-select">
+              <select name="" id="">
+                <option value="" selected>서울남부</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="aside">
+          <div class="ai">
+            <!-- off -->
+            <div class="tooltip-wrap status-off">
+              <!-- 활성화 is-active 클래스 추가 -->
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_off.png" alt="OFF AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 중단되었습니다.</p>
+              </div>
+            </div>
+            <!-- //off -->
+            <!-- on -->
+            <div class="tooltip-wrap status-on is-active">
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_on.png" alt="ON AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 동작중입니다.</p>
+              </div>
+            </div>
+            <!-- //on -->
+          </div>
+          <div class="item-input-has-btn">
+            <div class="item-input">
+              <input type="text" placeholder="피부착자 검색" />
+            </div>
+            <button type="button" class="btn btn-primary">조회</button>
+          </div>
+          <div class="notice">
+            <div class="notice-group">
+              <button type="button" class="btn-notice">
+                <img src="./assets/legacy/ai/images/ico_alarm.png" alt="알림" />
+                <!-- 2021.12.10 : add : 카운팅 위치 변경 -->
+                <span class="btn-notice-count">35</span>
+                <!-- //2021.12.10 : add : 카운팅 위치 변경 -->
+              </button>
+              <div class="notice-center">
+                <div class="notice-top">
+                  <span class="title">알림센터</span>
+                  <div class="btns-box fixed">
+                    <a href="#" class="btn-expand"><img src="./assets/legacy/ai/images/ico_unfold.png" alt="확대" /></a>
+                    <button type="button" class="btn-close"><img src="./assets/legacy/ai/images/ico_18px_cancle.png" alt="알림센터 닫기" /></button>
+                  </div>
+                </div>
+                <div class="notice-md">
+                  <div class="notice-list-box scroll-y">
+                    <p class="notice-empty">데이터가 없습니다.</p>
+                  </div>
+                </div>
+                <div class="notice-btm">
+                  <a href="#" class="btn-setting">알림설정</a>
+                </div>
+              </div>
+            </div>
+            <!-- 2021.12.10 : del : 카운팅 위치 변경
+            <a href="#" class="link-notice">35</a>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- //header -->
+
+      <!-- contents -->
+      <div class="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <ul class="lnb-list">
+            <li class="lnb-item is-active"><a href="#" class="lnb-link">실시간 경보현황</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">집중 관제</a></li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동이관 유보<span class="num">5</span></a>
+            </li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동종료 유보<span class="num">99+</span></a>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">이관 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">종료 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">대상자 요약 정보</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">상황관제</a></li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- 공통영역 x -->
+        <div class="contents">contents</div>
+        <!-- //공통영역 x -->
+      </div>
+      <!-- //contents -->
+    </div>
+
+    <!-- SBGrid -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <!-- //SBGrid -->
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form>
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">청구전 조사서 결과</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <section class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>주민번호</th>
+                      <td>999999-9999999</td>
+                      <th>조사 당시 나이</th>
+                      <td>38</td>
+                    </tr>
+                    <tr>
+                      <th>문서제목</th>
+                      <td>약식청구전 조사서</td>
+                      <th>문서작성일</th>
+                      <td>2021-09-02</td>
+                    </tr>
+                    <tr>
+                      <th>죄명</th>
+                      <td colspan="3">성폭력</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>대인관계정보</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="대인관계정보">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>일탈성적관심여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="일탈성적관심여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>과거성범죄이력</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="과거성범죄이력">
+                            <option value="">이력있음</option>
+                            <option value="">이력없음</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>알코올사용장애검사점수</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="알코올사용장애검사점수">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>정신질환경험있음</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="정신질환경험있음">
+                            <option value="">N</option>
+                            <option value="">Y</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">피해자관계</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="알코올사용장애검사점수">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>인지능력문제여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="인지능력문제여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>성매매경험여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="성매매경험여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>약물경험여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="약물경험여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th><span class="color-red">보호처분이력</span></th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="보호처분이력">
+                            <option value="">없음</option>
+                            <option value="">있음</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>직업정보</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="직업정보">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">가족의관심</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="가족의관심">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>결혼지속여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="결혼지속여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">동거인정보</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="동거인정보">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">범행인정여부</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행인정여부">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <span class="color-red">범행동기</span>
+                          </div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행동기">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">범행날짜</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="범행날짜" value="20070218" />
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">범행시각</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="범행시각" value="06:45" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">
+                            <span class="color-red">범행장소</span>
+                          </div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행장소">
+                            <option value="">여가시설</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        <div class="form-flex">
+                          <div class="form-flex-cell form-flex-cell--flexible">범행공범여부</div>
+                          <div class="form-flex-cell">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">보기</a>
+                          </div>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행공범여부">
+                            <option value="">공범없음</option>
+                            <option value="">공범있음</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span class="color-red">범행음주여부</span></th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행음주여부">
+                            <option value="">음주범행아님</option>
+                            <option value="">음주범행맞음</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th><span class="color-red">범행도구</span></th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범행도구">
+                            <option value="">도구사용안함</option>
+                            <option value="">도구사용함</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>피해자장애정보</th>
+                      <td colspan="3">
+                        <div class="ui-select-block input-width-166">
+                          <select class="ui-select" title="피해자장애정보">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>KSORAS</th>
+                      <td>총점 : 13점</td>
+                      <th>PCLR</th>
+                      <td>총점 : 13점</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">KSORAS보기</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">PCLR보기</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

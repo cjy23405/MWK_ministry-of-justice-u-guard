@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">범죄이력 관리</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title"><span class="color-blue">사건정보</span></h3>
+              </div>
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>
+                        피부착자명<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td>김6532</td>
+                      <th>주민등록번호</th>
+                      <td>AAGc/4-4KNsbe0</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        출처구분<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td colspan="3">
+                        <div class="ui-select-block input-width-190">
+                          <select class="ui-select" title="출처구분">
+                            <option value="">이력있음</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>부착 본 건 설정</th>
+                      <td colspan="3">
+                        <div class="form-row">
+                          <div class="ui-select-block input-width-190">
+                            <select class="ui-select" title="부착 본 건 설정">
+                              <option value="">이력있음</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <p class="basic-text color-gray">
+                            범죄수법 분석표 도출을 위한 정보입니다. 이 사건이 부착 본 건일 경우에만 사건번호를 선택해 주세요.<br />
+                            다른 사건정보에서 부착 본 건으로 지정한 사건번호는 선택할 수 없습니다.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>죄명</th>
+                      <td colspan="3">
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="죄명" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>처분 사항</th>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <th>사범</th>
+                      <td colspan="3">
+                        <div class="ui-select-block input-width-190">
+                          <select class="ui-select" title="사범">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        범죄 일시<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td colspan="3">
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker" title="범죄 일시" value="2021-12-10" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="시">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">시</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="분">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">분</div>
+                          <div class="form-flex-cell form-flex-cell--date-medium">
+                            <div class="ui-select-block input-width-date-select">
+                              <select class="ui-select" title="초">
+                                <option value="">00</option>
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                                <option value="">31</option>
+                                <option value="">32</option>
+                                <option value="">33</option>
+                                <option value="">34</option>
+                                <option value="">35</option>
+                                <option value="">36</option>
+                                <option value="">37</option>
+                                <option value="">38</option>
+                                <option value="">39</option>
+                                <option value="">40</option>
+                                <option value="">41</option>
+                                <option value="">42</option>
+                                <option value="">43</option>
+                                <option value="">44</option>
+                                <option value="">45</option>
+                                <option value="">46</option>
+                                <option value="">47</option>
+                                <option value="">48</option>
+                                <option value="">49</option>
+                                <option value="">50</option>
+                                <option value="">51</option>
+                                <option value="">52</option>
+                                <option value="">53</option>
+                                <option value="">54</option>
+                                <option value="">55</option>
+                                <option value="">56</option>
+                                <option value="">57</option>
+                                <option value="">58</option>
+                                <option value="">59</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">초</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        범죄 당시 연령<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td colspan="3">
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-mini">
+                              <input type="text" class="ui-input" title="범죄 당시 연령" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">세</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">범죄 발생지</th>
+                      <td colspan="3">
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="placeETC" />
+                              <label for="placeETC" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">직접입력</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--medium-large">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-search-2">찾기</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">
+                        <div class="form-row">
+                          <dl class="address-info">
+                            <dt class="address-info__key">도로명</dt>
+                            <dd class="address-info__val">서울 양천구 목동동로 151</dd>
+                          </dl>
+                          <dl class="address-info">
+                            <dt class="address-info__key">지번</dt>
+                            <dd class="address-info__val">서울 양천구 신정동 319-2</dd>
+                          </dl>
+                        </div>
+                        <div class="form-row">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="상세 주소" placeholder="상세 주소를 입력합니다." />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>처분법</th>
+                      <td colspan="3">
+                        <div class="ui-select-block input-width-190">
+                          <select class="ui-select" title="처분법">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th rowspan="2">범죄당시 거주지</th>
+                      <td colspan="3">
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="abodeETC" />
+                              <label for="abodeETC" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">직접입력</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-flex-cell form-flex-cell--medium-large">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-search-2">찾기</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">
+                        <div class="form-row">
+                          <dl class="address-info">
+                            <dt class="address-info__key">도로명</dt>
+                            <dd class="address-info__val">서울 양천구 목동동로 151</dd>
+                          </dl>
+                          <dl class="address-info">
+                            <dt class="address-info__key">지번</dt>
+                            <dd class="address-info__val">서울 양천구 신정동 319-2</dd>
+                          </dl>
+                        </div>
+                        <div class="form-row">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="상세 주소" placeholder="상세 주소를 입력합니다." />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>범죄발생지와 당시 거주지간 거리</th>
+                      <td colspan="3">
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-mini">
+                              <input type="text" class="ui-input" title="범죄발생지와 당시 거주지간 거리" />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">km</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>범죄발생지와 보호관찰소간 거리</th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="form-flex-cell">
+                            <div class="ui-input-block input-width-mini">
+                              <input type="text" class="ui-input" title="범죄발생지와 보호관찰소간 거리" disabled />
+                            </div>
+                          </div>
+                          <div class="form-flex-cell">km</div>
+                        </div>
+                      </td>
+                      <th>범죄당시 분류등급</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="범죄당시 분류등급" disabled>
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>고의성 여부</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="고의성 여부">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th>
+                        입건일<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="입건일" value="2021-12-10" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검찰 송치일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>검찰 송치기관</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="검찰 송치기관">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검찰 사건번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="검찰 사건번호" />
+                        </div>
+                      </td>
+                      <th>검찰 종국처분</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="검찰 종국처분">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검찰 종국처분일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="검찰 종국처분일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>검찰 수용기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="검찰 수용기관" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검찰 입소일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="검찰 입소일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>검찰 수용번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="검찰 수용번호" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>검찰 죄명</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="검찰 죄명" />
+                        </div>
+                      </td>
+                      <th>검찰 사범</th>
+                      <td>
+                        <div class="ui-select-block">
+                          <select class="ui-select" title="검찰 사범">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원1심 처분일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원1심 처분일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>
+                        법원1심 처분기관<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 처분기관" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원1심 처분내용</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 처분내용" />
+                        </div>
+                      </td>
+                      <th>법원1심 사건번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 사건번호" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원1심 수용기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 수용기관" />
+                        </div>
+                      </td>
+                      <th>법원1심 입소일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원1심 입소일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원1심 수용번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 수용번호" />
+                        </div>
+                      </td>
+                      <th>법원1심 비고</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원1심 비고" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원2심 처분일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원2심 처분일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>법원2심 처분기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 처분기관" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원2심 처분내용</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 처분내용" />
+                        </div>
+                      </td>
+                      <th>법원2심 사건번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 사건번호" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원2심 수용기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 수용기관" />
+                        </div>
+                      </td>
+                      <th>법원2심 입소일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원2심 입소일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원2심 수용번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 수용번호" />
+                        </div>
+                      </td>
+                      <th>법원2심 비고</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원2심 비고" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원3심 처분일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원3심 처분일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <th>법원3심 처분기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 처분기관" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원3심 처분내용</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 처분내용" />
+                        </div>
+                      </td>
+                      <th>법원3심 사건번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 사건번호" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원3심 수용기관</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 수용기관" />
+                        </div>
+                      </td>
+                      <th>법원3심 입소일자</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="법원3심 입소일자" value="2021-12-10" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>법원3심 수용번호</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 수용번호" />
+                        </div>
+                      </td>
+                      <th>법원3심 비고</th>
+                      <td>
+                        <div class="ui-input-block">
+                          <input type="text" class="ui-input" title="법원3심 비고" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title"><span class="color-blue">SSPI 점수</span></h3>
+              </div>
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--tight">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>SSPI 검사 남자아동 피해자</th>
+                      <th>SSPI 검사 아동 피해자수</th>
+                      <th>SSPI 검사 11세 이하 피해자</th>
+                      <th>SSPI 검사 아동 피해자 관계</th>
+                      <th>SSPI 검사 총점</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0점</td>
+                      <td>0점</td>
+                      <td>0점</td>
+                      <td>0점</td>
+                      <td>0점</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title"><span class="color-blue">범죄 사실</span></h3>
+              </div>
+              <div class="board-detail-table">
+                <table>
+                  <colgroup>
+                    <col class="board-detail-table__title-width-large" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>
+                        범죄사실 출처<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td>
+                        <div class="ui-select-block input-width-190">
+                          <select class="ui-select" title="범죄사실 출처">
+                            <option value="-1" disabled selected>선택</option>
+                            <option value="">option 1</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        범죄사실<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                      </th>
+                      <td>
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-small-medium" title="범죄사실"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">
+                  <span class="color-blue">범죄 사실 (범죄 발생 정보)</span><span class="ui-require ui-require--medium"><span class="for-a11y">(필수)</span></span>
+                </h3>
+                <div class="board-detail-head__right">
+                  <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--septenary ui-basic-button--icon ui-basic-button--icon-add-2">범죄사실 추가</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-board-table ui-board-table--6-rows" id="boardGrid"></div>
+            </section>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">취소</button>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          cell_1: '$죄명$',
+          cell_2: '$범죄사범$',
+          cell_3: '$범행날짜$',
+          cell_4: '$범행시각$',
+          cell_5: '',
+          cell_6: '',
+        },
+        {
+          cell_1: '$죄명$',
+          cell_2: '$범죄사범$',
+          cell_3: '$범행날짜$',
+          cell_4: '$범행시각$',
+          cell_5: '',
+          cell_6: '',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['죄명'],
+          ref: 'cell_1',
+          width: '223px',
+        },
+        {
+          caption: ['범죄사범'],
+          ref: 'cell_2',
+          width: '150px',
+        },
+        {
+          caption: ['범행날짜'],
+          ref: 'cell_3',
+          width: '150px',
+        },
+        {
+          caption: ['범행시각'],
+          ref: 'cell_4',
+          width: '150px',
+        },
+        {
+          caption: ['수정'],
+          ref: 'cell_5',
+          width: '95px',
+          sortable: false,
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-board-table__button">수정</button>';
+          },
+          style: 'text-align: center;',
+          fixedstyle: 'text-align: center !important;',
+        },
+        {
+          caption: ['삭제'],
+          ref: 'cell_6',
+          width: '95px',
+          sortable: false,
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-board-table__button">삭제</button>';
+          },
+          style: 'text-align: center;',
+          fixedstyle: 'text-align: center !important;',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            //datagrid.sortColumn(0, 'asc');
+            datagrid.sortingIcon();
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

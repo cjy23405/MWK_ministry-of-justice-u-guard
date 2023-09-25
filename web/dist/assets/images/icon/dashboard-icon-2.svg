@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-4{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_ordersuccess_40" transform="translate(-721 -446)">
+        <g id="그룹_5568" data-name="그룹 5568" transform="translate(-36 3)">
+            <g id="빼기_23" data-name="빼기 23" style="fill:#d3dce8">
+                <path d="m-11911.123-489.5 3.623-2.883V-506.5h-15v17h11.377m.523 1.5h-12.9a.5.5 0 0 1-.5-.5v-19a.5.5 0 0 1 .5-.5h17a.5.5 0 0 1 .5.5v15.84l-4.6 3.66z" style="fill:#111;stroke:none" transform="translate(12694 962.501)"/>
+            </g>
+            <path id="패스_4018" data-name="패스 4018" class="cls-4" d="M4727 447.528v4h7" transform="rotate(-45 2771.013 5226.147)"/>
+            <path id="패스_4020" data-name="패스 4020" class="cls-4" d="M767.221 470.5v-18h18" transform="translate(.279 -.505)"/>
+        </g>
+    </g>
+</svg>

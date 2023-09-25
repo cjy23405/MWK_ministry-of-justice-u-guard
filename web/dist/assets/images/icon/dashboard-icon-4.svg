@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-5{fill:none;stroke:#111;stroke-width:1.5px;stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="ic_time_40" transform="translate(-1309 -772)">
+        <g id="그룹_5539" data-name="그룹 5539" transform="translate(46 35)">
+            <g id="그룹_5538" data-name="그룹 5538" transform="translate(-46 -4)">
+                <g id="타원_701" data-name="타원 701" transform="translate(1319 752)" style="stroke:#111;stroke-width:1.5px;fill:none">
+                    <circle cx="10" cy="10" r="10" style="stroke:none"/>
+                    <circle cx="10" cy="10" r="9.25" style="fill:none"/>
+                </g>
+                <path id="패스_4014" data-name="패스 4014" d="M5484.482 757.115v5h4" transform="translate(-4155.482 -.115)" style="stroke-linejoin:round;stroke-linecap:round;stroke:#111;stroke-width:1.5px;fill:none"/>
+                <path id="선_335" data-name="선 335" class="cls-5" transform="translate(1329 750.5)" d="M0 2V0"/>
+                <path id="선_337" data-name="선 337" class="cls-5" transform="rotate(30 -775.773 2856.868)" d="M0 2V0"/>
+                <path id="선_338" data-name="선 338" class="cls-5" transform="rotate(150 564.023 565.04)" d="M0 0v2"/>
+                <path id="선_336" data-name="선 336" class="cls-5" transform="rotate(90 290.75 1040.75)" d="M0 5V0"/>
+            </g>
+        </g>
+    </g>
+</svg>

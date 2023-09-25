@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">관제 설정</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>그룹 및 권역</th>
+                    <td>
+                      <!-- 2021.12.10 : mod : <div class="form-row"> 태그 추가 -->
+                      <div class="form-row">
+                        <div class="ui-check-list ui-check-list--with-input">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group1-0" />
+                                <label for="group1-0" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">중앙그룹</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-select-block input-width-small-mini">
+                                <select class="ui-select" title="중앙그룹" disabled>
+                                  <option value="">option 1</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="ui-check-list ui-check-list--with-input">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group2-0" />
+                                <label for="group2-0" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">대전그룹</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-select-block input-width-small-mini">
+                                <select class="ui-select" title="대전그룹" disabled>
+                                  <option value="">4명</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group2-1" disabled />
+                                <label for="group2-1" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">6</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group2-2" disabled />
+                                <label for="group2-2" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">7</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group2-3" disabled />
+                                <label for="group2-3" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">8</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="group2-4" disabled />
+                                <label for="group2-4" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">9</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //2021.12.10 : mod : <div class="form-row"> 태그 추가 -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>집중관제</th>
+                    <td>
+                      <!-- 2021.12.10 : mod : <div class="ui-check-list"> 태그 추가 -->
+                      <div class="ui-check-list">
+                        <!-- 2021.12.10 : mod : <div class="form-row"> 태그 추가 -->
+                        <div class="form-row">
+                          <div class="ui-check-list">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group3-1" />
+                                  <label for="group3-1" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">중앙그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group3-2" disabled />
+                                  <label for="group3-2" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">집중중앙1그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group3-3" disabled />
+                                  <label for="group3-3" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">집중중앙2그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="ui-check-list">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group4-1" />
+                                  <label for="group4-1" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">대전그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group4-2" disabled />
+                                  <label for="group4-2" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">집중대전1그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="group4-3" disabled />
+                                  <label for="group4-3" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">집중대전2그룹</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- //2021.12.10 : mod : <div class="form-row"> 태그 추가 -->
+                      </div>
+                      <!-- //2021.12.10 : mod : <div class="ui-check-list"> 태그 추가 -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>보호관찰소(선택)</th>
+                    <td>
+                      <div class="ui-check-list ui-check-list--sexpartite">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area1" />
+                              <label for="area1" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">강릉</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area2" />
+                              <label for="area2" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">거창</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area3" />
+                              <label for="area3" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">경주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area4" />
+                              <label for="area4" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">고양</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area5" />
+                              <label for="area5" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">공주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area6" />
+                              <label for="area6" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">광주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area7" />
+                              <label for="area7" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">구미</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area8" />
+                              <label for="area8" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">군산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area9" />
+                              <label for="area9" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">남원</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area10" />
+                              <label for="area10" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">논산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area11" />
+                              <label for="area11" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">대구</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area12" />
+                              <label for="area12" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">대구서부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area13" />
+                              <label for="area13" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">대전</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area14" />
+                              <label for="area14" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">목포</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area15" />
+                              <label for="area15" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">밀양</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area16" />
+                              <label for="area16" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">부산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area17" />
+                              <label for="area17" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">부산동부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area18" />
+                              <label for="area18" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">부산서부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area19" />
+                              <label for="area19" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">부천</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area20" />
+                              <label for="area20" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">상주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area21" />
+                              <label for="area21" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">서산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area22" />
+                              <label for="area22" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">서울</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area23" />
+                              <label for="area23" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">서울남부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area24" />
+                              <label for="area24" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">서울동부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area25" />
+                              <label for="area25" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">서울서부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area26" />
+                              <label for="area26" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">성남</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area27" />
+                              <label for="area27" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">속초</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area28" />
+                              <label for="area28" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">수원</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area29" />
+                              <label for="area29" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">순천</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area30" />
+                              <label for="area30" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">안동</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area31" />
+                              <label for="area31" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">안산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area32" />
+                              <label for="area32" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">안양</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area33" />
+                              <label for="area33" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">여주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area34" />
+                              <label for="area34" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">영덕</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area35" />
+                              <label for="area35" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">영동</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area36" />
+                              <label for="area36" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">영월</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area37" />
+                              <label for="area37" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">울산</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area38" />
+                              <label for="area38" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">원주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area39" />
+                              <label for="area39" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">의정부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area40" />
+                              <label for="area40" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">인천</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area41" />
+                              <label for="area41" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">인천서부</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area42" />
+                              <label for="area42" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area43" />
+                              <label for="area43" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">정읍</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area44" />
+                              <label for="area44" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">제주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area45" />
+                              <label for="area45" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">제천</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area46" />
+                              <label for="area46" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">진주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area47" />
+                              <label for="area47" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">창원</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area48" />
+                              <label for="area48" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">천안</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area49" />
+                              <label for="area49" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">청주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area50" />
+                              <label for="area50" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">춘천</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area51" />
+                              <label for="area51" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">충주</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area52" />
+                              <label for="area52" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">통영</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area53" />
+                              <label for="area53" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">평택</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area54" />
+                              <label for="area54" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">포항</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area55" />
+                              <label for="area55" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">해남</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="area56" />
+                              <label for="area56" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">홍성</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>근무자</th>
+                    <td>홍길동(아이디)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

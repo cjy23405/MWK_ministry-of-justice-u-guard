@@ -1,0 +1,12 @@
+<svg id="ic_marklist" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#0e0e0e}
+        </style>
+    </defs>
+    <g id="그룹_3073" data-name="그룹 3073" transform="translate(-30.225 -485.328)">
+        <path id="패스_4012" data-name="패스 4012" class="cls-2" d="M41.226 500.329a.749.749 0 0 0-.429.135l-5.821 4.056v-15.691h12.5v9.5h1.5v-10.25a.75.75 0 0 0-.75-.75h-14a.75.75 0 0 0-.75.75v17.877a.75.75 0 0 0 1.179.615l6.571-4.578 2 1.394v-1.828l-1.57-1.1a.749.749 0 0 0-.43-.13z"/>
+        <path id="사각형_9943" data-name="사각형 9943" class="cls-2" transform="translate(45.225 500.33)" d="M0 0h9v1.5H0z"/>
+        <path id="사각형_9944" data-name="사각형 9944" class="cls-2" transform="translate(45.225 503.83)" d="M0 0h7v1.5H0z"/>
+    </g>
+</svg>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">경보/일일감독 소견 미처리</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <section class="board-detail-wrap">
+            <div class="board-detail-head">
+              <h3 class="board-detail-head__title">경보 미처리</h3>
+            </div>
+            <div class="ui-board-table ui-board-table--5-rows" id="boardGrid1"></div>
+          </section>
+
+          <section class="board-detail-wrap">
+            <div class="board-detail-head">
+              <h3 class="board-detail-head__title">일일감독 소견 미처리</h3>
+            </div>
+            <div class="ui-board-table ui-board-table--5-rows" id="boardGrid2"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data1 = [
+        {
+          id: '10',
+          cell_1: '고일석',
+          cell_2: 1,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '9',
+          cell_1: '고일석',
+          cell_2: 2,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '8',
+          cell_1: '고일석',
+          cell_2: 3,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '7',
+          cell_1: '고일석',
+          cell_2: 4,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '6',
+          cell_1: '고일석',
+          cell_2: 2,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '5',
+          cell_1: '고일석',
+          cell_2: 1,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '4',
+          cell_1: '고일석',
+          cell_2: 4,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '3',
+          cell_1: '고일석',
+          cell_2: 4,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '2',
+          cell_1: '고일석',
+          cell_2: 1,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+        {
+          id: '1',
+          cell_1: '고일석',
+          cell_2: 1,
+          cell_3: '2021-12-03 12:03:57',
+          cell_4: '테스트 경보',
+          cell_5: '서울',
+        },
+      ];
+
+      var grid_data2 = [
+        {
+          id: '10',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '9',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '8',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '7',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '6',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '5',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '4',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '3',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '2',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+        {
+          id: '1',
+          cell_1: '고일석',
+          cell_2: '2021-12-03',
+          cell_3: 'III',
+          cell_4: '김동민',
+          cell_5: '김서울1',
+          cell_6: '11-2222-3333-55555',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns1 = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['피부착자'],
+          ref: 'cell_1',
+          width: '110px',
+        },
+        {
+          caption: ['구분'],
+          ref: 'cell_2',
+          width: '110px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            var className = (function () {
+              if (strValue === 1) {
+                return 'lights--red';
+              } else if (strValue === 2) {
+                return 'lights--orange';
+              } else if (strValue === 3) {
+                return 'lights--charcoal';
+              } else if (strValue === 4) {
+                return 'lights--blue';
+              }
+            })();
+            var text = (function () {
+              if (strValue === 1) {
+                return '위험';
+              } else if (strValue === 2) {
+                return '경보';
+              } else if (strValue === 3) {
+                return '참조';
+              } else if (strValue === 4) {
+                return '기타';
+              }
+            })();
+            return '<div class="form-flex"><div class="form-flex-cell"><span class="lights ' + className + '"></span></div><div class="form-flex-cell">' + text + '</div></div>';
+          },
+        },
+        {
+          caption: ['경보일시'],
+          ref: 'cell_3',
+          width: '170px',
+        },
+        {
+          caption: ['경보내용'],
+          ref: 'cell_4',
+          width: '220px',
+        },
+        {
+          caption: ['보호관찰소'],
+          ref: 'cell_5',
+          width: '135px',
+        },
+      ];
+
+      var columns2 = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['피부착자'],
+          ref: 'cell_1',
+          width: '110px',
+        },
+        {
+          caption: ['일자'],
+          ref: 'cell_2',
+          width: '110px',
+        },
+        {
+          caption: ['구분'],
+          ref: 'cell_3',
+          width: '90px',
+        },
+        {
+          caption: ['담당자'],
+          ref: 'cell_4',
+          width: '110px',
+        },
+        {
+          caption: ['담당자 '],
+          ref: 'cell_5',
+          width: '110px',
+        },
+        {
+          caption: ['사건번호'],
+          ref: 'cell_6',
+          width: '210px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid1',
+            parentid: 'boardGrid1',
+            jsonref: 'grid_data1',
+            columns: columns1,
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid2',
+            parentid: 'boardGrid2',
+            jsonref: 'grid_data2',
+            columns: columns2,
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

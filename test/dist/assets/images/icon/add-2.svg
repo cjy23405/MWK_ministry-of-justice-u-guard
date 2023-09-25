@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#4264d0;stroke:#4264d0}.cls-3{stroke:none}.cls-4{fill:none}
+        </style>
+    </defs>
+    <g id="ic_btn_plus_blue" transform="translate(-161 -359)">
+        <path id="사각형_9411" data-name="사각형 9411" transform="translate(161 359)" style="fill:#e9ebf0;opacity:.003" d="M0 0h14v24H0z"/>
+        <g id="그룹_2711" data-name="그룹 2711" transform="translate(0 -43)">
+            <g id="사각형_7245" data-name="사각형 7245" class="cls-2">
+                <path class="cls-3" d="M0 0h1.5v10H0z" transform="translate(165.25 408.75)"/>
+                <path class="cls-4" d="M.5.5H1v9H.5z" transform="translate(165.25 408.75)"/>
+            </g>
+            <g id="사각형_7246" data-name="사각형 7246" class="cls-2">
+                <path class="cls-3" d="M0 0h1.5v10H0z" transform="rotate(90 -121 292)"/>
+                <path class="cls-4" d="M.5.5H1v9H.5z" transform="rotate(90 -121 292)"/>
+            </g>
+        </g>
+    </g>
+</svg>

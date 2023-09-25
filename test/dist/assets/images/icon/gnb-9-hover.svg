@@ -1,0 +1,23 @@
+<svg id="ic_menu_9_navy" xmlns="http://www.w3.org/2000/svg" width="24.001" height="24">
+    <defs>
+        <style>
+            .cls-3,.cls-7{fill:none}.cls-3{stroke:#153863;stroke-width:1.5px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="합치기_84" data-name="합치기 84" style="fill:#153863">
+        <path class="cls-5" d="m-11910.252-747.846-9.451-2.871-.107-.033H-11926.25v-10.5h6.441l.107-.032 9.451-2.872v16.308z" transform="translate(11930.001 765)"/>
+        <path d="M-11911.002-748.858v-14.284l-8.696 2.642h-5.803v9h5.803l.214.065 8.482 2.577m.952 1.857-9.87-2.999h-6.581a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5h6.58l9.871-3c.303 0 .548.237.548.53v16.94c0 .293-.245.53-.548.53z" style="fill:#153863;stroke:none" transform="translate(11930.001 765)"/>
+    </g>
+    <g id="사각형_6778" data-name="사각형 6778" class="cls-3" transform="translate(0 5)">
+        <rect class="cls-5" width="4.5" height="8" rx=".5"/>
+        <rect class="cls-7" x=".75" y=".75" width="3" height="6.5" rx=".25"/>
+    </g>
+    <g id="사각형_6799" data-name="사각형 6799" class="cls-3">
+        <path class="cls-5" d="M0 0h1.5A3.5 3.5 0 0 1 5 3.5 3.5 3.5 0 0 1 1.5 7H0V0z" transform="translate(19.001 5.5)"/>
+        <path class="cls-7" d="M1.235.75H1.5A2.75 2.75 0 0 1 4.25 3.5 2.75 2.75 0 0 1 1.5 6.25h-.265a.485.485 0 0 1-.485-.485v-4.53A.485.485 0 0 1 1.235.75z" transform="translate(19.001 5.5)"/>
+    </g>
+    <g id="사각형_6800" data-name="사각형 6800" transform="translate(5 13.5)" style="stroke:#153863;stroke-width:1.5px;fill:#153863">
+        <rect class="cls-5" width="4.5" height="10.5" rx=".5"/>
+        <rect class="cls-7" x=".75" y=".75" width="3" height="9" rx=".25"/>
+    </g>
+</svg>

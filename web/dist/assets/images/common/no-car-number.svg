@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="45">
+    <defs>
+        <style>
+            .cls-3{fill:#bcc9d9}
+        </style>
+    </defs>
+    <g id="ic_default_car_number" transform="translate(-560 -570)">
+        <g id="사각형_11534" data-name="사각형 11534" transform="translate(560 570)" style="fill:#e1eaf5;stroke:#bcc9d9;stroke-width:3px">
+            <rect width="124" height="45" rx="4" style="stroke:none"/>
+            <rect x="1.5" y="1.5" width="121" height="42" rx="2.5" style="fill:none"/>
+        </g>
+        <text id="_123가_1234" data-name="123가 1234" transform="translate(579.5 599)" style="fill:#a5b5c9;font-size:16px;font-family:SpoqaHanSansNeo-Medium,Spoqa Han Sans Neo;font-weight:500"><tspan x="0" y="0">123가 1234</tspan></text>
+        <circle id="타원_852" data-name="타원 852" class="cls-3" cx="3.5" cy="3.5" r="3.5" transform="translate(567 589)"/>
+        <circle id="타원_853" data-name="타원 853" class="cls-3" cx="3.5" cy="3.5" r="3.5" transform="translate(670 589)"/>
+    </g>
+</svg>

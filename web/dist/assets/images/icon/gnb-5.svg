@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#a1afc0}.cls-3,.cls-5{fill:none}.cls-3{stroke:#a1afc0;stroke-width:1.5px}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_menu_5_n" transform="translate(-33 -504)">
+        <path id="사각형_6718" data-name="사각형 6718" class="cls-2" transform="translate(34 507.75)" d="M0 0h5v1.5H0z"/>
+        <path id="사각형_9436" data-name="사각형 9436" class="cls-2" transform="translate(44 507.75)" d="M0 0h12v1.5H0z"/>
+        <path id="사각형_6719" data-name="사각형 6719" class="cls-2" transform="translate(34 514.75)" d="M0 0h13v1.5H0z"/>
+        <path id="사각형_9437" data-name="사각형 9437" class="cls-2" transform="translate(52 514.75)" d="M0 0h4v1.5H0z"/>
+        <path id="사각형_6720" data-name="사각형 6720" class="cls-2" transform="translate(34 522.75)" d="M0 0h5v1.5H0z"/>
+        <path id="사각형_9438" data-name="사각형 9438" class="cls-2" transform="translate(43 522.75)" d="M0 0h13v1.5H0z"/>
+        <g id="사각형_6721" data-name="사각형 6721" class="cls-3" transform="translate(38 505.5)">
+            <rect class="cls-4" width="6" height="6" rx=".5"/>
+            <rect class="cls-5" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+        </g>
+        <g id="사각형_6723" data-name="사각형 6723" class="cls-3" transform="translate(38 520.5)">
+            <rect class="cls-4" width="6" height="6" rx=".5"/>
+            <rect class="cls-5" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+        </g>
+        <g id="사각형_6722" data-name="사각형 6722" class="cls-3" transform="translate(47 512.5)">
+            <rect class="cls-4" width="6" height="6" rx=".5"/>
+            <rect class="cls-5" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+        </g>
+    </g>
+</svg>

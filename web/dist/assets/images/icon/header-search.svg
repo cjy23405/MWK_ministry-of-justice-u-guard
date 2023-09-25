@@ -1,0 +1,16 @@
+<svg id="ic_search" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-5{fill:none}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <path id="사각형_6645" data-name="사각형 6645" style="fill:#e9ebf0;opacity:.003" d="M0 0h24v24H0z"/>
+    <g id="타원_439" data-name="타원 439" transform="translate(5 4.5)" style="stroke-width:1.5px;stroke:#111;fill:none">
+        <circle class="cls-4" cx="6" cy="6" r="6"/>
+        <circle class="cls-5" cx="6" cy="6" r="5.25"/>
+    </g>
+    <g id="사각형_6703" data-name="사각형 6703" style="fill:#fff;stroke:#111">
+        <path class="cls-4" d="M0 0h1.5v6H0z" transform="rotate(-45 25.17 -9.865)"/>
+        <path class="cls-5" d="M.5.5H1v5H.5z" transform="rotate(-45 25.17 -9.865)"/>
+    </g>
+</svg>

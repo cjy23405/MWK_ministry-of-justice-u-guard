@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">관심 정보</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="tile-layout">
+            <div class="tile-layout__inner">
+              <div class="tile-layout__row tile-layout__row--small-detail">
+                <!-- 성범죄 요약정보 -->
+                <div class="tile-layout__cell">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">성범죄 요약정보</h2>
+                      </div>
+
+                      <div class="board-detail-table-scroller board-detail-table-scroller--last">
+                        <div class="board-detail-table">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>성범죄 사건 수</th>
+                                <td>2건</td>
+                              </tr>
+                              <tr>
+                                <th>범행날짜</th>
+                                <td>
+                                  2007.01.14(1건)<br />
+                                  2007.01.23(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>범행 시각</th>
+                                <td>
+                                  00(1건)<br />
+                                  04(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>범행 장소</th>
+                                <td>
+                                  차량(2건)<br />
+                                  노상(2건)<br />
+                                  그 외(1건)<br />
+                                  교통시설(1건)<br />
+                                  숙박시설(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>피해자 나이</th>
+                                <td>
+                                  20대(1건)<br />
+                                  30대(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>범죄 행위</th>
+                                <td>
+                                  절도(2건)<br />
+                                  강간(2건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>범행 방법</th>
+                                <td>
+                                  협박/위협(2건)<br />
+                                  유인/속여(1건)<br />
+                                  데리고가(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>사건 준비성</th>
+                                <td>계획적(2건)</td>
+                              </tr>
+                              <tr>
+                                <th>범행 도구</th>
+                                <td>도구사용(1건-칼(1))</td>
+                              </tr>
+                              <tr>
+                                <th>범행 음주 여부</th>
+                                <td>음주범행(1건)</td>
+                              </tr>
+                              <tr>
+                                <th>피해자 관계</th>
+                                <td>
+                                  비면식(2건)<br />
+                                  일반면식(1건)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>범행 공범 여부</th>
+                                <td>공범있음(1건)</td>
+                              </tr>
+                              <tr>
+                                <th>피해자 장애 정보</th>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //성범죄 요약정보 -->
+              </div>
+              <div class="tile-layout__row">
+                <!-- 관심 정보 분석 결과 -->
+                <div class="tile-layout__cell">
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap">
+                      <div class="board-detail-head">
+                        <h2 class="board-detail-head__title">관심 정보 분석 결과</h2>
+                      </div>
+
+                      <div class="board-detail-table board-detail-table--bottom-line">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>
+                                <mark class="mark">위험 키워드</mark>
+                              </th>
+                              <td>
+                                <div class="ui-check-list">
+                                  <ul class="ui-check-list__list">
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-1" />
+                                        <label for="keyword1-1" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">결혼 및 가족관계(87)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-2" />
+                                        <label for="keyword1-2" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">경제상태(54)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-3" />
+                                        <label for="keyword1-3" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">직업상태(32)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-4" />
+                                        <label for="keyword1-4" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">대인관계(22)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-5" />
+                                        <label for="keyword1-5" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">음주 및 약물(10)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword1-6" />
+                                        <label for="keyword1-6" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">정신건강 및 정서상태(2)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>
+                                <span class="color-red">개인별 관심 키워드</span>
+                              </th>
+                              <td>
+                                <div class="ui-check-list">
+                                  <ul class="ui-check-list__list">
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword2-1" />
+                                        <label for="keyword2-1" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">외출금지(100)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword2-2" />
+                                        <label for="keyword2-2" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">여자친구(43)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword2-3" />
+                                        <label for="keyword2-3" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">준수사항(12)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword2-4" />
+                                        <label for="keyword2-4" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">약(3)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="keyword2-5" />
+                                        <label for="keyword2-5" class="ui-label">
+                                          <span class="ui-checkbox-object"></span>
+                                          <span class="ui-label__text">기억(1)</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="tile-layout__scroller tile-layout__scroller--log">
+                        <section class="log-section">
+                          <div class="log-section__head">
+                            <h3 class="log-section__title">2020-10-14</h3>
+                          </div>
+                          <div class="dot-list dot-list--primary-color dot-list--small-margin">
+                            <ul class="dot-list__list">
+                              <li class="dot-list__item">
+                                2020. 6. 16. 야간 <span class="color-red">외출금지</span> 위반건에 대한 경위서
+                                <div class="hyphen-list hyphen-list--child color-charcoal">
+                                  <ul class="hyphen-list__list">
+                                    <li class="hyphen-list__item">
+                                      2020.6.15. 주거지 인근 족발집에서 생활관 아는 형과 <mark class="mark">맥주</mark>를 10병정도 나누어 마셨으며 과한 <mark class="mark">음주</mark>로 집으로 올라와서
+                                      기억이 나지 않음
+                                    </li>
+                                    <li class="hyphen-list__item">2020.6.16. 00:26 귀가하여 26분간 <span class="color-red">외출금지</span>를 위반함</li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li class="dot-list__item">집으로 올라와서는 <mark class="mark">음주</mark>로 기억이 잘 나지 않는데 생활관 쇼파에서 잠이 든것 같다는 생각이 듦</li>
+                              <li class="dot-list__item">오늘 면담 후 부산 해운대구 재송동 소재 손정신의학과에서 진료를 받을 예정임</li>
+                              <li class="dot-list__item">처방받은 약 복용 잘하도록 하고 불시에 점검 예정임을 고지함</li>
+                              <li class="dot-list__item"><span class="color-red">외출금지</span> 위반건에 대해 경고장을 발부함</li>
+                              <li class="dot-list__item">과도한 <mark class="mark">음주</mark> 자제, <span class="color-red">외출금지</span> 준수 등 전자감독 준수사항 엄수를 지시함</li>
+                            </ul>
+                          </div>
+                        </section>
+                        <section class="log-section">
+                          <div class="log-section__head">
+                            <h3 class="log-section__title">2020-10-12</h3>
+                          </div>
+                          <div class="dot-list dot-list--primary-color dot-list--small-margin">
+                            <ul class="dot-list__list">
+                              <li class="dot-list__item">이레우리밀 빵공장에서 계속해서 일을 하면서 숙소에 거주하고 있음</li>
+                              <li class="dot-list__item">
+                                근래 <mark class="mark">음주</mark>는 많이 하지 않으며 숙소에서 <mark class="mark">음주</mark>를 하지 못해 편의점에서 <mark class="mark">맥주</mark> 한캔 정도를 마시는
+                                정도임
+                              </li>
+                              <li class="dot-list__item">다른 특이사항 없이 처방받은 약을 잘 복용하고 있으며 6월 중순 이후 다시 병원 방문하여 진료를 받을 예정임</li>
+                              <li class="dot-list__item">숙소에 거주하면서 일을 하고 있어 답답함을 호소하는 일이 있어 개별 체험프로그램 집행 검토</li>
+                              <li class="dot-list__item">야간 <span class="color-red">외출금지</span> 준수사항 엄수 지시, 전자장치 효용유지의무 엄수를 지시함</li>
+                            </ul>
+                          </div>
+                        </section>
+                        <section class="log-section">
+                          <div class="log-section__head">
+                            <h3 class="log-section__title">2020-10-08</h3>
+                          </div>
+                          <div class="dot-list dot-list--primary-color dot-list--small-margin">
+                            <ul class="dot-list__list">
+                              <li class="dot-list__item">피부착자가 주거지 앞 해강아파트 맞은편에 측위되어 방문함</li>
+                              <li class="dot-list__item">양산시 석산6길 32 GS 편의점 벤치에 앉아 있는 피부착자를 발견하여 만나서 면담함</li>
+                              <li class="dot-list__item">휴대전화 가방을 앞에 둔채 <mark class="mark">맥주</mark>를 마시고 있던 중이었음</li>
+                              <li class="dot-list__item">오늘 양산 남부시장에 다녀왔으며 휴대전화가 고장 나서 새 전화기를 구입하여 오는 길이었음</li>
+                              <li class="dot-list__item">저장되어 있던 연락처가 없어져서 난처해 함</li>
+                              <li class="dot-list__item">담당자의 연락처를 알려주고 특이사항 발생 시 즉시 보고할 것을 지시함</li>
+                              <li class="dot-list__item">
+                                <span class="color-red">외출금지</span> 엄수 및 전자장치 효용유지의무 엄수 등 준수사항과 생업에 충실하고 과도한 <mark class="mark">음주</mark>를 자제할 것을 지시함
+                              </li>
+                            </ul>
+                          </div>
+                        </section>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //면담 이슈 분석 결과 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

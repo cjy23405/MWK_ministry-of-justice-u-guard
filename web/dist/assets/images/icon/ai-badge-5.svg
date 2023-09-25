@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-3{fill:#111}.cls-4{fill:none;stroke:#111;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ico_scissors" transform="translate(-553 -375)">
+        <path id="사각형_17627" data-name="사각형 17627" transform="translate(553 375)" style="fill:transparent" d="M0 0h50v50H0z"/>
+        <g id="그룹_12026" data-name="그룹 12026" transform="translate(69)">
+            <g id="사각형_17727" data-name="사각형 17727" style="fill:transparent;stroke:transparent">
+                <path style="stroke:none" d="M0 0h36v36H0z" transform="translate(491 382)"/>
+                <path style="fill:none" d="M.5.5h35v35H.5z" transform="translate(491 382)"/>
+            </g>
+            <path id="패스_12146" data-name="패스 12146" class="cls-3" d="M1.943 18a3.3 3.3 0 0 0 4.5 1.2l1.3-.746 3.412-1.97-.868-1.5L8.4 16.075l-.74-1.337-.015-.027A3.291 3.291 0 1 0 1.943 18m-1.3.75a4.791 4.791 0 1 1 8.3-4.791l.03.053 1.862-1.075 2.368 4.1-6.01 3.47a4.792 4.792 0 0 1-6.549-1.755" transform="translate(495 385.999)"/>
+            <path id="패스_12147" data-name="패스 12147" class="cls-4" d="M6.194 15.58a1.6 1.6 0 1 1-2.187-.586 1.6 1.6 0 0 1 2.187.586z" transform="translate(495 385.999)"/>
+            <path id="패스_12148" data-name="패스 12148" class="cls-4" d="M26.556 7.9a.486.486 0 0 1-.178.663L12.11 16.8a.486.486 0 0 1-.664-.173l-1.133-1.962a.484.484 0 0 1 .176-.665L22.8 6.9a2.752 2.752 0 0 1 3.756 1z" transform="translate(495 385.999)"/>
+            <path id="패스_12149" data-name="패스 12149" class="cls-3" d="M17.726 27.115a3.292 3.292 0 1 0 0-6.583h-.037l-1.524.024v-2.173h-1.736v3.94h.005v1.5a3.3 3.3 0 0 0 3.292 3.292m0 1.5a4.792 4.792 0 0 1-4.792-4.792h-.005v-6.94h4.736v2.15h.061a4.792 4.792 0 1 1 0 9.583" transform="translate(495 385.999)"/>
+            <circle id="타원_1808" data-name="타원 1808" class="cls-4" cx="1.601" cy="1.601" r="1.601" transform="translate(511.098 408.221)"/>
+            <path id="패스_12150" data-name="패스 12150" class="cls-4" d="M13.679 12.162V1.235a.485.485 0 0 1 .485-.485 2.751 2.751 0 0 1 2.752 2.75v6.793" transform="translate(495 385.999)"/>
+            <path id="패스_12151" data-name="패스 12151" class="cls-4" d="M16.916 14.029v3.681a.485.485 0 0 1-.48.49h-2.272a.485.485 0 0 1-.485-.485V15.9" transform="translate(495 385.999)"/>
+        </g>
+    </g>
+</svg>

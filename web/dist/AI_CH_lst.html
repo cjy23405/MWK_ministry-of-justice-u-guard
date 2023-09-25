@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="ko" id="ie9"><![endif]-->
+<!--[if !IE]>-->
+<html lang="ko">
+  <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AI 기반 전자감독 서비스</title>
+    <!-- SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <!-- //SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery.mCustomScrollbar.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/common.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <div class="btns-box">
+          <button type="button" class="btn-refresh"><img src="./assets/legacy/ai/images/ico_reload.png" alt="새로고침" /></button>
+          <a href="#" class="btn-setting"><img src="./assets/legacy/ai/images/ico_settings.png" alt="설정" /></a>
+        </div>
+        <div class="info-list">
+          <div class="info-list-item">
+            <span class="item">집중 관제</span>
+            <div class="value">
+              집중중앙그룹
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 1</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">중앙그룹</span>
+            <div class="value">전체</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">대전그룹</span>
+            <div class="value">선택없음</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">보호관찰소</span>
+            <div class="value">
+              서울남부
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 3</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">데이터 수신 주기</span>
+            <div class="value">30초</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">테스트 데이터</span>
+            <div class="value">사용</div>
+          </div>
+        </div>
+        <div class="aside">
+          <div class="ai">
+            <!-- off -->
+            <div class="tooltip-wrap status-off is-active">
+              <!-- 활성화 is-active 클래스 추가 -->
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_off.png" alt="OFF AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 중단되었습니다.</p>
+              </div>
+            </div>
+            <!-- //off -->
+            <!-- on -->
+            <div class="tooltip-wrap status-on">
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_on.png" alt="ON AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 동작중입니다.</p>
+              </div>
+            </div>
+            <!-- //on -->
+          </div>
+          <div class="item-input-has-btn">
+            <div class="item-input">
+              <input type="text" placeholder="피부착자 검색" />
+            </div>
+            <button type="button" class="btn btn-primary">조회</button>
+          </div>
+          <div class="notice">
+            <div class="notice-group">
+              <button type="button" class="btn-notice">
+                <img src="./assets/legacy/ai/images/ico_alarm.png" alt="알림" />
+                <!-- 2021.12.10 : add : 카운팅 위치 변경 -->
+                <span class="btn-notice-count">35</span>
+                <!-- //2021.12.10 : add : 카운팅 위치 변경 -->
+              </button>
+              <div class="notice-center">
+                <div class="notice-top">
+                  <span class="title">알림센터</span>
+                  <div class="btns-box fixed">
+                    <a href="#" class="btn-expand"><img src="./assets/legacy/ai/images/ico_unfold.png" alt="확대" /></a>
+                    <button type="button" class="btn-close"><img src="./assets/legacy/ai/images/ico_18px_cancle.png" alt="알림센터 닫기" /></button>
+                  </div>
+                </div>
+                <div class="notice-md">
+                  <!-- 2021.12.10 : del : 전체삭제 위치 변경
+                  <div class="btns-box">
+                    <button type="button" class="btn btn-point-white">전체삭제</button>
+                  </div>
+                  -->
+                  <div class="notice-list-box scroll-y">
+                    <ul class="notice-list">
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">[1:1] 홍길동 (인천서부 관찰소) 경보 발생</span>
+                          <span class="text">부착장치 훼손(본체)</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">4건의 경보가 자동으로 종료 처리되었습니다.</span>
+                          <span class="text">종료 이력을 확인해 주시기 바랍니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">일 이내 출국금지자 재신청 필요</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2건</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">과거 범죄 발생지에 동일 시간대에 방문했습니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">재범위험성 평가 점수 9점 증가</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">미귀가자가 5명 발생하였습니다.</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2명</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="notice-btm">
+                  <!-- 2021.12.24 : mod : 클래스 값 변경 -->
+                  <button type="button" class="btn btn-point-white-2">전체삭제</button>
+                  <!-- //2021.12.24 : mod : 클래스 값 변경 -->
+                  <a href="#" class="btn-setting">알림설정</a>
+                </div>
+              </div>
+            </div>
+            <!-- 2021.12.10 : del : 카운팅 위치 변경
+            <a href="#" class="link-notice">35</a>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- //header -->
+
+      <!-- contents -->
+      <div class="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <ul class="lnb-list">
+            <li class="lnb-item is-active"><a href="#" class="lnb-link">실시간 경보현황</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">집중 관제</a></li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동이관 유보<span class="num">5</span></a>
+            </li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동종료 유보<span class="num">99+</span></a>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">이관 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">종료 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">보호관찰 대시보드</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">미처리 이관 경보</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">경보 처리 결과</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">대상자 요약 정보</a></li>
+            <li class="lnb-item has-2depth is-active">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item is-active"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item has-2depth">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">범죄 이력 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">검찰 사건 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">AI 분석 데이터</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">상황관제</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">사용자 메뉴 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">연계 시스템 관리</a></li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- 공통영역 x -->
+        <div class="contents">
+          <div class="page-head">
+            <div class="page-head__left">
+              <h2 class="page-head__title">범죄이력관리</h2>
+            </div>
+            <div class="page-head__right">
+              <p class="page-head__location">
+                <span class="page-head__location__item">HOME</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">AI보호관찰관</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">범죄이력관리</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="list-search-box has-btn type-list-page">
+            <table>
+              <colgroup>
+                <col width="75px" />
+                <col width="200px" />
+                <col width="105px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="list-search-title-auto-width">상태 구분</th>
+                  <td>
+                    <div class="item-select">
+                      <select name="" id="">
+                        <option value="">현재원(감독진행)</option>
+                        <option value="">옵션 2</option>
+                        <option value="">옵션 3</option>
+                        <option value="">옵션 4</option>
+                        <option value="">옵션 5</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="list-search-title-auto-width">키워드 검색</th>
+                  <td>
+                    <div class="form-group">
+                      <div class="input-width-200">
+                        <div class="item-select">
+                          <select name="" id="">
+                            <option value="">피부착자 성명</option>
+                            <option value="">옵션 2</option>
+                            <option value="">옵션 3</option>
+                            <option value="">옵션 4</option>
+                            <option value="">옵션 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="input-width-6"></div>
+                      <div>
+                        <div class="item-input">
+                          <input type="text" placeholder="검색어를 입력해 주세요." />
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="btns-box">
+              <button type="button" class="btn btn-point-white-2 btn-ico-reset">초기화</button>
+              <button type="button" class="btn btn-primary btn-ico-search-2">조회</button>
+            </div>
+          </div>
+
+          <div class="list-top-info">
+            <div class="btns-box fixed type-left">
+              <button type="button" class="btn btn-point-white-2 btn-ico-excel">다운로드</button>
+            </div>
+          </div>
+
+          <div class="grid-group grid-layout-row">
+            <div class="grid-layout-col">
+              <!-- 피부착자 -->
+              <div class="grid-layout-col grid-con type-list-width">
+                <div class="grid-layout-auto-contents">
+                  <div class="con-top type-no-line">
+                    <div class="list-top-info type-grid">
+                      <h3 class="title yel">피부착자</h3>
+                    </div>
+                  </div>
+
+                  <div class="ui-board-area">
+                    <div class="con-none no-info">
+                      <div class="text">
+                        검색된 피부착자가 없습니다.<br />
+                        조회조건을 변경하여 검색해 주세요.
+                      </div>
+                    </div>
+
+                    <div class="ui-board-table ui-board-table--15-rows ui-board-table--select" id="boardGrid1"></div>
+
+                    <div class="pagination-box type-grid-layout">
+                      <button type="button" class="pagination-btn pagination-first" disabled>처음</button>
+                      <button type="button" class="pagination-btn pagination-prev" disabled>이전</button>
+                      <div class="pagination-pages">
+                        <div class="item-input">
+                          <input type="text" placeholder="" value="1" />
+                        </div>
+                        <span class="slash">/</span>
+                        <span class="num">128</span>
+                      </div>
+                      <button type="button" class="pagination-btn pagination-next">다음</button>
+                      <button type="button" class="pagination-btn pagination-last">끝</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //피부착자 -->
+
+              <div class="grid-margin"></div>
+
+              <!-- 범죄이력 -->
+              <div class="grid-layout-col grid-con">
+                <div class="grid-layout-auto-contents">
+                  <div class="con-top type-no-line">
+                    <div class="list-top-info type-grid">
+                      <h3 class="title yel">범죄이력 (오동식, 000000-0000000)</h3>
+                    </div>
+                    <div class="con-top-aside">
+                      <div class="btns-box fixed align-right">
+                        <button type="button" class="btn btn-point btn-ico-add">등록</button>
+                        <button type="button" class="btn btn-point-white-2">삭제</button>
+                        <button type="button" class="btn btn-point-yel">수정</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ui-board-area">
+                    <div class="con-none no-selected">
+                      <div class="text">
+                        피부착자를 선택해 주세요.<br />
+                        피부착자가 선택되지 않았습니다.
+                      </div>
+                    </div>
+
+                    <div class="ui-board-table ui-board-table--17-rows ui-board-table--no-bottom-line" id="boardGrid2"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- //범죄이력 -->
+            </div>
+          </div>
+        </div>
+        <!-- //공통영역 x -->
+      </div>
+      <!-- //contents -->
+    </div>
+
+    <!-- SBGrid -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <!-- //SBGrid -->
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/ui.js"></script>
+    <!-- SBGrid -->
+    <script type="text/javascript">
+      // Data
+      var grid_data1 = [
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+        {
+          cell_1: '홍길동',
+          cell_2: '12-3456-7890-12345',
+        },
+      ];
+
+      var grid_data2 = [
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: 'Y',
+          cell_3: '특수강도미수/강간치상/사기/여신전문금융업법위반/절도/폭력행위등처벌에관한법률위반/특수절도/성폭(특수강도강간등)/특수강도',
+          cell_4: '1979-05-05',
+          cell_5: '대법원',
+          cell_6: '징역 1년6월',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+        {
+          cell_1: '범죄경력',
+          cell_2: '',
+          cell_3: '절도/장물취득',
+          cell_4: '1979-05-05',
+          cell_5: '수원지방법원',
+          cell_6: '벌금 4만원',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns1 = [
+        {
+          caption: ['피부착자 성명'],
+          ref: 'cell_1',
+          width: '140px',
+        },
+        {
+          caption: ['사건번호'],
+          ref: 'cell_2',
+          width: '225px',
+        },
+      ];
+
+      var columns2 = [
+        {
+          caption: [''],
+          ref: 'check',
+          width: '55px',
+          type: 'checkbox',
+          sortable: false,
+          style: 'text-align: center;',
+          fixedstyle: 'text-align: center !important;',
+        },
+        {
+          caption: ['출처구분'],
+          ref: 'cell_1',
+          width: '160px',
+        },
+        {
+          caption: ['부착 본 건'],
+          ref: 'cell_2',
+          width: '180px',
+        },
+        {
+          caption: ['죄명'],
+          ref: 'cell_3',
+          width: '395px',
+        },
+        {
+          caption: ['처분일자'],
+          ref: 'cell_4',
+          width: '180px',
+        },
+        {
+          caption: ['처분기관'],
+          ref: 'cell_5',
+          width: '225px',
+        },
+        {
+          caption: ['처분내용'],
+          ref: 'cell_6',
+          width: '180px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridLegacyProperties, {
+            id: 'datagrid1',
+            parentid: 'boardGrid1',
+            jsonref: 'grid_data1',
+            columns: columns1,
+          }),
+          function (datagrid) {
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid1').data('grid', datagrid);
+
+            // 데이터 없을 때 실행
+            var allData = datagrid.getGridDataAll();
+            if (allData.length <= 0) {
+              $('#boardGrid1').closest('.ui-board-area').addClass('is-empty');
+            }
+          }
+        );
+        createGrid(
+          $.extend({}, SBGridLegacyProperties, {
+            id: 'datagrid2',
+            parentid: 'boardGrid2',
+            jsonref: 'grid_data2',
+            columns: columns2,
+            ellipsis: false,
+          }),
+          function (datagrid) {
+            datagrid.setFixedcellcheckbox(0, 0);
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid2').data('grid', datagrid);
+
+            // 데이터 없을 때 실행
+            var allData = datagrid.getGridDataAll();
+            if (allData.length <= 0) {
+              $('#boardGrid2').closest('.ui-board-area').addClass('is-empty');
+            }
+          }
+        );
+      });
+    </script>
+    <!-- //SBGrid -->
+  </body>
+</html>

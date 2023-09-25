@@ -1,0 +1,30 @@
+<svg id="ic_menu_11_navy" xmlns="http://www.w3.org/2000/svg" width="27" height="27.002" viewBox="0 0 27 27.002">
+    <defs>
+        <style>
+            .cls-8{fill:none}.cls-5{stroke:#153863;stroke-width:1.5px;fill:#153863}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <path id="사각형_17537" data-name="사각형 17537" transform="rotate(180 13.5 13.5)" style="fill:transparent" d="M0 0h27v27H0z"/>
+    <g id="사각형_17538" data-name="사각형 17538" transform="translate(2 2)" style="stroke-width:1.5px;stroke:#153863;fill:none">
+        <rect class="cls-7" width="23" height="23" rx=".5"/>
+        <rect class="cls-8" x=".75" y=".75" width="21.5" height="21.5" rx=".25"/>
+    </g>
+    <g id="타원_989" data-name="타원 989" transform="translate(10.348 8)" style="stroke-width:.8px;fill:#153863;stroke:#153863">
+        <circle class="cls-7" cx="3.105" cy="3.105" r="3.105"/>
+        <circle class="cls-8" cx="3.105" cy="3.105" r="2.705"/>
+    </g>
+    <path id="패스_11354" data-name="패스 11354" d="M2 15.958 3.757 11h6.15l1.757 4.958" transform="translate(6.67 4.451)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:.8px;fill:#153863;stroke:#153863"/>
+    <g id="사각형_17539" data-name="사각형 17539" class="cls-5" transform="rotate(-90 24.001 3.001)">
+        <rect class="cls-7" width="6" height="6" rx=".5"/>
+        <rect class="cls-8" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+    </g>
+    <g id="사각형_17540" data-name="사각형 17540" class="cls-5" transform="rotate(-90 8.252 -2.248)">
+        <rect class="cls-7" width="6" height="6" rx=".5"/>
+        <rect class="cls-8" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+    </g>
+    <g id="사각형_17541" data-name="사각형 17541" class="cls-5" transform="rotate(-90 13.501 13.501)">
+        <rect class="cls-7" width="6" height="6" rx=".5"/>
+        <rect class="cls-8" x=".75" y=".75" width="4.5" height="4.5" rx=".25"/>
+    </g>
+    <path id="패스_11355" data-name="패스 11355" d="M-22434.83-20641.922h9.8l-1-1.656-7.062-.109-1.736.969z" transform="translate(22443.5 20662.727)" style="fill:#153863"/>
+</svg>

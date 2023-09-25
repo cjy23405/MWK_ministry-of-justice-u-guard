@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup window-popup--regist-situation-work-diary js-ui-tab-panel">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">상황근무일지 등록</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>근무시작일</th>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="근무시작일" value="2021-12-10" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>근무시간</th>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="time" id="time-1" checked />
+                                <label for="time-1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">주간 (09:00~18:00)</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="time" id="time-2" />
+                                <label for="time-2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">야간 (18:00~09:00)</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="time" id="time-3" />
+                                <label for="time-3" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">휴일 (09:00~09:00)</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="time" id="time-4" />
+                                <label for="time-4" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">집중</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>등록자</th>
+                      <td>홍길동</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="board-detail-wrap">
+              <div class="board-tab">
+                <ul class="board-tab__list">
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab1">근무자현황</a>
+                  </li>
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab2">경보발생현황</a>
+                  </li>
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab3">경보처리현황</a>
+                  </li>
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab4">출장현황</a>
+                  </li>
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab5">조치현황</a>
+                  </li>
+                  <li class="board-tab__item">
+                    <a href="" class="board-tab__link" data-tab-open="tab6">기타특이사항</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 근무자현황 -->
+              <div class="board-tab-panel" data-tab="tab1">
+                <div class="board-top board-top--tab-panel">
+                  <div class="board-top__right">
+                    <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary" id="templateFormAdd1">추가</button>
+                        </li>
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary" id="templateFormRemove1">삭제</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="board-detail-table board-detail-table--vertical-line">
+                  <table>
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: 150px" />
+                      <col />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="templateFormAllSelect1" />
+                            <label for="templateFormAllSelect1" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">전체 열 선택</span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>근무팀</th>
+                        <th>보호관찰소</th>
+                        <th>직급</th>
+                        <th>성명</th>
+                      </tr>
+                    </thead>
+                    <tbody id="templateForm1">
+                      <!--
+                      <tr>
+                        <td class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="rowSelect1-1" />
+                            <label for="rowSelect1-1" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">열 선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td></td>
+                        <td>
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="보호관찰소">
+                              <option value="-1" disabled selected>선택</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="직급">
+                              <option value="-1" disabled selected>선택</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="성명">
+                              <option value="-1" disabled selected>선택</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //근무자현황 -->
+
+              <!-- 경보발생현황 -->
+              <div class="board-tab-panel" data-tab="tab2">
+                <div class="board-detail-table board-detail-table--vertical-line board-detail-table--thead-line">
+                  <table>
+                    <colgroup>
+                      <col class="board-detail-table__title-width" />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구분</th>
+                        <th>즉시 이관</th>
+                        <th>단순 이관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>건수</th>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="즉시 이관 건수" />
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="단순 이관 건수" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //경보발생현황 -->
+
+              <!-- 경보처리현황 -->
+              <div class="board-tab-panel" data-tab="tab3">
+                <div class="board-top board-top--tab-panel">
+                  <div class="board-top__right">
+                    <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary" id="templateFormAdd3">추가</button>
+                        </li>
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary" id="templateFormRemove3">삭제</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="board-detail-table board-detail-table--vertical-line board-detail-table--tight">
+                  <table>
+                    <colgroup>
+                      <col style="width: 40px" />
+                      <col style="width: 45px" />
+                      <col style="width: 130px" />
+                      <col style="width: 130px" />
+                      <col style="width: 110px" />
+                      <col style="width: 110px" />
+                      <col style="width: 210px" />
+                      <col style="width: 210px" />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="templateFormAllSelect3" />
+                            <label for="templateFormAllSelect3" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">전체 열 선택</span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>연번</th>
+                        <th>대상자</th>
+                        <th>경보명</th>
+                        <th>경보구분</th>
+                        <th>처리방식</th>
+                        <th>이관일시</th>
+                        <th>처리일시</th>
+                        <th>경보 처리 내용</th>
+                      </tr>
+                    </thead>
+                    <tbody id="templateForm3">
+                      <!--
+                      <tr>
+                        <td class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="rowSelect3-1" />
+                            <label for="rowSelect3-1" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">열 선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>
+                          <div class="header-search header-search--filter">
+                            <div class="ui-input-block header-search__input">
+                              <input type="text" class="ui-input" title="대상자" />
+                            </div>
+                            <button type="button" class="ui-button header-search__submit">
+                              <span class="for-a11y">검색</span>
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="경보명" />
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="경보구분">
+                              <option value="-1" disabled selected>선택</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="처리방식">
+                              <option value="-1" disabled selected>선택</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input-row">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block ui-input-block--date input-width-167">
+                                  <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-row">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-select-block input-width-date-select">
+                                  <select class="ui-select" title="시">
+                                    <option value="">00</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">시</div>
+                              <div class="form-flex-cell form-flex-cell--date-medium">
+                                <div class="ui-select-block input-width-date-select">
+                                  <select class="ui-select" title="분">
+                                    <option value="">00</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                    <option value="">25</option>
+                                    <option value="">26</option>
+                                    <option value="">27</option>
+                                    <option value="">28</option>
+                                    <option value="">29</option>
+                                    <option value="">30</option>
+                                    <option value="">31</option>
+                                    <option value="">32</option>
+                                    <option value="">33</option>
+                                    <option value="">34</option>
+                                    <option value="">35</option>
+                                    <option value="">36</option>
+                                    <option value="">37</option>
+                                    <option value="">38</option>
+                                    <option value="">39</option>
+                                    <option value="">40</option>
+                                    <option value="">41</option>
+                                    <option value="">42</option>
+                                    <option value="">43</option>
+                                    <option value="">44</option>
+                                    <option value="">45</option>
+                                    <option value="">46</option>
+                                    <option value="">47</option>
+                                    <option value="">48</option>
+                                    <option value="">49</option>
+                                    <option value="">50</option>
+                                    <option value="">51</option>
+                                    <option value="">52</option>
+                                    <option value="">53</option>
+                                    <option value="">54</option>
+                                    <option value="">55</option>
+                                    <option value="">56</option>
+                                    <option value="">57</option>
+                                    <option value="">58</option>
+                                    <option value="">59</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">분</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="input-row">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block ui-input-block--date input-width-167">
+                                  <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-row">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-select-block input-width-date-select">
+                                  <select class="ui-select" title="시">
+                                    <option value="">00</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">시</div>
+                              <div class="form-flex-cell form-flex-cell--date-medium">
+                                <div class="ui-select-block input-width-date-select">
+                                  <select class="ui-select" title="분">
+                                    <option value="">00</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                    <option value="">25</option>
+                                    <option value="">26</option>
+                                    <option value="">27</option>
+                                    <option value="">28</option>
+                                    <option value="">29</option>
+                                    <option value="">30</option>
+                                    <option value="">31</option>
+                                    <option value="">32</option>
+                                    <option value="">33</option>
+                                    <option value="">34</option>
+                                    <option value="">35</option>
+                                    <option value="">36</option>
+                                    <option value="">37</option>
+                                    <option value="">38</option>
+                                    <option value="">39</option>
+                                    <option value="">40</option>
+                                    <option value="">41</option>
+                                    <option value="">42</option>
+                                    <option value="">43</option>
+                                    <option value="">44</option>
+                                    <option value="">45</option>
+                                    <option value="">46</option>
+                                    <option value="">47</option>
+                                    <option value="">48</option>
+                                    <option value="">49</option>
+                                    <option value="">50</option>
+                                    <option value="">51</option>
+                                    <option value="">52</option>
+                                    <option value="">53</option>
+                                    <option value="">54</option>
+                                    <option value="">55</option>
+                                    <option value="">56</option>
+                                    <option value="">57</option>
+                                    <option value="">58</option>
+                                    <option value="">59</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">분</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-input-block">
+                            <textarea class="ui-input input-height-mini" title="경보 처리 내용"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //경보처리현황 -->
+
+              <!-- 출장현황 -->
+              <div class="board-tab-panel" data-tab="tab4">
+                <div class="board-top board-top--tab-panel">
+                  <div class="board-top__right">
+                    <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary" id="templateFormAdd4">추가</button>
+                        </li>
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary" id="templateFormRemove4">삭제</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="board-detail-table board-detail-table--vertical-line">
+                  <table>
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: 65px" />
+                      <col style="width: 180px" />
+                      <col style="width: 370px" />
+                      <col style="width: 180px" />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="templateFormAllSelect4" />
+                            <label for="templateFormAllSelect4" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">전체 열 선택</span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>연번</th>
+                        <th>대상자</th>
+                        <th>출장일시</th>
+                        <th>장소</th>
+                        <th>면담내용</th>
+                      </tr>
+                    </thead>
+                    <tbody id="templateForm4">
+                      <!--
+                      <tr>
+                        <td class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="rowSelect4-1" />
+                            <label for="rowSelect4-1" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">열 선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>
+                          <div class="header-search header-search--filter">
+                            <div class="ui-input-block header-search__input">
+                              <input type="text" class="ui-input" title="대상자" />
+                            </div>
+                            <button type="button" class="ui-button header-search__submit">
+                              <span class="for-a11y">검색</span>
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block ui-input-block--date input-width-date">
+                                <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--date-medium">
+                              <div class="ui-select-block input-width-date-select">
+                                <select class="ui-select" title="시">
+                                  <option value="">00</option>
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                  <option value="">13</option>
+                                  <option value="">14</option>
+                                  <option value="">15</option>
+                                  <option value="">16</option>
+                                  <option value="">17</option>
+                                  <option value="">18</option>
+                                  <option value="">19</option>
+                                  <option value="">20</option>
+                                  <option value="">21</option>
+                                  <option value="">22</option>
+                                  <option value="">23</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">시</div>
+                            <div class="form-flex-cell form-flex-cell--date-medium">
+                              <div class="ui-select-block input-width-date-select">
+                                <select class="ui-select" title="분">
+                                  <option value="">00</option>
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                  <option value="">13</option>
+                                  <option value="">14</option>
+                                  <option value="">15</option>
+                                  <option value="">16</option>
+                                  <option value="">17</option>
+                                  <option value="">18</option>
+                                  <option value="">19</option>
+                                  <option value="">20</option>
+                                  <option value="">21</option>
+                                  <option value="">22</option>
+                                  <option value="">23</option>
+                                  <option value="">24</option>
+                                  <option value="">25</option>
+                                  <option value="">26</option>
+                                  <option value="">27</option>
+                                  <option value="">28</option>
+                                  <option value="">29</option>
+                                  <option value="">30</option>
+                                  <option value="">31</option>
+                                  <option value="">32</option>
+                                  <option value="">33</option>
+                                  <option value="">34</option>
+                                  <option value="">35</option>
+                                  <option value="">36</option>
+                                  <option value="">37</option>
+                                  <option value="">38</option>
+                                  <option value="">39</option>
+                                  <option value="">40</option>
+                                  <option value="">41</option>
+                                  <option value="">42</option>
+                                  <option value="">43</option>
+                                  <option value="">44</option>
+                                  <option value="">45</option>
+                                  <option value="">46</option>
+                                  <option value="">47</option>
+                                  <option value="">48</option>
+                                  <option value="">49</option>
+                                  <option value="">50</option>
+                                  <option value="">51</option>
+                                  <option value="">52</option>
+                                  <option value="">53</option>
+                                  <option value="">54</option>
+                                  <option value="">55</option>
+                                  <option value="">56</option>
+                                  <option value="">57</option>
+                                  <option value="">58</option>
+                                  <option value="">59</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">분</div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="장소" />
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-flex">
+                            <div class="form-flex-cell form-flex-cell--flexible">
+                              <div class="ui-input-block">
+                                <textarea class="ui-input input-height-mini" title="면담내용"></textarea>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">
+                              <button
+                                type="button"
+                                class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-search-2 ui-basic-button--icon-only"
+                              >
+                                <span class="for-a11y">검색</span>
+                              </button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //출장현황 -->
+
+              <!-- 조치현황 -->
+              <div class="board-tab-panel" data-tab="tab5">
+                <div class="board-top board-top--tab-panel">
+                  <div class="board-top__right">
+                    <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--septenary" id="templateFormAdd5">추가</button>
+                        </li>
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary" id="templateFormRemove5">삭제</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="board-detail-table board-detail-table--vertical-line">
+                  <table>
+                    <colgroup>
+                      <col style="width: 60px" />
+                      <col style="width: 65px" />
+                      <col style="width: 180px" />
+                      <col style="width: 370px" />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="templateFormAllSelect5" />
+                            <label for="templateFormAllSelect5" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">전체 열 선택</span>
+                            </label>
+                          </div>
+                        </th>
+                        <th>연번</th>
+                        <th>대상자</th>
+                        <th>점검시간</th>
+                        <th>특이대상자(24:00 이후 배회자 포함) 조치사항</th>
+                      </tr>
+                    </thead>
+                    <tbody id="templateForm5">
+                      <!--
+                      <tr>
+                        <td class="align-center">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" id="rowSelect5-1" />
+                            <label for="rowSelect5-1" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="for-a11y">열 선택</span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>
+                          <div class="header-search header-search--filter">
+                            <div class="ui-input-block header-search__input">
+                              <input type="text" class="ui-input" title="대상자" />
+                            </div>
+                            <button type="button" class="ui-button header-search__submit">
+                              <span class="for-a11y">검색</span>
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block ui-input-block--date input-width-date">
+                                <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--date-medium">
+                              <div class="ui-select-block input-width-date-select">
+                                <select class="ui-select" title="시">
+                                  <option value="">00</option>
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                  <option value="">13</option>
+                                  <option value="">14</option>
+                                  <option value="">15</option>
+                                  <option value="">16</option>
+                                  <option value="">17</option>
+                                  <option value="">18</option>
+                                  <option value="">19</option>
+                                  <option value="">20</option>
+                                  <option value="">21</option>
+                                  <option value="">22</option>
+                                  <option value="">23</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">시</div>
+                            <div class="form-flex-cell form-flex-cell--date-medium">
+                              <div class="ui-select-block input-width-date-select">
+                                <select class="ui-select" title="분">
+                                  <option value="">00</option>
+                                  <option value="">01</option>
+                                  <option value="">02</option>
+                                  <option value="">03</option>
+                                  <option value="">04</option>
+                                  <option value="">05</option>
+                                  <option value="">06</option>
+                                  <option value="">07</option>
+                                  <option value="">08</option>
+                                  <option value="">09</option>
+                                  <option value="">10</option>
+                                  <option value="">11</option>
+                                  <option value="">12</option>
+                                  <option value="">13</option>
+                                  <option value="">14</option>
+                                  <option value="">15</option>
+                                  <option value="">16</option>
+                                  <option value="">17</option>
+                                  <option value="">18</option>
+                                  <option value="">19</option>
+                                  <option value="">20</option>
+                                  <option value="">21</option>
+                                  <option value="">22</option>
+                                  <option value="">23</option>
+                                  <option value="">24</option>
+                                  <option value="">25</option>
+                                  <option value="">26</option>
+                                  <option value="">27</option>
+                                  <option value="">28</option>
+                                  <option value="">29</option>
+                                  <option value="">30</option>
+                                  <option value="">31</option>
+                                  <option value="">32</option>
+                                  <option value="">33</option>
+                                  <option value="">34</option>
+                                  <option value="">35</option>
+                                  <option value="">36</option>
+                                  <option value="">37</option>
+                                  <option value="">38</option>
+                                  <option value="">39</option>
+                                  <option value="">40</option>
+                                  <option value="">41</option>
+                                  <option value="">42</option>
+                                  <option value="">43</option>
+                                  <option value="">44</option>
+                                  <option value="">45</option>
+                                  <option value="">46</option>
+                                  <option value="">47</option>
+                                  <option value="">48</option>
+                                  <option value="">49</option>
+                                  <option value="">50</option>
+                                  <option value="">51</option>
+                                  <option value="">52</option>
+                                  <option value="">53</option>
+                                  <option value="">54</option>
+                                  <option value="">55</option>
+                                  <option value="">56</option>
+                                  <option value="">57</option>
+                                  <option value="">58</option>
+                                  <option value="">59</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">분</div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="ui-input-block">
+                            <textarea class="ui-input input-height-mini" title="특이대상자(24:00 이후 배회자 포함) 조치사항"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //조치현황 -->
+
+              <!-- 기타특이사항 -->
+              <div class="board-tab-panel" data-tab="tab6">
+                <div class="board-tab-panel__doc">
+                  <div class="ui-input-block">
+                    <textarea class="ui-input" title="기타특이사항" placeholder="기타특이사항을 입력하세요."></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- //기타특이사항 -->
+            </div>
+          </div>
+
+          <div class="window-popup__foot" data-tab="tab1">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button js-ui-tab-panel-next">다음</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="window-popup__foot" data-tab="tab2">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary js-ui-tab-panel-prev">이전</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button js-ui-tab-panel-next">다음</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="window-popup__foot" data-tab="tab3">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary js-ui-tab-panel-prev">이전</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button js-ui-tab-panel-next">다음</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="window-popup__foot" data-tab="tab4">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary js-ui-tab-panel-prev">이전</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button js-ui-tab-panel-next">다음</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="window-popup__foot" data-tab="tab5">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary js-ui-tab-panel-prev">이전</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button js-ui-tab-panel-next">다음</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="window-popup__foot" data-tab="tab6">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary js-ui-tab-panel-prev">이전</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var today = moment().format('YYYY-MM-DD');
+
+        function createTimeOption(max) {
+          var html = '';
+          for (var i = 0; i <= max; i++) {
+            html += '<option value="' + i + '">' + (i < 10 ? '0' : '') + i + '</option>';
+          }
+          return html;
+        }
+
+        // ##### 근무자현황 #####
+        var templateForm1 = new UiTemplateForm({
+          container: '#templateForm1',
+          addButton: '#templateFormAdd1',
+          removeButton: '#templateFormRemove1',
+          allSelect: '#templateFormAllSelect1',
+          defaultData: {
+            data_1: '',
+            data_2: '-1',
+            data_3: '-1',
+            data_4: '-1',
+          },
+          min: 1, // 최소 데이터 개수
+          template: function (data, index, templateFormObject) {
+            // defaultData 의 키 값과 name 값이 매칭 되어 데이터가 연동 됨.
+            return (
+              '<tr>' +
+              '<td class="align-center">' +
+              '<div class="ui-checkbox-block">' +
+              '<input type="checkbox" class="ui-checkbox ' +
+              templateFormObject.className.checkbox +
+              '" id="rowSelect1-' +
+              index +
+              '" />' +
+              '<label for="rowSelect1-' +
+              index +
+              '" class="ui-label">' +
+              '<span class="ui-checkbox-object"></span>' +
+              '<span class="for-a11y">열 선택</span>' +
+              '</label>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              data.data_1 +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-select-block">' +
+              '<select class="ui-select" title="보호관찰소" name="data_2">' +
+              '<option value="-1" disabled selected>선택</option>' +
+              '<option value="1">option 1</option>' +
+              '<option value="2">option 2</option>' +
+              '<option value="3">option 3</option>' +
+              '<option value="4">option 4</option>' +
+              '<option value="5">option 5</option>' +
+              '</select>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-select-block">' +
+              '<select class="ui-select" title="직급" name="data_3">' +
+              '<option value="-1" disabled selected>선택</option>' +
+              '<option value="1">option 1</option>' +
+              '<option value="2">option 2</option>' +
+              '<option value="3">option 3</option>' +
+              '<option value="4">option 4</option>' +
+              '<option value="5">option 5</option>' +
+              '</select>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-select-block">' +
+              '<select class="ui-select" title="성명" name="data_4">' +
+              '<option value="-1" disabled selected>선택</option>' +
+              '<option value="1">option 1</option>' +
+              '<option value="2">option 2</option>' +
+              '<option value="3">option 3</option>' +
+              '<option value="4">option 4</option>' +
+              '<option value="5">option 5</option>' +
+              '</select>' +
+              '</div>' +
+              '</td>' +
+              '</tr>'
+            );
+          },
+          onInit: function (templateFormObject) {
+            // 처음 셋팅 될 때 발생
+            console.log('onInit', templateFormObject);
+          },
+          onBeforeAdd: function (data, templateFormObject) {
+            // 템플릿 추가 되기 직전에 발생
+            console.log('onBeforeAdd', data, templateFormObject);
+          },
+          onAdd: function (data, templateFormObject) {
+            // 템플릿 추가 되고 직후에 발생
+            console.log('onAdd', data, templateFormObject);
+          },
+          onBeforeRemove: function (data, templateFormObject) {
+            // 템플릿 제거 되기 직전에 발생
+            console.log('onBeforeRemove', data, templateFormObject);
+          },
+          onRemove: function (data, templateFormObject) {
+            // 템플릿 제거 되고 직후에 발생
+            console.log('onRemove', data, templateFormObject);
+          },
+          onDataUpdate: function (oldDataArray, newDataArray, templateFormObject) {
+            // 사용자 액션으로 데이터가 변경 된 후에 발생 (이 callback은 dataChange, replaceData 메소드로 변경시엔 발생하지 않음.)
+            console.log('onDataUpdate', oldDataArray, newDataArray, templateFormObject);
+          },
+          onSelected: function (data, index, templateFormObject) {
+            // templateFormObject.className.checkbox 클래스값을 가진 체크박스 선택 시 발생
+            console.log('onSelected', data, index, templateFormObject);
+          },
+          onUnSelected: function (data, index, templateFormObject) {
+            // templateFormObject.className.checkbox 클래스값을 가진 체크박스 선택 해제 시 발생
+            console.log('onUnSelected', data, index, templateFormObject);
+          },
+          onRender: function (templateFormObject) {
+            // 템플릿 dom 이 재 렌더링 된 후 발생 (초기 세팅 / 추가 / 제거 / dataChange 메소드 / replaceData 메소드)
+            console.log('onRender', templateFormObject);
+          },
+        });
+
+        // 데이터 변경 메소드 (index, data)
+        templateForm1.dataChange(0, {
+          data_1: '테스트 데이터',
+          data_2: '3',
+        });
+
+        // 데이터 Get
+        console.log('getData', templateForm1.getData());
+
+        // ##### 경보처리현황 #####
+        var templateForm3 = new UiTemplateForm({
+          container: '#templateForm3',
+          addButton: '#templateFormAdd3',
+          removeButton: '#templateFormRemove3',
+          allSelect: '#templateFormAllSelect3',
+          defaultData: {
+            data_1: '',
+            data_2: '',
+            data_3: '-1',
+            data_4: '-1',
+            data_5: today,
+            data_6: '0',
+            data_7: '0',
+            data_8: today,
+            data_9: '0',
+            data_10: '0',
+            data_11: '',
+          },
+          min: 1,
+          template: function (data, index, templateFormObject) {
+            return (
+              '<tr>' +
+              '<td class="align-center">' +
+              '<div class="ui-checkbox-block">' +
+              '<input type="checkbox" class="ui-checkbox ' +
+              templateFormObject.className.checkbox +
+              '" id="rowSelect3-' +
+              index +
+              '" />' +
+              '<label for="rowSelect3-' +
+              index +
+              '" class="ui-label">' +
+              '<span class="ui-checkbox-object"></span>' +
+              '<span class="for-a11y">열 선택</span>' +
+              '</label>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              (index + 1) +
+              '</td>' +
+              '<td>' +
+              '<div class="header-search header-search--filter">' +
+              '<div class="ui-input-block header-search__input">' +
+              '<input type="text" class="ui-input" title="대상자" name="data_1" />' +
+              '</div>' +
+              '<button type="button" class="ui-button header-search__submit">' +
+              '<span class="for-a11y">검색</span>' +
+              '</button>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-input-block">' +
+              '<input type="text" class="ui-input" title="경보명" name="data_2" />' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-select-block">' +
+              '<select class="ui-select" title="경보구분" name="data_3">' +
+              '<option value="-1" disabled selected>선택</option>' +
+              '<option value="1">option 1</option>' +
+              '<option value="2">option 2</option>' +
+              '<option value="3">option 3</option>' +
+              '<option value="4">option 4</option>' +
+              '<option value="5">option 5</option>' +
+              '</select>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-select-block">' +
+              '<select class="ui-select" title="처리방식" name="data_4">' +
+              '<option value="-1" disabled selected>선택</option>' +
+              '<option value="1">option 1</option>' +
+              '<option value="2">option 2</option>' +
+              '<option value="3">option 3</option>' +
+              '<option value="4">option 4</option>' +
+              '<option value="5">option 5</option>' +
+              '</select>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="input-row">' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-input-block ui-input-block--date input-width-167">' +
+              '<input type="text" class="ui-input js-datepicker" title="날짜" name="data_5" />' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '<div class="input-row">' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="시" name="data_6">' +
+              createTimeOption(23) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">시</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="분" name="data_7">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">분</div>' +
+              '</div>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="input-row">' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-input-block ui-input-block--date input-width-167">' +
+              '<input type="text" class="ui-input js-datepicker" title="날짜" name="data_8" />' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '<div class="input-row">' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="시" name="data_9">' +
+              createTimeOption(23) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">시</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="분" name="data_10">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">분</div>' +
+              '</div>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-input-block">' +
+              '<textarea class="ui-input input-height-mini" title="경보 처리 내용" name="data_11"></textarea>' +
+              '</div>' +
+              '</td>' +
+              '</tr>'
+            );
+          },
+        });
+
+        // ##### 출장현황 #####
+        var templateForm4 = new UiTemplateForm({
+          container: '#templateForm4',
+          addButton: '#templateFormAdd4',
+          removeButton: '#templateFormRemove4',
+          allSelect: '#templateFormAllSelect4',
+          defaultData: {
+            data_1: '',
+            data_2: today,
+            data_3: '0',
+            data_4: '0',
+            data_5: '',
+            data_6: '',
+          },
+          min: 1,
+          template: function (data, index, templateFormObject) {
+            return (
+              '<tr>' +
+              '<td class="align-center">' +
+              '<div class="ui-checkbox-block">' +
+              '<input type="checkbox" class="ui-checkbox ' +
+              templateFormObject.className.checkbox +
+              '" id="rowSelect4-' +
+              index +
+              '" />' +
+              '<label for="rowSelect4-' +
+              index +
+              '" class="ui-label">' +
+              '<span class="ui-checkbox-object"></span>' +
+              '<span class="for-a11y">열 선택</span>' +
+              '</label>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              (index + 1) +
+              '</td>' +
+              '<td>' +
+              '<div class="header-search header-search--filter">' +
+              '<div class="ui-input-block header-search__input">' +
+              '<input type="text" class="ui-input" title="대상자" name="data_1" />' +
+              '</div>' +
+              '<button type="button" class="ui-button header-search__submit">' +
+              '<span class="for-a11y">검색</span>' +
+              '</button>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-input-block ui-input-block--date input-width-date">' +
+              '<input type="text" class="ui-input js-datepicker" title="날짜" name="data_2" />' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="시" name="data_3">' +
+              createTimeOption(23) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">시</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="분" name="data_4">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">분</div>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-input-block">' +
+              '<input type="text" class="ui-input" title="장소" name="data_5" />' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              // 2021.11.26 : mod : 검색 버튼 추가 : start
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell form-flex-cell--flexible">' +
+              '<div class="ui-input-block">' +
+              '<textarea class="ui-input input-height-mini" title="면담내용" name="data_6"></textarea>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">' +
+              '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-search-2 ui-basic-button--icon-only">' +
+              '<span class="for-a11y">검색</span>' +
+              '</button>' +
+              '</div>' +
+              '</div>' +
+              // 2021.11.26 : mod : 검색 버튼 추가 : end
+              '</td>' +
+              '</tr>'
+            );
+          },
+        });
+
+        // ##### 조치현황 #####
+        var templateForm5 = new UiTemplateForm({
+          container: '#templateForm5',
+          addButton: '#templateFormAdd5',
+          removeButton: '#templateFormRemove5',
+          allSelect: '#templateFormAllSelect5',
+          defaultData: {
+            data_1: '',
+            data_2: today,
+            data_3: '0',
+            data_4: '0',
+            data_5: '',
+          },
+          min: 1,
+          template: function (data, index, templateFormObject) {
+            return (
+              '<tr>' +
+              '<td class="align-center">' +
+              '<div class="ui-checkbox-block">' +
+              '<input type="checkbox" class="ui-checkbox ' +
+              templateFormObject.className.checkbox +
+              '" id="rowSelect5-' +
+              index +
+              '" />' +
+              '<label for="rowSelect5-' +
+              index +
+              '" class="ui-label">' +
+              '<span class="ui-checkbox-object"></span>' +
+              '<span class="for-a11y">열 선택</span>' +
+              '</label>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              (index + 1) +
+              '</td>' +
+              '<td>' +
+              '<div class="header-search header-search--filter">' +
+              '<div class="ui-input-block header-search__input">' +
+              '<input type="text" class="ui-input" title="대상자" name="data_1" />' +
+              '</div>' +
+              '<button type="button" class="ui-button header-search__submit">' +
+              '<span class="for-a11y">검색</span>' +
+              '</button>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="form-flex">' +
+              '<div class="form-flex-cell">' +
+              '<div class="ui-input-block ui-input-block--date input-width-date">' +
+              '<input type="text" class="ui-input js-datepicker" title="날짜" name="data_2" />' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="시" name="data_3">' +
+              createTimeOption(23) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">시</div>' +
+              '<div class="form-flex-cell form-flex-cell--date-medium">' +
+              '<div class="ui-select-block input-width-date-select">' +
+              '<select class="ui-select" title="분" name="data_4">' +
+              createTimeOption(59) +
+              '</select>' +
+              '</div>' +
+              '</div>' +
+              '<div class="form-flex-cell">분</div>' +
+              '</div>' +
+              '</td>' +
+              '<td>' +
+              '<div class="ui-input-block">' +
+              '<textarea class="ui-input input-height-mini" title="특이대상자(24:00 이후 배회자 포함) 조치사항" name="data_5"></textarea>' +
+              '</div>' +
+              '</td>' +
+              '</tr>'
+            );
+          },
+        });
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">직원조회</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="board-top">
+            <div class="board-top__right">
+              <div class="form-flex form-flex--medium">
+                <div class="form-flex-cell">
+                  <span class="color-charcoal">근무조</span>
+                </div>
+                <div class="form-flex-cell">
+                  <div class="ui-select-block input-width-small">
+                    <select class="ui-select" title="근무조">
+                      <option value="">1팀(서울A)</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="board-detail-wrap">
+            <div class="board-detail-table board-detail-table--vertical-line">
+              <table>
+                <thead>
+                  <tr>
+                    <th>어제 <strong class="color-primary">08/09</strong></th>
+                    <th>오늘 <strong class="color-primary">08/10</strong></th>
+                    <th>내일 <strong class="color-primary">08/11</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                    <td class="bg-color-light-blue">강석호(4) 010-1234-5678 (주간)</td>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                  </tr>
+                  <tr>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                    <td class="bg-color-light-blue">강석호(4) 010-1234-5678 (주간)</td>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                  </tr>
+                  <tr>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                    <td class="bg-color-light-blue">강석호(4) 010-1234-5678 (주간)</td>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                  </tr>
+                  <tr>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                    <td class="bg-color-light-blue">강석호(4) 010-1234-5678 (주간)</td>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                  </tr>
+                  <tr>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                    <td class="bg-color-light-blue">강석호(4) 010-1234-5678 (주간)</td>
+                    <td>강석호(4) 010-1234-5678 (주간)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="board-detail-wrap">
+            <div class="board-detail-head">
+              <h3 class="board-detail-head__title">전담직원</h3>
+            </div>
+            <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          cell_1: '서울보호관찰소',
+          cell_2: '강대현',
+          cell_3: '20231',
+          cell_4: '02-2200-0374',
+          cell_5: '010-5301-8773',
+          cell_6: '전담보호관찰관',
+        },
+        {
+          cell_1: '서울보호관찰소',
+          cell_2: '강대현',
+          cell_3: '20231',
+          cell_4: '02-2200-0374',
+          cell_5: '010-5301-8773',
+          cell_6: '전담보호관찰관',
+        },
+        {
+          cell_1: '서울보호관찰소',
+          cell_2: '강대현',
+          cell_3: '20231',
+          cell_4: '02-2200-0374',
+          cell_5: '010-5301-8773',
+          cell_6: '전담보호관찰관',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['관찰소'],
+            ref: 'cell_1',
+            width: '150px',
+          },
+          {
+            caption: ['사용자'],
+            ref: 'cell_2',
+            width: '100px',
+          },
+          {
+            caption: ['사용자ID'],
+            ref: 'cell_3',
+            width: '120px',
+          },
+          {
+            caption: ['전화번호'],
+            ref: 'cell_4',
+            width: '140px',
+          },
+          {
+            caption: ['휴대전화'],
+            ref: 'cell_5',
+            width: '140px',
+          },
+          {
+            caption: ['권한'],
+            ref: 'cell_6',
+            width: '140px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

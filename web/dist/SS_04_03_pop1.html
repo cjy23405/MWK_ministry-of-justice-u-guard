@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">전체 종합평가 조회</h1>
+        </div>
+
+        <div class="window-popup__body js-ui-tab-panel">
+          <form action="">
+            <section class="search-bar search-bar--popup search-bar--fix-width-key-small">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">보호관찰소</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block input-width-medium">
+                        <select class="ui-select" title="보호관찰소">
+                          <option value="">전체</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">피부착자</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block input-width-medium">
+                        <input type="text" class="ui-input" title="피부착자" />
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">일자</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block ui-input-block--date input-width-date">
+                        <input type="text" class="ui-input js-datepicker" title="일자" value="2021-12-10" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="search-bar__row" data-tab="tab1">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">정렬구분</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block input-width-medium">
+                        <select class="ui-select" title="정렬구분">
+                          <option value="">총점</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--full">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="board-tab board-tab--nav">
+            <ul class="board-tab__list">
+              <li class="board-tab__item">
+                <a href="" class="board-tab__link" data-tab-open="tab1">종합평가</a>
+              </li>
+              <li class="board-tab__item">
+                <a href="" class="board-tab__link" data-tab-open="tab2">평가정보</a>
+              </li>
+              <li class="board-tab__item">
+                <a href="" class="board-tab__link" data-tab-open="tab3">종합평가 입력현황</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 종합평가 -->
+          <div class="board-tab-panel" data-tab="tab1">
+            <div class="board-top">
+              <div class="board-top__left">
+                <div class="ui-buttons ui-buttons--left">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--secondary">다운로드</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="board-top__right">
+                <div class="ui-buttons ui-buttons--right">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">종합평가 도움말</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+                <div class="tile-layout__row">
+                  <!-- 목록 -->
+                  <div class="tile-layout__cell">
+                    <div class="ui-board-table ui-board-table--select" id="boardGrid1"></div>
+
+                    <div class="board-bottom board-bottom--list">
+                      <div class="board-bottom__left">
+                        <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+                      </div>
+                      <div class="board-bottom__right">
+                        <div class="pagination">
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                            <span class="for-a11y">처음 페이지</span>
+                          </button>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                            <span class="for-a11y">이전 페이지</span>
+                          </button>
+                          <div class="pagination__fraction">
+                            <div class="pagination__fraction-currunt">
+                              <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                              </div>
+                            </div>
+                            <div class="pagination__fraction-slash">/</div>
+                            <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                          </div>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                            <span class="for-a11y">다음 페이지</span>
+                          </button>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                            <span class="for-a11y">마지막 페이지</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //목록 -->
+                </div>
+                <div class="tile-layout__row tile-layout__row--small-detail">
+                  <!-- 상세 -->
+                  <div class="tile-layout__cell">
+                    <div class="board-detail-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>성범죄 사건수</th>
+                            <td>2건</td>
+                          </tr>
+                          <tr>
+                            <th>범행날짜</th>
+                            <td>
+                              2010-09-15(1건);<br />
+                              2010-09(경)(1건)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <div class="form-flex">
+                                <div class="form-flex-cell form-flex-cell--flexible">범행시각</div>
+                                <div class="form-flex-cell">
+                                  <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-chart ui-basic-button--icon-only">
+                                    <span class="for-a11y">차트</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </th>
+                            <td>18건(1건); 경(1건)</td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <div class="form-flex">
+                                <div class="form-flex-cell form-flex-cell--flexible">범행장소</div>
+                                <div class="form-flex-cell">
+                                  <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-chart ui-basic-button--icon-only">
+                                    <span class="for-a11y">차트</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </th>
+                            <td>
+                              주거시설(2건);<br />
+                              피해자관련장소(1건);<br />
+                              피부착자관련(1건)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>피해자나이</th>
+                            <td>아동(1건)</td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <div class="form-flex">
+                                <div class="form-flex-cell form-flex-cell--flexible">범죄행위</div>
+                                <div class="form-flex-cell">
+                                  <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-chart ui-basic-button--icon-only">
+                                    <span class="for-a11y">차트</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </th>
+                            <td>추행(2건); 강간(2건);</td>
+                          </tr>
+                          <tr>
+                            <th>범행방법</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>사건준비성</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>범행도구</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>범행음주여부</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>피해자관계</th>
+                            <td>일반면식(1건)</td>
+                          </tr>
+                          <tr>
+                            <th>범행공범여부</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>피해자장애정보</th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- //상세 -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //종합평가 -->
+
+          <!-- 평가정보 -->
+          <div class="board-tab-panel" data-tab="tab2">
+            <div class="board-top">
+              <div class="board-top__left">
+                <div class="ui-buttons ui-buttons--left">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--secondary">다운로드</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="board-top__right">
+                <div class="ui-buttons ui-buttons--right">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">종합평가 도움말</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-board-table" id="boardGrid2"></div>
+
+            <div class="board-bottom board-bottom--list">
+              <div class="board-bottom__left">
+                <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+              </div>
+              <div class="board-bottom__right">
+                <div class="pagination">
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                    <span class="for-a11y">처음 페이지</span>
+                  </button>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                    <span class="for-a11y">이전 페이지</span>
+                  </button>
+                  <div class="pagination__fraction">
+                    <div class="pagination__fraction-currunt">
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                      </div>
+                    </div>
+                    <div class="pagination__fraction-slash">/</div>
+                    <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                  </div>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                    <span class="for-a11y">다음 페이지</span>
+                  </button>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                    <span class="for-a11y">마지막 페이지</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //평가정보 -->
+
+          <!-- 종합평가 입력현황 -->
+          <div class="board-tab-panel" data-tab="tab3">
+            <div class="board-top">
+              <div class="board-top__left">
+                <div class="ui-buttons ui-buttons--left">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--secondary">다운로드</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="board-top__right">
+                <div class="ui-buttons ui-buttons--right">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">종합평가 도움말</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-board-table" id="boardGrid3"></div>
+
+            <div class="board-bottom board-bottom--list">
+              <div class="board-bottom__left">
+                <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+              </div>
+              <div class="board-bottom__right">
+                <div class="pagination">
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                    <span class="for-a11y">처음 페이지</span>
+                  </button>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                    <span class="for-a11y">이전 페이지</span>
+                  </button>
+                  <div class="pagination__fraction">
+                    <div class="pagination__fraction-currunt">
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                      </div>
+                    </div>
+                    <div class="pagination__fraction-slash">/</div>
+                    <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                  </div>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                    <span class="for-a11y">다음 페이지</span>
+                  </button>
+                  <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                    <span class="for-a11y">마지막 페이지</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //종합평가 입력현황 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data1 = [
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 0,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: -0.3,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+        {
+          cell_1: '2020-08-07',
+          cell_2: 21.4,
+          cell_3: '홍8398',
+          cell_4: '20(.8)%',
+          cell_5: '20(.8)%',
+          cell_6: '안산',
+          cell_7: '김형철',
+          cell_8: '55',
+          cell_9: '15',
+          cell_10: '5.3',
+          cell_11: '6',
+          cell_12: '12.7',
+          cell_13: '16',
+        },
+      ];
+
+      var grid_data2 = [
+        {
+          cell_1: '피부착자',
+          cell_2: '구분',
+          cell_3: '경보일시',
+          cell_4: '경보내용',
+          cell_5: '관찰소',
+        },
+      ];
+
+      var grid_data3 = [
+        {
+          cell_1: '일자',
+          cell_2: '성명',
+          cell_3: '기관명',
+          cell_4: '담당자',
+          cell_5: '위치추적 개시일',
+          cell_6: 'K-SORAS',
+          cell_7: '범죄사실',
+          cell_8: 'K-PRAI',
+          cell_9: '측위데이터',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns1 = [
+        {
+          caption: ['일자'],
+          ref: 'cell_1',
+          width: '120px',
+        },
+        {
+          caption: ['전일대비'],
+          ref: 'cell_2',
+          width: '110px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            var isClass = strValue > 0 ? 'is-up' : strValue < 0 ? 'is-down' : '';
+            return '<span class="ui-fluctuation ' + isClass + '">' + strValue + '</span>';
+          },
+        },
+        {
+          caption: ['성명'],
+          ref: 'cell_3',
+          width: '120px',
+        },
+        {
+          caption: ['기관순위'],
+          ref: 'cell_4',
+          width: '110px',
+        },
+        {
+          caption: ['전국순위'],
+          ref: 'cell_5',
+          width: '110px',
+        },
+        {
+          caption: ['보호관찰소'],
+          ref: 'cell_6',
+          width: '150px',
+        },
+        {
+          caption: ['담당자'],
+          ref: 'cell_7',
+          width: '120px',
+        },
+        {
+          caption: ['총점'],
+          ref: 'cell_8',
+          width: '120px',
+        },
+        {
+          caption: ['급성(주간)'],
+          ref: 'cell_9',
+          width: '120px',
+        },
+        {
+          caption: ['급성(일탈)'],
+          ref: 'cell_10',
+          width: '120px',
+        },
+        {
+          caption: ['급성(당일)'],
+          ref: 'cell_11',
+          width: '120px',
+        },
+        {
+          caption: ['만성요인'],
+          ref: 'cell_12',
+          width: '120px',
+        },
+        {
+          caption: ['정적요인'],
+          ref: 'cell_13',
+          width: '120px',
+        },
+      ];
+
+      var columns2 = [
+        {
+          caption: ['피부착자'],
+          ref: 'cell_1',
+          width: '220px',
+        },
+        {
+          caption: ['구분'],
+          ref: 'cell_2',
+          width: '120px',
+        },
+        {
+          caption: ['경보일시'],
+          ref: 'cell_3',
+          width: '170px',
+        },
+        {
+          caption: ['경보내용'],
+          ref: 'cell_4',
+          width: '430px',
+        },
+        {
+          caption: ['관찰소'],
+          ref: 'cell_5',
+          width: '200px',
+        },
+      ];
+
+      var columns3 = [
+        {
+          caption: ['일자'],
+          ref: 'cell_1',
+          width: '120px',
+        },
+        {
+          caption: ['성명'],
+          ref: 'cell_2',
+          width: '120px',
+        },
+        {
+          caption: ['기관명'],
+          ref: 'cell_3',
+          width: '150px',
+        },
+        {
+          caption: ['담당자'],
+          ref: 'cell_4',
+          width: '120px',
+        },
+        {
+          caption: ['위치추적 개시일'],
+          ref: 'cell_5',
+          width: '150px',
+        },
+        {
+          caption: ['K-SORAS'],
+          ref: 'cell_6',
+          width: '120px',
+        },
+        {
+          caption: ['범죄사실'],
+          ref: 'cell_7',
+          width: '120px',
+        },
+        {
+          caption: ['K-PRAI'],
+          ref: 'cell_8',
+          width: '120px',
+        },
+        {
+          caption: ['측위데이터'],
+          ref: 'cell_9',
+          width: '120px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid1',
+            parentid: 'boardGrid1',
+            jsonref: 'grid_data1',
+            columns: columns1,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid1').data('grid', datagrid);
+          }
+        );
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid2',
+            parentid: 'boardGrid2',
+            jsonref: 'grid_data2',
+            columns: columns2,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid2').data('grid', datagrid);
+          }
+        );
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid3',
+            parentid: 'boardGrid3',
+            jsonref: 'grid_data3',
+            columns: columns3,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid3').data('grid', datagrid);
+          }
+        );
+
+        // 탭 변경 시 그리드 리사이즈
+        $('.window-popup__body.js-ui-tab-panel').on('uiTabPanelChange', function () {
+          var $this = $(this);
+          var $activePanel = $this.find('.board-tab-panel.js-tabpanel-opened');
+          var grid = $activePanel.find('.ui-board-table').data('grid');
+
+          if (grid) {
+            grid.resize();
+          }
+        });
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

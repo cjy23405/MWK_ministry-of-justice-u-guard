@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">위치 추적기간 이력</h1>
+          <div class="people-head">
+            <div class="people-head__block">
+              <div class="people-head__sex people-head__sex--man">
+                <span class="for-a11y">(남)</span>
+              </div>
+              <div class="people-head__sex people-head__sex--woman">
+                <span class="for-a11y">(여)</span>
+              </div>
+              <div class="people-head__name">고 123</div>
+              <div class="people-head__info">(남) 20세</div>
+              <div class="people-head__hr"></div>
+              <div class="people-head__number">
+                <span class="people-head__key">사건번호</span>
+                <span class="people-head__val">12-3456-7890-12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <section class="board-detail-wrap">
+            <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+          </section>
+
+          <section class="board-detail-wrap">
+            <div class="board-detail-head board-detail-head--no-line">
+              <h3 class="board-detail-head__title">비고</h3>
+            </div>
+            <div class="board-detail-contents board-detail-contents--first">
+              <div class="ui-input-block">
+                <textarea class="ui-input input-height-small-regular" title="비고"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <div class="notice-box notice-box--bottom">
+            <p class="notice-box__item">
+              적용 시작일은 야간 미귀가가 적용되는 일자입니다.<br />
+              (예) 적용 시작일이’2021-06-01 -&gt; 입력일자 2021-05-31, 적용일자 2021-06-01로 표시됨
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          cell_1: '사용자 수동 변경',
+          cell_2: '2021-09-23',
+          cell_3: '2021-09-23 13:35:01',
+          cell_4: '현장처리자',
+        },
+        {
+          cell_1: '사용자 수동 변경',
+          cell_2: '2021-09-23',
+          cell_3: '2021-09-23 13:35:01',
+          cell_4: '현장처리자',
+        },
+        {
+          cell_1: '사용자 수동 변경',
+          cell_2: '2021-09-23',
+          cell_3: '2021-09-23 13:35:01',
+          cell_4: '현장처리자',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['기간 연장사유'],
+            ref: 'cell_1',
+            width: '200px',
+          },
+          {
+            caption: ['기간 연장일자'],
+            ref: 'cell_2',
+            width: '200px',
+          },
+          {
+            caption: ['등록일시'],
+            ref: 'cell_3',
+            width: '200px',
+          },
+          {
+            caption: ['현장처리자'],
+            ref: 'cell_4',
+            width: '190px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

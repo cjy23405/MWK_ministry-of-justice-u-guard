@@ -1,0 +1,25 @@
+<svg id="ic_notice_default" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2{fill:#98aed3}.cls-2,.cls-3,.cls-4{stroke:#fff}.cls-2,.cls-3{stroke-width:1.5px}.cls-3,.cls-4,.cls-6{fill:none}.cls-3,.cls-4{stroke-linecap:round}.cls-4{stroke-width:2.5px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="사각형_16049" data-name="사각형 16049" class="cls-2" transform="translate(3 2)">
+        <rect class="cls-5" width="28" height="38" rx="2"/>
+        <rect class="cls-6" x=".75" y=".75" width="26.5" height="36.5" rx="1.25"/>
+    </g>
+    <g id="사각형_16046" data-name="사각형 16046" class="cls-2" transform="translate(7 6)">
+        <rect class="cls-5" width="28" height="38" rx="2"/>
+        <rect class="cls-6" x=".75" y=".75" width="26.5" height="36.5" rx="1.25"/>
+    </g>
+    <path id="선_351" data-name="선 351" class="cls-3" transform="translate(14 16)" d="M0 0h14"/>
+    <path id="선_349" data-name="선 349" class="cls-3" transform="translate(14 22)" d="M0 0h14"/>
+    <path id="선_350" data-name="선 350" class="cls-3" transform="translate(14 28)" d="M0 0h7"/>
+    <g id="타원_933" data-name="타원 933" class="cls-2" transform="translate(24 19)">
+        <circle class="cls-5" cx="10" cy="10" r="10"/>
+        <circle class="cls-6" cx="10" cy="10" r="9.25"/>
+    </g>
+    <path id="선_360" data-name="선 360" class="cls-4" transform="translate(34 29)" d="M0 0h0"/>
+    <path id="선_361" data-name="선 361" class="cls-4" transform="translate(38 29)" d="M0 0h0"/>
+    <path id="선_362" data-name="선 362" class="cls-4" transform="translate(30 29)" d="M0 0h0"/>
+</svg>

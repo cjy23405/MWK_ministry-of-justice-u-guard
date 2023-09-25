@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">(교정관리) 피부착자 조회</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup search-bar--fix-width-key-small">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">피부착자명</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="피부착자명" />
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">사건번호</dt>
+                    <dd class="search-bar__val">
+                      <div class="form-flex form-flex--medium">
+                        <div class="form-flex-cell form-flex-cell--flexible">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="사건번호" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell color-gray">(-제외)</div>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">감독상태</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block">
+                        <select class="ui-select" title="감독상태">
+                          <option value="">전체</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="search-bar__row">
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">보호관찰소</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-select-block">
+                        <select class="ui-select" title="보호관찰소">
+                          <option value="">교정본부</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">수용기관</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="수용기관" />
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">수용번호</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="수용번호" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--full">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                    </li>
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="board-top">
+            <div class="board-top__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--secondary">다운로드</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="board-top__right">
+              <div class="ui-select-block input-width-small">
+                <select class="ui-select" title="목록 개수">
+                  <option value="">10개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                  <option value="">100개씩 보기</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-board-table" id="boardGrid"></div>
+
+          <div class="board-bottom board-bottom--list">
+            <div class="board-bottom__left">
+              <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+            </div>
+            <div class="board-bottom__right">
+              <div class="pagination">
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                  <span class="for-a11y">처음 페이지</span>
+                </button>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                  <span class="for-a11y">이전 페이지</span>
+                </button>
+                <div class="pagination__fraction">
+                  <div class="pagination__fraction-currunt">
+                    <div class="ui-input-block">
+                      <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                    </div>
+                  </div>
+                  <div class="pagination__fraction-slash">/</div>
+                  <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                </div>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                  <span class="for-a11y">다음 페이지</span>
+                </button>
+                <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                  <span class="for-a11y">마지막 페이지</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '9',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '8',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '7',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '6',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '5',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '4',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '3',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '2',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+        {
+          id: '1',
+          cell_1: '김5590',
+          cell_2: '000000-0000000',
+          cell_3: '89-2015-1020-00001',
+          cell_4: '2015-12-10 ~ 2015-12-10',
+          cell_5: '개시이전',
+          cell_6: '안양교도소',
+          cell_7: '909',
+          cell_8: '교정본부',
+          cell_9: '진료',
+          cell_10: '',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['피부착자'],
+          ref: 'cell_1',
+          width: '160px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+          },
+        },
+        {
+          caption: ['주민번호'],
+          ref: 'cell_2',
+          width: '160px',
+        },
+        {
+          caption: ['사건번호'],
+          ref: 'cell_3',
+          width: '200px',
+        },
+        {
+          caption: ['위치추적기간'],
+          ref: 'cell_4',
+          width: '220px',
+        },
+        {
+          caption: ['감독상태'],
+          ref: 'cell_5',
+          width: '200px',
+        },
+        {
+          caption: ['수용기관'],
+          ref: 'cell_6',
+          width: '200px',
+        },
+        {
+          caption: ['수용번호'],
+          ref: 'cell_7',
+          width: '160px',
+        },
+        {
+          caption: ['보호관찰소'],
+          ref: 'cell_8',
+          width: '200px',
+        },
+        {
+          caption: ['부착사유'],
+          ref: 'cell_9',
+          width: '160px',
+        },
+        {
+          caption: ['중지사유'],
+          ref: 'cell_10',
+          width: '160px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

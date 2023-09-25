@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-search-director">담당자 찾기</a>
+
+    <!-- layer: 담당자 찾기 -->
+    <div class="layer-wrap layer-search-director" data-layer="layer-search-director">
+      <div class="layer-container">
+        <section class="ui-layer ui-layer--small-regular">
+          <div class="ui-layer__head">
+            <div class="ui-layer-header">
+              <h2 class="ui-layer-header__title">담당자 찾기</h2>
+              <button type="button" class="ui-button ui-layer-header__close" data-role="layerClose">
+                <span class="for-a11y">레이어 닫기</span>
+              </button>
+            </div>
+          </div>
+          <div class="ui-layer__body">
+            <div class="ui-layer__body-inner">
+              <form action="">
+                <section class="search-bar search-bar--fix-width-key-small search-bar--popup search-bar--outline">
+                  <h2 class="for-a11y">검색</h2>
+                  <div class="search-bar__left">
+                    <div class="search-bar__row">
+                      <dl class="search-bar__item search-bar__item--flexible">
+                        <dt class="search-bar__key">보호관찰소</dt>
+                        <dd class="search-bar__val">
+                          <div class="ui-select-block">
+                            <select class="ui-select" title="보호관찰소">
+                              <option value="">전체</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="search-bar__row">
+                      <dl class="search-bar__item search-bar__item--flexible">
+                        <dt class="search-bar__key">이름</dt>
+                        <dd class="search-bar__val">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="이름" />
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="search-bar__right">
+                    <div class="ui-buttons ui-buttons--full">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                        </li>
+                        <li class="ui-buttons__item">
+                          <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </form>
+
+              <div class="ui-board-table ui-board-table--outline ui-board-table--6-rows" id="boardGrid"></div>
+            </div>
+          </div>
+          <div class="ui-layer__foot">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary" data-role="layerClose">닫기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 담당자 찾기 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '9',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '8',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '7',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '6',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '5',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '4',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '3',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '2',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+        {
+          id: '1',
+          cell_1: '$유형1$',
+          cell_2: '홍길동',
+          cell_3: 'TEST11',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        {
+          caption: ['보호관찰소'],
+          ref: 'cell_1',
+          width: '155px',
+        },
+        {
+          caption: ['이름'],
+          ref: 'cell_2',
+          width: '100px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+          },
+        },
+        {
+          caption: ['아이디'],
+          ref: 'cell_3',
+          width: '160px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid').data('grid', datagrid);
+          }
+        );
+
+        // 레이어 열린 후 그리드 리사이즈
+        $('.layer-search-director').on('layerAfterOpened', function () {
+          var $this = $(this);
+          var grid = $this.find('.ui-board-table').data('grid');
+
+          if (grid) {
+            grid.resize();
+          }
+        });
+
+        uiJSLayer.open('layer-search-director'); // 퍼블리셔 테스트 소스 입니다.
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

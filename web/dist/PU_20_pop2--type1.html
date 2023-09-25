@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup js-ui-tab-panel">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">전자장치 관리</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                  <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                  <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__name">고 123</div>
+                <div class="people-head__info">(남) 20세</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>일체형 충전팩</th>
+                    <td></td>
+                    <th>전자장치 배정일시</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell form-flex-cell--flexible">2021-07-05 17:07</div>
+                        <div class="form-flex-cell form-flex-cell--button">
+                          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--septenary">장치배정</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>개량형 부착장치</th>
+                    <td>401410</td>
+                    <th>개량형 부착장치 번호</th>
+                    <td>012-3251-5359</td>
+                  </tr>
+                  <tr>
+                    <th>개량형 재택장치</th>
+                    <td>501510</td>
+                    <th>개량형 재택장치 번호</th>
+                    <td>012-3253-2652</td>
+                  </tr>
+                  <tr>
+                    <th>환경설정</th>
+                    <td colspan="3">개량형 부착장치 : 설정완료 / 개량형 재택장치 : 설정완료</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="board-bottom board-bottom--list">
+              <div class="board-bottom__left">
+                <div class="total-text">
+                  <p class="notice-box__item">인증키 : B8750C11764ACEEC</p>
+                </div>
+              </div>
+              <div class="board-bottom__right">
+                <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--senary">부착/분리</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">상태정보</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                      <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">환경설정</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="survey-hr survey-hr--height-20"></div>
+
+            <section class="board-detail-wrap">
+              <div class="board-detail-head">
+                <h3 class="board-detail-head__title">환경설정</h3>
+              </div>
+
+              <div class="board-tab-panel board-tab-panel--last">
+                <div class="board-detail-table board-detail-table--thead-line board-detail-table--vertical-line">
+                  <table>
+                    <colgroup>
+                      <col class="board-detail-table__title-width" />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구분 (Ver.)</th>
+                        <th>개량형 부착장치 (부착중)</th>
+                        <th>개량형 재택장치 (설치)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>장치 ID</th>
+                        <td>401410(4G)</td>
+                        <td>501510(4G)</td>
+                      </tr>
+                      <tr>
+                        <th>MDN</th>
+                        <td>01232515359</td>
+                        <td>01232532652</td>
+                      </tr>
+                      <tr>
+                        <th>소속기관</th>
+                        <td>중앙관제센터</td>
+                        <td>중앙관제센터</td>
+                      </tr>
+                      <tr>
+                        <th>보고주기(위치)</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block input-width-small-mini">
+                                <input type="text" class="ui-input" title="보고주기(위치)" />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">분</div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*1~1440분 까지 입력 가능합니다.</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>장치간 통신주기</th>
+                        <td colspan="2">
+                          <div class="ui-select-block input-width-small-mini">
+                            <select class="ui-select" title="장치간 통신주기">
+                              <option value="">40</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>감응거리</th>
+                        <td>
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-select-block input-width-small-mini">
+                                <select class="ui-select" title="감응거리">
+                                  <option value="">9</option>
+                                  <option value="">option 2</option>
+                                  <option value="">option 3</option>
+                                  <option value="">option 4</option>
+                                  <option value="">option 5</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">단계</div>
+                          </div>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>Hotkey1</th>
+                        <td></td>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="Hotkey1" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Hotkey2</th>
+                        <td></td>
+                        <td>
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="Hotkey2" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>저전력 발생 기준값</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block input-width-small-mini">
+                                <input type="text" class="ui-input" title="저전력 발생 기준값" />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">%</div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*11%~50% 까지 입력 가능합니다.</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          저전력 주기보고<br />
+                          가변 사용여부
+                        </th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-check-list">
+                                <ul class="ui-check-list__list">
+                                  <li class="ui-check-list__item">
+                                    <div class="ui-radio-block">
+                                      <input type="radio" class="ui-radio" name="lowPowerCycleReportVariable" id="lowPowerCycleReportVariable1" />
+                                      <label for="lowPowerCycleReportVariable1" class="ui-label">
+                                        <span class="ui-radio-object"></span>
+                                        <span class="ui-label__text">사용</span>
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="ui-check-list__item">
+                                    <div class="ui-radio-block">
+                                      <input type="radio" class="ui-radio" name="lowPowerCycleReportVariable" id="lowPowerCycleReportVariable2" />
+                                      <label for="lowPowerCycleReportVariable2" class="ui-label">
+                                        <span class="ui-radio-object"></span>
+                                        <span class="ui-label__text">미사용</span>
+                                      </label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*저전력 발생 시 8분마다 주기보고</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원오프 기준값</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block input-width-small-mini">
+                                <input type="text" class="ui-input" title="전원오프 기준값" />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">%</div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*5%~10% 까지 입력 가능합니다.</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>충격감지 기준값</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block input-width-small-mini">
+                                <input type="text" class="ui-input" title="충격감지 기준값" disabled />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*0~5까지 입력 가능합니다.</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>무동작 감지 기준값</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-input-block input-width-small-mini">
+                                <input type="text" class="ui-input" title="무동작 감지 기준값" disabled />
+                              </div>
+                            </div>
+                            <div class="form-flex-cell">분</div>
+                            <div class="form-flex-cell form-flex-cell--medium color-gray">*20분~80분 까지 입력 가능합니다.</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>측위 On/Off</th>
+                        <td colspan="2">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-check-list">
+                                <ul class="ui-check-list__list">
+                                  <li class="ui-check-list__item">
+                                    <div class="ui-radio-block">
+                                      <input type="radio" class="ui-radio" name="positioning" id="positioning1" disabled />
+                                      <label for="positioning1" class="ui-label">
+                                        <span class="ui-radio-object"></span>
+                                        <span class="ui-label__text">사용</span>
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="ui-check-list__item">
+                                    <div class="ui-radio-block">
+                                      <input type="radio" class="ui-radio" name="positioning" id="positioning2" disabled />
+                                      <label for="positioning2" class="ui-label">
+                                        <span class="ui-radio-object"></span>
+                                        <span class="ui-label__text">미사용</span>
+                                      </label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--medium-large">
+                              <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary" disabled>적용</button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>사유</th>
+                        <td colspan="2">
+                          <div class="ui-input-block">
+                            <textarea class="ui-input input-height-mini" title="사유"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+            <div class="bottom-buttons">
+              <ul class="bottom-buttons__list">
+                <li class="bottom-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">일체형 부착장치 리셋</button>
+                </li>
+                <li class="bottom-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">재택장치 리셋</button>
+                </li>
+                <li class="bottom-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary" disabled>초기화</button>
+                </li>
+                <li class="bottom-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">일체형 부착장치 전원 OFF</button>
+                </li>
+                <li class="bottom-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">재택장치전원 OFF</button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="notice-box notice-box--bottom">
+              <p class="notice-box__item notice-box__item--icon-red">환경설정 저장 시 성공 메시지를 확인하실 때까지 창을 닫지 마십시오. 성공할 때까지 재시도 하시기 바랍니다.</p>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary">측위요청</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

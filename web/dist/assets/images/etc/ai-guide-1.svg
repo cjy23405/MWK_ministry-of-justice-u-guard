@@ -1,0 +1,128 @@
+<svg id="image_AI_MA_pop8" xmlns="http://www.w3.org/2000/svg" width="1120" height="312" viewBox="0 0 1120 312">
+    <defs>
+        <style>
+            .cls-1{fill:#c1c7d8}.cls-10,.cls-20,.cls-8,.cls-9{fill:none}.cls-13,.cls-18,.cls-3{fill:#fff}.cls-10,.cls-3,.cls-8,.cls-9{stroke:#c1c7d8}.cls-4{fill:#f2f4f8}.cls-5{fill:#ebf2ff}.cls-13,.cls-5{stroke:#4264d0}.cls-6,.cls-7{fill:#111;font-size:13px}.cls-6{font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo}.cls-18,.cls-7{font-family:SpoqaHanSansNeo-Medium,Spoqa Han Sans Neo;font-weight:500}.cls-10,.cls-9{stroke-linecap:round}.cls-9{stroke-linejoin:round}.cls-14{fill:#4264d0}.cls-18{font-size:12px}.cls-19{stroke:none}
+        </style>
+    </defs>
+    <path id="합치기_169" data-name="합치기 169" class="cls-1" d="M10169.5-3375a.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5h19.5v-107h-19.5a.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5h20a.5.5 0 0 1 .5.5v108a.5.5 0 0 1-.5.5z" transform="translate(-9341 3578)"/>
+    <g id="사각형_17122" data-name="사각형 17122" class="cls-3" transform="translate(69 71)">
+        <rect class="cls-19" width="139" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="138" height="43" rx="5.5"/>
+    </g>
+    <rect id="사각형_17131" data-name="사각형 17131" class="cls-4" width="121" height="184" rx="6" transform="translate(353)"/>
+    <g id="사각형_17124" data-name="사각형 17124" class="cls-5" transform="translate(368 10)">
+        <rect class="cls-19" width="91" height="44" rx="22"/>
+        <rect class="cls-20" x=".5" y=".5" width="90" height="43" rx="21.5"/>
+    </g>
+    <g id="사각형_17125" data-name="사각형 17125" class="cls-5" transform="translate(368 70)">
+        <rect class="cls-19" width="91" height="44" rx="22"/>
+        <rect class="cls-20" x=".5" y=".5" width="90" height="43" rx="21.5"/>
+    </g>
+    <g id="사각형_17126" data-name="사각형 17126" class="cls-5" transform="translate(368 130)">
+        <rect class="cls-19" width="91" height="44" rx="22"/>
+        <rect class="cls-20" x=".5" y=".5" width="90" height="43" rx="21.5"/>
+    </g>
+    <text id="실시간_경보현황" data-name="실시간 경보현황" class="cls-6" transform="translate(106 98)"><tspan x="0" y="0">실시간 경보현황</tspan></text>
+    <text id="완전_자동" data-name="완전 자동" class="cls-6" transform="translate(388 37)"><tspan x="0" y="0">완전 자동</tspan></text>
+    <text id="반자동" class="cls-6" transform="translate(396 97)"><tspan x="0" y="0">반자동</tspan></text>
+    <text id="수동" class="cls-6" transform="translate(402 157)"><tspan x="0" y="0">수동</tspan></text>
+    <text id="실시간_AI_분석" data-name="실시간 AI 분석" class="cls-7" transform="translate(237 139)"><tspan x="0" y="0">실시간 AI 분석</tspan></text>
+    <text id="자동_처리_대상_분류" data-name="자동 처리 대상 분류" class="cls-7" transform="translate(357 208)"><tspan x="0" y="0">자동 처리 대상 분류</tspan></text>
+    <text id="경보_처리" data-name="경보 처리" class="cls-7" transform="translate(739 148)"><tspan x="0" y="0">경보 처리</tspan></text>
+    <text id="경보_처리_완료" data-name="경보 처리 완료" class="cls-7" transform="translate(904 231.5)"><tspan x="0" y="0">경보 처리 완료</tspan></text>
+    <rect id="사각형_17138" data-name="사각형 17138" class="cls-4" width="133" height="118" rx="6" transform="translate(875 89.5)"/>
+    <g id="사각형_17136" data-name="사각형 17136" class="cls-3" transform="translate(890 99.5)">
+        <rect class="cls-19" width="103" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="102" height="43" rx="5.5"/>
+    </g>
+    <g id="사각형_17134" data-name="사각형 17134" class="cls-3" transform="translate(890 153.5)">
+        <rect class="cls-19" width="103" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="102" height="43" rx="5.5"/>
+    </g>
+    <text id="종료_이력" data-name="종료 이력" class="cls-6" transform="translate(927 126.5)"><tspan x="0" y="0">종료 이력</tspan></text>
+    <text id="이관_이력" data-name="이관 이력" class="cls-6" transform="translate(927 180.5)"><tspan x="0" y="0">이관 이력</tspan></text>
+    <g id="타원_721" data-name="타원 721" class="cls-5" transform="translate(253 71)">
+        <circle class="cls-19" cx="22" cy="22" r="22"/>
+        <circle class="cls-20" cx="22" cy="22" r="21.5"/>
+    </g>
+    <text id="AI" class="cls-6" transform="translate(269 98)"><tspan x="0" y="0">AI</tspan></text>
+    <path id="선_348" data-name="선 348" class="cls-8" transform="translate(208 93)" d="M0 0h40"/>
+    <path id="패스_11289" data-name="패스 11289" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11715.994 -416.34)"/>
+    <path id="패스_11295" data-name="패스 11295" class="cls-10" d="M0 0h60" transform="translate(302 93)"/>
+    <path id="선_357" data-name="선 357" class="cls-8" transform="translate(459 93)" d="M0 0h40"/>
+    <path id="선_358" data-name="선 358" transform="translate(459 152.5)" style="stroke-linejoin:round;stroke:#c1c7d8;fill:none" d="M0 0h40"/>
+    <path id="패스_11298" data-name="패스 11298" d="M0 0h195" transform="translate(499 202.5)" style="fill:transparent;stroke-linejoin:round;stroke-linecap:round;stroke:#c1c7d8"/>
+    <path id="선_359" data-name="선 359" class="cls-9" transform="translate(499 152.5)" d="M0 50V0"/>
+    <path id="선_353" data-name="선 353" class="cls-10" transform="translate(499 66.5)" d="M0 0h21"/>
+    <path id="선_354" data-name="선 354" class="cls-10" transform="translate(499 119.5)" d="M0 0h21"/>
+    <path id="패스_11293" data-name="패스 11293" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11988.994 -442.839)"/>
+    <path id="패스_11294" data-name="패스 11294" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11988.994 -389.839)"/>
+    <path id="선_353-2" data-name="선 353" class="cls-8" transform="rotate(180 336.5 60.25)" d="M0 0h20"/>
+    <path id="선_364" data-name="선 364" class="cls-9" transform="translate(459 32.5)" d="M0 0h482.5"/>
+    <path id="선_354-2" data-name="선 354" class="cls-8" transform="rotate(180 336.5 33.25)" d="M0 0h20"/>
+    <path id="선_363" data-name="선 363" class="cls-9" transform="translate(941.5 32.5)" d="M0 0v51"/>
+    <path id="패스_11297" data-name="패스 11297" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="rotate(90 -5050.827 6501.667)"/>
+    <path id="선_362" data-name="선 362" class="cls-10" transform="translate(673.5 93.5)" d="M0 0h20"/>
+    <path id="패스_11296" data-name="패스 11296" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(12161.994 -415.839)"/>
+    <path id="선_368" data-name="선 368" class="cls-10" transform="translate(848.5 148.5)" d="M0 0h21"/>
+    <path id="패스_11300" data-name="패스 11300" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(12337.994 -360.84)"/>
+    <path id="패스_11299" data-name="패스 11299" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(12161.994 -306.839)"/>
+    <path id="선_356" data-name="선 356" class="cls-9" transform="translate(499 66.5)" d="M0 53V0"/>
+    <path id="선_361" data-name="선 361" class="cls-9" transform="rotate(180 336.5 60.25)" d="M0 54V0"/>
+    <path id="패스_11290" data-name="패스 11290" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11830.995 -416.339)"/>
+    <path id="패스_11291" data-name="패스 11291" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11830.994 -476.339)"/>
+    <path id="패스_11292" data-name="패스 11292" class="cls-9" d="m-11470.994 505.84 3 3.475-3 3.525" transform="translate(11830.994 -357.339)"/>
+    <g id="사각형_17133" data-name="사각형 17133" class="cls-13" transform="translate(699 172)">
+        <rect class="cls-19" width="130" height="60" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="129" height="59" rx="5.5"/>
+    </g>
+    <text id="조치내용_수동_입력" data-name="조치내용 수동 입력" class="cls-6" transform="translate(764 199)"><tspan x="-23.92" y="0">조치내용</tspan><tspan x="-25.376" y="17">수동 입력</tspan></text>
+    <text id="경보_처리-2" data-name="경보 처리" class="cls-7" transform="translate(739 256)"><tspan x="0" y="0">경보 처리</tspan></text>
+    <g id="사각형_17132" data-name="사각형 17132" class="cls-13" transform="translate(699 64)">
+        <rect class="cls-19" width="130" height="60" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="129" height="59" rx="5.5"/>
+    </g>
+    <text id="조치내용_자동_입력" data-name="조치내용 자동 입력" class="cls-6" transform="translate(764 91)"><tspan x="-23.92" y="0">조치내용</tspan><tspan class="cls-14"><tspan x="-25.376" y="17">자동 입력</tspan></tspan></text>
+    <g id="사각형_10527" data-name="사각형 10527" transform="translate(0 268)" style="stroke:#dfe5eb;fill:#fff">
+        <rect class="cls-19" width="364" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="363" height="43" rx="5.5"/>
+    </g>
+    <path id="사각형_11617" data-name="사각형 11617" d="M5 0h59v42H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(1 269)" style="fill:#f3f5f7"/>
+    <text id="범례" transform="translate(21 295)" style="fill:#565a61;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;font-size:13px"><tspan x="0" y="0">범례</tspan></text>
+    <text id="메뉴" class="cls-6" transform="translate(108 295)"><tspan x="0" y="0">메뉴</tspan></text>
+    <text id="사용자_처리" data-name="사용자 처리" class="cls-6" transform="translate(175 295)"><tspan x="0" y="0">사용자 처리</tspan></text>
+    <text id="시스템_처리" data-name="시스템 처리" class="cls-6" transform="translate(281 295)"><tspan x="0" y="0">시스템 처리</tspan></text>
+    <g id="btn_checkbox_n" class="cls-3" transform="translate(85 281)">
+        <rect class="cls-19" width="18" height="18" rx="3"/>
+        <rect class="cls-20" x=".5" y=".5" width="17" height="17" rx="2.5"/>
+    </g>
+    <g id="btn_checkbox_n-2" data-name="btn_checkbox_n" class="cls-13" transform="translate(152 281)">
+        <rect class="cls-19" width="18" height="18" rx="3"/>
+        <rect class="cls-20" x=".5" y=".5" width="17" height="17" rx="2.5"/>
+    </g>
+    <g id="btn_checkbox_n-3" data-name="btn_checkbox_n" class="cls-5" transform="translate(258 281)">
+        <rect class="cls-19" width="18" height="18" rx="3"/>
+        <rect class="cls-20" x=".5" y=".5" width="17" height="17" rx="2.5"/>
+    </g>
+    <rect id="사각형_17199" data-name="사각형 17199" class="cls-14" width="17" height="17" rx="3" transform="translate(905 113)"/>
+    <text id="_4" data-name="4" class="cls-18" transform="translate(910 126)"><tspan x="0" y="0">4</tspan></text>
+    <rect id="사각형_17200" data-name="사각형 17200" class="cls-14" width="17" height="17" rx="3" transform="translate(905 167)"/>
+    <text id="_5" data-name="5" class="cls-18" transform="translate(910 180)"><tspan x="0" y="0">5</tspan></text>
+    <rect id="사각형_17233" data-name="사각형 17233" class="cls-14" width="17" height="17" rx="3" transform="translate(84 85)"/>
+    <text id="_1" data-name="1" class="cls-18" transform="translate(89 98)"><tspan x="0" y="0">1</tspan></text>
+    <g id="사각형_17127" data-name="사각형 17127" class="cls-3" transform="translate(526 45)">
+        <rect class="cls-19" width="127" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="126" height="43" rx="5.5"/>
+    </g>
+    <g id="사각형_17129" data-name="사각형 17129" class="cls-3" transform="translate(526 99)">
+        <rect class="cls-19" width="127" height="44" rx="6"/>
+        <rect class="cls-20" x=".5" y=".5" width="126" height="43" rx="5.5"/>
+    </g>
+    <text id="자동이관_유보" data-name="자동이관 유보" class="cls-6" transform="translate(563 72)"><tspan x="0" y="0">자동이관 유보</tspan></text>
+    <text id="자동종료_유보" data-name="자동종료 유보" class="cls-6" transform="translate(563 126)"><tspan x="0" y="0">자동종료 유보</tspan></text>
+    <rect id="사각형_17234" data-name="사각형 17234" class="cls-14" width="17" height="17" rx="3" transform="translate(541 59)"/>
+    <rect id="사각형_17235" data-name="사각형 17235" class="cls-14" width="17" height="17" rx="3" transform="translate(541 112)"/>
+    <text id="_2" data-name="2" class="cls-18" transform="translate(546 72)"><tspan x="0" y="0">2</tspan></text>
+    <text id="_3" data-name="3" class="cls-18" transform="translate(546 125)"><tspan x="0" y="0">3</tspan></text>
+    <path id="합치기_170" data-name="합치기 170" class="cls-1" d="M10189.473-3363.5h-20.918a.555.555 0 0 1-.556-.555.555.555 0 0 1 .556-.555H10189v-117.89h-20.445a.555.555 0 0 1-.556-.555.555.555 0 0 1 .556-.555h20.944a.5.5 0 0 1 .5.5V-3364a.5.5 0 0 1-.5.5z" transform="rotate(180 5265.5 -1665.5)"/>
+</svg>

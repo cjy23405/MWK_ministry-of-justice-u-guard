@@ -1,0 +1,23 @@
+<svg id="ic_menu_1_n" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2,.cls-4{fill:none}.cls-2{stroke:#a1afc0;stroke-width:1.5px}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="사각형_6289" data-name="사각형 6289" class="cls-2" transform="translate(1 1)">
+        <rect class="cls-3" width="10" height="10" rx=".5"/>
+        <rect class="cls-4" x=".75" y=".75" width="8.5" height="8.5" rx=".25"/>
+    </g>
+    <g id="사각형_6292" data-name="사각형 6292" class="cls-2" transform="translate(1 13)">
+        <rect class="cls-3" width="10" height="10" rx=".5"/>
+        <rect class="cls-4" x=".75" y=".75" width="8.5" height="8.5" rx=".25"/>
+    </g>
+    <g id="사각형_6290" data-name="사각형 6290" class="cls-2" transform="translate(13 1)">
+        <rect class="cls-3" width="10" height="10" rx=".5"/>
+        <rect class="cls-4" x=".75" y=".75" width="8.5" height="8.5" rx=".25"/>
+    </g>
+    <g id="사각형_6291" data-name="사각형 6291" class="cls-2" transform="translate(13 13)">
+        <rect class="cls-3" width="10" height="10" rx=".5"/>
+        <rect class="cls-4" x=".75" y=".75" width="8.5" height="8.5" rx=".25"/>
+    </g>
+</svg>

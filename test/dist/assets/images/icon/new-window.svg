@@ -1,0 +1,11 @@
+<svg id="ic_popup" xmlns="http://www.w3.org/2000/svg" width="16" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_9411" data-name="사각형 9411" style="fill:none" d="M0 0h16v24H0z"/>
+    <path id="패스_10707" data-name="패스 10707" class="cls-2" d="M9227.088 10299.751h-3.788v10h10v-3.9" transform="translate(-9222.302 -10292.751)"/>
+    <path id="패스_10708" data-name="패스 10708" class="cls-2" d="M9223.3 10299.751v4h4" transform="rotate(180 4617.15 5155.375)"/>
+    <path id="패스_10709" data-name="패스 10709" class="cls-2" d="m9233.021 10300.233-5.892 5.689" transform="translate(-9222.13 -10293.233)"/>
+</svg>

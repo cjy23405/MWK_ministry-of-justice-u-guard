@@ -1,0 +1,14 @@
+<svg id="ic_menu_13_n" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25">
+    <defs>
+        <style>
+            .cls-3{fill:#a1afc0}
+        </style>
+    </defs>
+    <path id="사각형_17483" data-name="사각형 17483" style="fill:transparent" d="M0 0h24v25H0z"/>
+    <g id="사각형_17485" data-name="사각형 17485" transform="translate(3)" style="stroke:#a1afc0;stroke-width:1.5px;fill:none">
+        <rect width="18" height="25" rx=".5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="16.5" height="23.5" rx=".25" style="fill:none"/>
+    </g>
+    <path id="사각형_17487" data-name="사각형 17487" class="cls-3" transform="translate(9.5 20)" d="M0 0h5.08v1.5H0z"/>
+    <path id="패스_11336" data-name="패스 11336" class="cls-3" d="M9.063 3.75H2.484L1.547 0H0l1.028 4.112A1.252 1.252 0 0 0 2.273 5.25h7a1.253 1.253 0 0 0 1.246-1.138L11.547 0H10z" transform="translate(6.361)"/>
+</svg>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">집중관제 경보 수동 이관 (대상자 지정)</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <!-- 2021.10.22 : del : colgroup 제거
+                <colgroup>
+                  <col width="200px;" />
+                  <col width="" />
+                </colgroup>
+                -->
+                <tbody>
+                  <tr>
+                    <th>피부착자</th>
+                    <td>
+                      <div class="header-search header-search--filter input-width-medium">
+                        <div class="ui-input-block header-search__input">
+                          <input type="text" class="ui-input" title="피부착자" />
+                        </div>
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사건번호</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>집중관제정보</th>
+                    <td>
+                      <div class="ui-check-list ui-check-list--tripartition">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+                              <label for="radio1-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">생활패턴 이탈</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+                              <label for="radio1-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">장시간 차량이동</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-3" />
+                              <label for="radio1-3" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">위험장소 진입</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-4" />
+                              <label for="radio1-4" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">심야외출 미귀가</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-5" />
+                              <label for="radio1-5" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">성범죄 Hot-Spot 진입</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-6" />
+                              <label for="radio1-6" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">피해자 접근금지</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-7" />
+                              <label for="radio1-7" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">자해, 자살, 재범 등 예고</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-8" />
+                              <label for="radio1-8" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">24시간 재택 측위</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-9" />
+                              <label for="radio1-9" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">출입금지구역 인근지역반복 출입</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-10" />
+                              <label for="radio1-10" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">훼손 의심</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio1" id="radio1-11" />
+                              <label for="radio1-11" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">기타</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>처리일시</th>
+                    <td>
+                      <!-- 2021.10.18 : mod : 클래스 값 수정 및 "시", "분" 텍스트 셀렉트 밖으로 이동 -->
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block ui-input-block--date input-width-date">
+                            <input type="text" class="ui-input js-datepicker" title="날짜" value="2021-12-10" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-medium">
+                          <div class="ui-select-block input-width-date-select">
+                            <select class="ui-select" title="시">
+                              <option value="">00</option>
+                              <option value="">01</option>
+                              <option value="">02</option>
+                              <option value="">03</option>
+                              <option value="">04</option>
+                              <option value="">05</option>
+                              <option value="">06</option>
+                              <option value="">07</option>
+                              <option value="">08</option>
+                              <option value="">09</option>
+                              <option value="">10</option>
+                              <option value="">11</option>
+                              <option value="">12</option>
+                              <option value="">13</option>
+                              <option value="">14</option>
+                              <option value="">15</option>
+                              <option value="">16</option>
+                              <option value="">17</option>
+                              <option value="">18</option>
+                              <option value="">19</option>
+                              <option value="">20</option>
+                              <option value="">21</option>
+                              <option value="">22</option>
+                              <option value="">23</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">시</div>
+                        <div class="form-flex-cell form-flex-cell--date-medium">
+                          <div class="ui-select-block input-width-date-select">
+                            <select class="ui-select" title="분">
+                              <option value="">00</option>
+                              <option value="">01</option>
+                              <option value="">02</option>
+                              <option value="">03</option>
+                              <option value="">04</option>
+                              <option value="">05</option>
+                              <option value="">06</option>
+                              <option value="">07</option>
+                              <option value="">08</option>
+                              <option value="">09</option>
+                              <option value="">10</option>
+                              <option value="">11</option>
+                              <option value="">12</option>
+                              <option value="">13</option>
+                              <option value="">14</option>
+                              <option value="">15</option>
+                              <option value="">16</option>
+                              <option value="">17</option>
+                              <option value="">18</option>
+                              <option value="">19</option>
+                              <option value="">20</option>
+                              <option value="">21</option>
+                              <option value="">22</option>
+                              <option value="">23</option>
+                              <option value="">24</option>
+                              <option value="">25</option>
+                              <option value="">26</option>
+                              <option value="">27</option>
+                              <option value="">28</option>
+                              <option value="">29</option>
+                              <option value="">30</option>
+                              <option value="">31</option>
+                              <option value="">32</option>
+                              <option value="">33</option>
+                              <option value="">34</option>
+                              <option value="">35</option>
+                              <option value="">36</option>
+                              <option value="">37</option>
+                              <option value="">38</option>
+                              <option value="">39</option>
+                              <option value="">40</option>
+                              <option value="">41</option>
+                              <option value="">42</option>
+                              <option value="">43</option>
+                              <option value="">44</option>
+                              <option value="">45</option>
+                              <option value="">46</option>
+                              <option value="">47</option>
+                              <option value="">48</option>
+                              <option value="">49</option>
+                              <option value="">50</option>
+                              <option value="">51</option>
+                              <option value="">52</option>
+                              <option value="">53</option>
+                              <option value="">54</option>
+                              <option value="">55</option>
+                              <option value="">56</option>
+                              <option value="">57</option>
+                              <option value="">58</option>
+                              <option value="">59</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">분</div>
+                      </div>
+                      <!-- //2021.10.18 : mod : 클래스 값 수정 및 "시", "분" 텍스트 셀렉트 밖으로 이동 -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>처리상태</th>
+                    <td>
+                      <div class="ui-check-list">
+                        <ul class="ui-check-list__list">
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio2" id="radio2-1" />
+                              <label for="radio2-1" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">이상없음</span>
+                              </label>
+                            </div>
+                          </li>
+                          <li class="ui-check-list__item">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" name="radio2" id="radio2-2" checked />
+                              <label for="radio2-2" class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">보호관찰담당자 통보</span>
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>관제센터 처리내용</th>
+                    <td>
+                      <div class="ui-input-block">
+                        <textarea class="ui-input input-height-small-medium" title="관제센터 처리내용"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

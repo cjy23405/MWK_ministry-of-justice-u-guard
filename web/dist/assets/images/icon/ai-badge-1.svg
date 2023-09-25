@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-4{fill:none;stroke:#111;stroke-width:1.5px;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="ico_departure" transform="translate(-553 -108)">
+        <path id="사각형_17704" data-name="사각형 17704" transform="translate(553 108)" style="fill:transparent" d="M0 0h50v50H0z"/>
+        <g id="그룹_12022" data-name="그룹 12022" transform="translate(98)">
+            <path id="선_403" data-name="선 403" transform="translate(463.5 147.5)" style="stroke:#111;stroke-width:1.5px;fill:none" d="M0 0h33"/>
+            <g id="그룹_11988" data-name="그룹 11988" transform="rotate(-10.02 -686.738 1492.505)">
+                <g id="그룹_11986" data-name="그룹 11986">
+                    <path id="빼기_30" data-name="빼기 30" class="cls-4" d="M702.814 360.586 699 361.975a.171.171 0 0 1-.22-.1.134.134 0 0 1-.01-.036l-.77-5.728a.171.171 0 0 0-.193-.147.136.136 0 0 0-.036.008l-6.483 2.36-.094.007-4.933-.96-.124-.1-2.241-5.21a.171.171 0 0 1 .1-.22l2.63-1.3a.172.172 0 0 1 .207.075l2.78 3.093a.173.173 0 0 0 .21.073l18.625-8.144a3.048 3.048 0 0 1 2.887.239l4.78 3.119a.171.171 0 0 1 .048.238.176.176 0 0 1-.085.067l-12.413 4.518-.114.148-.624 6.47z"/>
+                    <path id="패스_12103" data-name="패스 12103" class="cls-4" d="m693.1 345.621 4.235-1.541a.173.173 0 0 1 .153.019l5.376 3.7a.173.173 0 0 1 .047.24.179.179 0 0 1-.08.064l-5.5 2.331a.173.173 0 0 1-.183-.04l-4.112-4.495a.173.173 0 0 1 0-.244.187.187 0 0 1 .064-.034z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

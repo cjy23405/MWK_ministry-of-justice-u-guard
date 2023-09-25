@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="ko" id="ie9"><![endif]-->
+<!--[if !IE]>-->
+<html lang="ko">
+  <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AI 기반 전자감독 서비스</title>
+    <!-- SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <!-- //SBGrid -->
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery.mCustomScrollbar.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/legacy/ai/css/common.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <div class="btns-box">
+          <button type="button" class="btn-refresh"><img src="./assets/legacy/ai/images/ico_reload.png" alt="새로고침" /></button>
+          <a href="#" class="btn-setting"><img src="./assets/legacy/ai/images/ico_settings.png" alt="설정" /></a>
+        </div>
+        <div class="info-list">
+          <div class="info-list-item">
+            <span class="item">집중 관제</span>
+            <div class="value">
+              집중중앙그룹
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 1</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">중앙그룹</span>
+            <div class="value">전체</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">대전그룹</span>
+            <div class="value">선택없음</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">보호관찰소</span>
+            <div class="value">
+              서울남부
+              <div class="tooltip-wrap">
+                <span class="tooltip-item">외 3</span>
+                <div class="tooltip-box">
+                  <p class="tooltip-paragraph">서울남부, 서울동부, 제주, 영동</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">데이터 수신 주기</span>
+            <div class="value">30초</div>
+          </div>
+          <div class="info-list-item">
+            <span class="item">테스트 데이터</span>
+            <div class="value">사용</div>
+          </div>
+        </div>
+        <div class="aside">
+          <div class="ai">
+            <!-- off -->
+            <div class="tooltip-wrap status-off is-active">
+              <!-- 활성화 is-active 클래스 추가 -->
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_off.png" alt="OFF AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 중단되었습니다.</p>
+              </div>
+            </div>
+            <!-- //off -->
+            <!-- on -->
+            <div class="tooltip-wrap status-on">
+              <span class="tooltip-item"><img src="./assets/legacy/ai/images/ico_ai_on.png" alt="ON AI" /></span>
+              <div class="tooltip-box">
+                <p class="tooltip-paragraph">AI 자동 관제 및 분석이 동작중입니다.</p>
+              </div>
+            </div>
+            <!-- //on -->
+          </div>
+          <div class="item-input-has-btn">
+            <div class="item-input">
+              <input type="text" placeholder="피부착자 검색" />
+            </div>
+            <button type="button" class="btn btn-primary">조회</button>
+          </div>
+          <div class="notice">
+            <div class="notice-group">
+              <button type="button" class="btn-notice">
+                <img src="./assets/legacy/ai/images/ico_alarm.png" alt="알림" />
+                <!-- 2021.12.10 : add : 카운팅 위치 변경 -->
+                <span class="btn-notice-count">35</span>
+                <!-- //2021.12.10 : add : 카운팅 위치 변경 -->
+              </button>
+              <div class="notice-center">
+                <div class="notice-top">
+                  <span class="title">알림센터</span>
+                  <div class="btns-box fixed">
+                    <a href="#" class="btn-expand"><img src="./assets/legacy/ai/images/ico_unfold.png" alt="확대" /></a>
+                    <button type="button" class="btn-close"><img src="./assets/legacy/ai/images/ico_18px_cancle.png" alt="알림센터 닫기" /></button>
+                  </div>
+                </div>
+                <div class="notice-md">
+                  <!-- 2021.12.10 : del : 전체삭제 위치 변경
+                  <div class="btns-box">
+                    <button type="button" class="btn btn-point-white">전체삭제</button>
+                  </div>
+                  -->
+                  <div class="notice-list-box scroll-y">
+                    <ul class="notice-list">
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">[1:1] 홍길동 (인천서부 관찰소) 경보 발생</span>
+                          <span class="text">부착장치 훼손(본체)</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">4건의 경보가 자동으로 종료 처리되었습니다.</span>
+                          <span class="text">종료 이력을 확인해 주시기 바랍니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">일 이내 출국금지자 재신청 필요</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2건</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">과거 범죄 발생지에 동일 시간대에 방문했습니다.</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 (인천서부 관찰소)</span>
+                          <span class="text">재범위험성 평가 점수 9점 증가</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">미귀가자가 5명 발생하였습니다.</span>
+                          <span class="text">김철수, 홍길동, 박영수 외 2명</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                      <li class="notice-list-item">
+                        <a href="#" class="notice-list-inner">
+                          <span class="date">2020-07-20 03:00</span>
+                          <span class="info">홍길동 면담 정보</span>
+                          <span class="text">이번 달 면담 3회중, 1회 실행 필요</span>
+                        </a>
+                        <button type="button" class="btn-delete"><span class="blind">알림 삭제</span></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="notice-btm">
+                  <!-- 2021.12.24 : mod : 클래스 값 변경 -->
+                  <button type="button" class="btn btn-point-white-2">전체삭제</button>
+                  <!-- //2021.12.24 : mod : 클래스 값 변경 -->
+                  <a href="#" class="btn-setting">알림설정</a>
+                </div>
+              </div>
+            </div>
+            <!-- 2021.12.10 : del : 카운팅 위치 변경
+            <a href="#" class="link-notice">35</a>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- //header -->
+
+      <!-- contents -->
+      <div class="container">
+        <!-- lnb -->
+        <div class="lnb">
+          <ul class="lnb-list">
+            <li class="lnb-item is-active"><a href="#" class="lnb-link">실시간 경보현황</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">집중 관제</a></li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동이관 유보<span class="num">5</span></a>
+            </li>
+            <li class="lnb-item">
+              <a href="#" class="lnb-link">자동종료 유보<span class="num">99+</span></a>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">이관 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">종료 이력</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">보호관찰 대시보드</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">미처리 이관 경보</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">경보 처리 결과</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">대상자 요약 정보</a></li>
+            <li class="lnb-item has-2depth is-active">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item is-active"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item has-2depth">
+              <!-- 초기 열려있을 경우 opened 클래스 추가 -->
+              <a href="#" class="lnb-link">범죄예방업무</a>
+              <button type="button" class="btn-2depth"><img src="./assets/legacy/ai/images/ico_arrow_lnb.png" alt="" /></button>
+              <div class="lnb-2depth">
+                <ul class="lnb-2depth-list">
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">상황근무 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">주간 업무수행 일지</a></li>
+                  <li class="lnb-2depth-item"><a href="#" class="lnb-2depth-link">야간 업무수행 일지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="lnb-item"><a href="#" class="lnb-link">범죄 이력 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">검찰 사건 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">AI 분석 데이터</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">상황관제</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">사용자 메뉴 관리</a></li>
+            <li class="lnb-item"><a href="#" class="lnb-link">연계 시스템 관리</a></li>
+          </ul>
+        </div>
+        <!-- //lnb -->
+
+        <!-- 공통영역 x -->
+        <div class="contents">
+          <div class="page-head">
+            <div class="page-head__left">
+              <h2 class="page-head__title">야간업무수행일지</h2>
+            </div>
+            <div class="page-head__right">
+              <p class="page-head__location">
+                <span class="page-head__location__item">HOME</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">AI보호관찰관</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">범죄예방팀업무</span>
+                <span class="page-head__location__arrow">&gt;</span>
+                <span class="page-head__location__item">야간업무수행일지</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="list-search-box has-btn type-list-page">
+            <table>
+              <colgroup>
+                <col />
+                <col width="100px" />
+                <col width="300px" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="bullet">
+                    <div class="form-group">
+                      <div class="item-radio width-auto">
+                        <input type="radio" name="search1" id="search1-1" checked />
+                        <label for="search1-1"><span class="radio-ico"></span>근무팀</label>
+                      </div>
+                      <span class="item-margin-2"></span>
+                      <div class="item-select">
+                        <select name="" id="">
+                          <option value="">전체</option>
+                        </select>
+                      </div>
+                      <span class="item-margin-2"></span>
+                      <div class="item-radio width-auto">
+                        <input type="radio" name="search1" id="search1-2" checked />
+                        <label for="search1-2"><span class="radio-ico"></span>보호관찰소</label>
+                      </div>
+                      <span class="item-margin-2"></span>
+                      <div class="item-select is-disabled">
+                        <select name="" id="" disabled>
+                          <option value="">전체</option>
+                        </select>
+                      </div>
+                    </div>
+                  </td>
+                  <th>수행일</th>
+                  <td>
+                    <div class="form-group">
+                      <div class="item-input item-input-date">
+                        <input type="text" readonly />
+                      </div>
+                      <span class="dash">~</span>
+                      <div class="item-input item-input-date">
+                        <input type="text" readonly />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="btns-box">
+              <button type="button" class="btn btn-point-white-2 btn-ico-reset">초기화</button>
+              <button type="button" class="btn btn-primary btn-ico-search-2">조회</button>
+            </div>
+          </div>
+
+          <div class="list-top-info">
+            <div class="btns-box fixed type-left">
+              <div class="item-input item-input-date input-width-date medium-margin">
+                <input type="text" readonly />
+              </div>
+              <button type="button" class="btn btn-point btn-ico-add">등록</button>
+              <button type="button" class="btn btn-point-white-2">삭제</button>
+            </div>
+            <div class="btns-box fixed">
+              <div class="item-select view-count-select">
+                <select name="" id="">
+                  <option value="">10개씩 보기</option>
+                  <option value="">옵션 2</option>
+                  <option value="">옵션 3</option>
+                  <option value="">옵션 4</option>
+                  <option value="">옵션 5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-board-table" id="boardGrid"></div>
+
+          <div class="pagination-box type-grid">
+            <div class="pagination-box-total-text">Total 123,124,124</div>
+            <button type="button" class="pagination-btn pagination-first" disabled>처음</button>
+            <button type="button" class="pagination-btn pagination-prev" disabled>이전</button>
+            <div class="pagination-pages">
+              <div class="item-input">
+                <input type="text" placeholder="" value="1" />
+              </div>
+              <span class="slash">/</span>
+              <span class="num">128</span>
+            </div>
+            <button type="button" class="pagination-btn pagination-next">다음</button>
+            <button type="button" class="pagination-btn pagination-last">끝</button>
+          </div>
+        </div>
+        <!-- //공통영역 x -->
+      </div>
+      <!-- //contents -->
+    </div>
+
+    <!-- SBGrid -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <!-- //SBGrid -->
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="./assets/legacy/ai/js/ui.js"></script>
+    <!-- SBGrid -->
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+        {
+          cell_1: '2021-09-01',
+          cell_2: '1팀',
+          cell_3: '서울보호관찰소',
+          cell_4: '시스템 A',
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        {
+          caption: [''],
+          ref: 'check',
+          width: '55px',
+          type: 'checkbox',
+          sortable: false,
+          style: 'text-align: center;',
+          fixedstyle: 'text-align: center !important;',
+        },
+        {
+          caption: ['수행일'],
+          ref: 'cell_1',
+          width: '415px',
+        },
+        {
+          caption: ['근무팀'],
+          ref: 'cell_2',
+          width: '415px',
+        },
+        {
+          caption: ['보호관찰소'],
+          ref: 'cell_3',
+          width: '415px',
+        },
+        {
+          caption: ['등록자'],
+          ref: 'cell_4',
+          width: '415px',
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridLegacyProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            datagrid.setFixedcellcheckbox(0, 0);
+            // datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+            $('#boardGrid').data('grid', datagrid);
+          }
+        );
+      });
+    </script>
+    <!-- //SBGrid -->
+  </body>
+</html>

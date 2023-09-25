@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">특별관제 대상자</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <!-- 2021.10.08 : mod : .search-bar__item 에 search-bar__item--flexible 클래스 삭제 -->
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">보호관찰소</dt>
+                    <dd class="search-bar__val">
+                      <!-- 2021.10.08 : mod : .ui-select-block에 input-width-medium 클래스 추가 -->
+                      <div class="ui-select-block input-width-medium">
+                        <select class="ui-select" title="보호관찰소">
+                          <option value="">전체</option>
+                          <option value="">option 2</option>
+                          <option value="">option 3</option>
+                          <option value="">option 4</option>
+                          <option value="">option 5</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="ui-board-table ui-board-table--5-rows" id="boardGrid"></div>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__left">
+            <div class="ui-buttons ui-buttons--left">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">삭제</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add">등록</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '9',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '8',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '7',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '6',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '5',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '4',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '3',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '2',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+        {
+          id: '1',
+          name: '홍길동',
+          area: '보호관찰소',
+          date: 'YYYY-MM-DD ~ YYYY-MM-DD',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          // 2021.10.08 : mod : 체크박스 컬럼 방식 변경 : start
+          {
+            caption: [''],
+            ref: 'check',
+            width: '60px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          // 2021.10.08 : mod : 체크박스 컬럼 방식 변경 : end
+          {
+            caption: ['번호'],
+            ref: 'id',
+            width: '65px', // 2021.10.08 : mod : width 값 변경
+            sortable: false,
+          },
+          {
+            caption: ['특별관제 대상자'],
+            ref: 'name',
+            width: '180px',
+            // 2021.10.08 : add : 링크 추가 : start
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+            },
+            // 2021.10.08 : add : 링크 추가 : end
+          },
+          {
+            caption: ['보호관찰소'],
+            ref: 'area',
+            width: '190px',
+          },
+          {
+            caption: ['특별관제 기간'],
+            ref: 'date',
+            width: '250px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+        datagrid.setFixedcellcheckbox(0, 0); // 2021.10.08 : add : 전체 체크박스 추가
+        datagrid.sortColumn(1, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

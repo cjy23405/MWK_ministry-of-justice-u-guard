@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">특이대상자(24:00 이후 배회자 포함) 이동경로 등록</h1>
+          </div>
+
+          <div class="window-popup__body">
+            <div class="board-detail-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>대상자명(처분유형)</th>
+                    <td>
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="대상자명(처분유형)" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>담당자</th>
+                    <td>
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input" title="담당자" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>특이사항</th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-small-medium" title="특이사항" data-text-count="#discriptionCount1"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="basic-text color-gray align-right">현재 <span id="discriptionCount1">0</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>점검시간</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block input-width-70">
+                            <input type="text" class="ui-input" title="시작시간의 시" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-hyphen">:</div>
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block input-width-70">
+                            <input type="text" class="ui-input" title="시작시간의 분" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block input-width-70">
+                            <input type="text" class="ui-input" title="종료시간의 시" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-hyphen">:</div>
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block input-width-70">
+                            <input type="text" class="ui-input" title="종료시간의 분" />
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>주요이동경로</th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-small-medium" title="주요이동경로" data-text-count="#discriptionCount2"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="basic-text color-gray align-right">현재 <span id="discriptionCount2">0</span></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">취소</button>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button">저장</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <!-- 2021.11.12 : mod : page-contents--dark 클래스 값 추가 -->
+        <div class="page-contents page-contents--only page-contents--dark">
+          <div class="tile-layout">
+            <div class="tile-layout__inner">
+              <div class="tile-layout__row tile-layout__row--alert-status">
+                <!-- 정보 -->
+                <div class="tile-layout__cell">
+                  <div class="contents-only-header">
+                    <h1 class="contents-only-header__logo">
+                      <a href="" class="contents-only-header__logo-link">
+                        <span class="for-a11y">법무부 - u Guard</span>
+                      </a>
+                    </h1>
+                    <div class="contents-only-header__hr"></div>
+                    <h2 class="contents-only-header__title">경보현황</h2>
+                  </div>
+
+                  <div class="tile-layout__contents">
+                    <section class="board-detail-wrap board-detail-wrap--alert-status">
+                      <div class="board-detail-head">
+                        <h3 class="board-detail-head__title">대상자 현황</h3>
+                      </div>
+
+                      <div class="alert-subject-status">
+                        <!-- DD : 카운팅 최대 값 9,999 제한 -->
+                        <div class="alert-subject-status__total">
+                          <dl class="count-info">
+                            <dt class="count-info__key">Total</dt>
+                            <dd class="count-info__val">
+                              <strong class="count-info__num">9,999</strong>
+                              <span class="count-info__unit">명</span>
+                            </dd>
+                          </dl>
+                        </div>
+                        <div class="alert-subject-status__info">
+                          <div class="alert-subject-status__info-inner">
+                            <dl class="count-info count-info--case">
+                              <dt class="count-info__key">성폭력</dt>
+                              <dd class="count-info__val">
+                                <strong class="count-info__num"><a href="" class="basic-link">9,999</a></strong>
+                                <span class="count-info__unit">명</span>
+                              </dd>
+                            </dl>
+                            <dl class="count-info count-info--case">
+                              <dt class="count-info__key">살인</dt>
+                              <dd class="count-info__val">
+                                <strong class="count-info__num"><a href="" class="basic-link">9,999</a></strong>
+                                <span class="count-info__unit">명</span>
+                              </dd>
+                            </dl>
+                            <dl class="count-info count-info--case">
+                              <dt class="count-info__key">강도</dt>
+                              <dd class="count-info__val">
+                                <strong class="count-info__num"><a href="" class="basic-link">9,999</a></strong>
+                                <span class="count-info__unit">명</span>
+                              </dd>
+                            </dl>
+                            <dl class="count-info count-info--case">
+                              <dt class="count-info__key">약취유인</dt>
+                              <dd class="count-info__val">
+                                <strong class="count-info__num"><a href="" class="basic-link">9,999</a></strong>
+                                <span class="count-info__unit">명</span>
+                              </dd>
+                            </dl>
+                            <dl class="count-info count-info--case">
+                              <dt class="count-info__key">기타</dt>
+                              <dd class="count-info__val">
+                                <strong class="count-info__num"><a href="" class="basic-link">9,999</a></strong>
+                                <span class="count-info__unit">명</span>
+                              </dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="board-detail-wrap board-detail-wrap--alert-status">
+                      <div class="board-detail-head">
+                        <h3 class="board-detail-head__title">권역</h3>
+                      </div>
+
+                      <div class="board-top board-top--contents">
+                        <div class="board-top__left">
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-checkbox-block">
+                                <input type="checkbox" class="ui-checkbox" id="all" />
+                                <label for="all" class="ui-label">
+                                  <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">전체</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="form-flex-cell form-flex-cell--medium">
+                              <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">조회</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="board-top__right">
+                          <div class="ui-check-list ui-check-list--with-input">
+                            <ul class="ui-check-list__list">
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="lock" />
+                                  <label for="lock" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">잠그기</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="hide" />
+                                  <label for="hide" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">개인정보 숨기기</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fill-checks">
+                        <ul class="fill-checks__list">
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group1" />
+                              <label for="group1" class="fill-checks__label">중앙그룹</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group2" />
+                              <label for="group2" class="fill-checks__label">1권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group3" />
+                              <label for="group3" class="fill-checks__label">2권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group4" />
+                              <label for="group4" class="fill-checks__label">3권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group5" />
+                              <label for="group5" class="fill-checks__label">4권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group6" />
+                              <label for="group6" class="fill-checks__label">5권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group7" />
+                              <label for="group7" class="fill-checks__label">대전그룹</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group8" />
+                              <label for="group8" class="fill-checks__label">1권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group9" />
+                              <label for="group9" class="fill-checks__label">2권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group10" />
+                              <label for="group10" class="fill-checks__label">3권역</label>
+                            </div>
+                          </li>
+                          <li class="fill-checks__item">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" id="group11" />
+                              <label for="group11" class="fill-checks__label">4권역</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+
+                    <section class="board-detail-wrap board-detail-wrap--alert-status">
+                      <div class="board-detail-head">
+                        <h3 class="board-detail-head__title">실시간 누적 경보현황</h3>
+                      </div>
+
+                      <div class="cumulative">
+                        <p class="cumulative__total">9,999</p>
+                        <div class="cumulative__list">
+                          <dl class="count-info count-info--case">
+                            <dt class="count-info__key count-info__key--dot count-info__key--dot-red">위험</dt>
+                            <dd class="count-info__val">
+                              <strong class="count-info__num">9,999</strong>
+                              <span class="count-info__unit">건</span>
+                            </dd>
+                          </dl>
+                          <dl class="count-info count-info--case">
+                            <dt class="count-info__key count-info__key--dot count-info__key--dot-yellow">주의</dt>
+                            <dd class="count-info__val">
+                              <strong class="count-info__num">9,999</strong>
+                              <span class="count-info__unit">건</span>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="board-detail-wrap board-detail-wrap--alert-status">
+                      <div class="board-detail-head">
+                        <h3 class="board-detail-head__title">경보현황 (전국)</h3>
+                      </div>
+
+                      <div class="alert-count">
+                        <div class="alert-count__inner">
+                          <div class="alert-count__item alert-count__item--blue">
+                            <dl class="alert-count__block">
+                              <dt class="alert-count__key">관제중</dt>
+                              <dd class="alert-count__val"><strong class="alert-count__num">9,999</strong>건</dd>
+                            </dl>
+                          </div>
+                          <div class="alert-count__item">
+                            <dl class="alert-count__block">
+                              <dt class="alert-count__key">이관</dt>
+                              <dd class="alert-count__val"><strong class="alert-count__num">9,999</strong>건</dd>
+                            </dl>
+                          </div>
+                          <div class="alert-count__item">
+                            <dl class="alert-count__block">
+                              <dt class="alert-count__key">조치완료</dt>
+                              <dd class="alert-count__val"><strong class="alert-count__num">9,999</strong>건</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <!-- //정보 -->
+              </div>
+              <div class="tile-layout__row">
+                <!-- 목록 -->
+                <div class="tile-layout__cell">
+                  <div class="alert-cards">
+                    <ul class="alert-cards__list">
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">서울</div>
+                          <div class="alert-cards__discription is-red">출입금지 위반</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>5</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-red"><span class="for-a11y">위험 레벨 : </span>7</div>
+                          <div class="alert-cards__locale">의정부</div>
+                          <div class="alert-cards__discription is-red">부착장치 훼손 (스트랩)</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-red">고위험</div>
+                            <div class="alert-cards__etc-tag is-red">주간위험</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">일체형 부착장치 저전력</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-green">일반</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="alert-cards__item">
+                        <div class="alert-cards__block">
+                          <div class="alert-cards__badge is-yellow"><span class="for-a11y">주의 레벨 : </span>1</div>
+                          <div class="alert-cards__locale">중앙관제센터</div>
+                          <div class="alert-cards__discription is-yellow">재택감독장치 이동</div>
+                          <div class="alert-cards__date">2021-12-31 12:30:30</div>
+                          <div class="alert-cards__etc">
+                            <div class="alert-cards__etc-text">고1230</div>
+                            <div class="alert-cards__etc-tag">미분류</div>
+                            <div class="alert-cards__etc-tag is-yellow">주간경보</div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- //목록 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

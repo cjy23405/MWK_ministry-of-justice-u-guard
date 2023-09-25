@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">근무자 등록</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="board-detail-table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>근무일</th>
+                  <td>2021-12-31</td>
+                </tr>
+                <tr>
+                  <th>근무시간</th>
+                  <td>
+                    <div class="ui-check-list ui-check-list--bipartite">
+                      <ul class="ui-check-list__list">
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="time" id="time1" checked />
+                            <label for="time1" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">주간 (09:00~18:00)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="time" id="time2" />
+                            <label for="time2" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">야간 (18:00~09:00)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="time" id="time3" />
+                            <label for="time3" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">휴일 (09:00~09:00)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="ui-check-list__item">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" name="time" id="time4" />
+                            <label for="time4" class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">집중</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <div class="board-top">
+            <div class="board-top__right">
+              <div class="header-search header-search--filter input-width-medium js-auto-search">
+                <p class="for-a11y">타이핑시 자동 완성 결과가 아래에 노출 되며 선택 시 자동 입력 됩니다.</p>
+                <div class="ui-input-block header-search__input">
+                  <input type="text" class="ui-input js-auto-search__input" title="이름, 아이디 검색" placeholder="이름, 아이디 검색" />
+                </div>
+                <button type="button" class="ui-button header-search__submit">
+                  <span class="for-a11y">검색</span>
+                </button>
+                <div class="auto-search__layer">
+                  <div class="auto-search__layer-contents">
+                    <p class="auto-search__empty">데이터가 없습니다.</p>
+                    <ul class="auto-search__list">
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="홍길동 | test"><mark>김</mark>길동 | test</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김서연 | test2"><mark>김</mark>서연 | test2</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김민준 | test3"><mark>김</mark>민준 | test3</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김시우 | test4"><mark>김</mark>시우 | test4</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김다은 | test5"><mark>김</mark>다은 | test5</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김윤아 | test6"><mark>김</mark>윤아 | test6</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="김은우 | test7"><mark>김</mark>은우 | test7</button>
+                      </li>
+                      <li class="auto-search__item">
+                        <button type="button" class="ui-button auto-search__link js-auto-search__link" data-value="강한김 | test8">강한<mark>김</mark> | test8</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-board-table ui-board-table--6-rows" id="boardGrid"></div>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit" class="ui-button ui-basic-button">저장</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '9',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '8',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '7',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '6',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '5',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+        {
+          id: '4',
+          cell_1: '$보호관찰소$',
+          cell_2: '$직급$',
+          cell_3: '홍길동(아이디)',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.columns = [
+          {
+            caption: ['번호'],
+            ref: 'id',
+            width: '65px',
+            sortable: false,
+          },
+          {
+            caption: ['보호관찰소'],
+            ref: 'cell_1',
+            width: '140px',
+          },
+          {
+            caption: ['직급'],
+            ref: 'cell_2',
+            width: '118px',
+          },
+          {
+            caption: ['이름(아이디)'],
+            ref: 'cell_3',
+            width: '138px',
+          },
+          {
+            caption: ['관리'],
+            ref: 'cell_4',
+            width: '129px',
+            sortable: false,
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-delete ui-board-table__button">삭제</button>';
+            },
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

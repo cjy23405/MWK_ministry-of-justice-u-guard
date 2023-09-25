@@ -1,0 +1,19 @@
+<svg id="ic_myinfo" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <path id="사각형_6493" data-name="사각형 6493" class="cls-1" d="M0 0h24v24H0z"/>
+    <path id="사각형_6505" data-name="사각형 6505" class="cls-1" transform="translate(3 3)" d="M0 0h12v12H0z"/>
+    <g id="타원_468" data-name="타원 468" transform="translate(8.5 3)" style="stroke:#000;stroke-width:1.5px;fill:none">
+        <circle class="cls-6" cx="3.5" cy="3.5" r="3.5"/>
+        <circle class="cls-1" cx="3.5" cy="3.5" r="2.75"/>
+    </g>
+    <path id="패스_3832" data-name="패스 3832" d="m2 19 4-8h7" transform="translate(1 2)" style="stroke-linejoin:round;stroke:#000;stroke-width:1.5px;fill:none"/>
+    <path id="사각형_6878" data-name="사각형 6878" transform="translate(2 20)" style="fill:#fff" d="M0 0h20v2H0z"/>
+    <g id="패스_3835" data-name="패스 3835" style="stroke-linecap:round;fill:#fff;stroke-linejoin:round">
+        <path class="cls-6" d="m2.135 13.114-1.75-2.34V1.116h3.5v9.658l-1.75 2.34z" transform="rotate(35.02 -3.953 35.762)"/>
+        <path d="M1.135 1.866v8.658l1 1.338 1-1.338V1.866h-2m-1.5-1.5h5v10.657l-2.5 3.343-2.5-3.343V.366z" style="fill:#000;stroke:none" transform="rotate(35.02 -3.953 35.762)"/>
+    </g>
+</svg>

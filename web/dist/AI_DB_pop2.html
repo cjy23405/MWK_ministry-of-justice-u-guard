@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup window-popup--ai-work-schedule-management">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">업무 일정 관리</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <form action="">
+            <section class="search-bar search-bar--popup">
+              <h2 class="for-a11y">검색</h2>
+              <div class="search-bar__left">
+                <div class="search-bar__row">
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">피부착자</dt>
+                    <dd class="search-bar__val">
+                      <div class="header-search header-search--filter">
+                        <div class="ui-input-block header-search__input">
+                          <input type="text" class="ui-input" title="피부착자" />
+                        </div>
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible">
+                    <dt class="search-bar__key">기준일</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-input-block ui-input-block--date input-width-date">
+                        <input type="text" class="ui-input js-datepicker" title="기준일" value="2021-12-10" />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="search-bar__right">
+                <div class="ui-buttons ui-buttons--center">
+                  <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                      <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="board-detail-wrap js-ui-tab-panel">
+            <div class="board-tab">
+              <ul class="board-tab__list">
+                <li class="board-tab__item">
+                  <a href="" class="board-tab__link" data-tab-open="tab1">당일업무</a>
+                </li>
+                <li class="board-tab__item">
+                  <a href="" class="board-tab__link" data-tab-open="tab2">주간업무</a>
+                </li>
+                <li class="board-tab__item">
+                  <a href="" class="board-tab__link" data-tab-open="tab3">월간업무</a>
+                </li>
+                <li class="board-tab__item">
+                  <a href="" class="board-tab__link" data-tab-open="tab4">기타업무</a>
+                </li>
+                <li class="board-tab__item">
+                  <a href="" class="board-tab__link" data-tab-open="tab5">개시/종료</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 당일업무 -->
+            <div class="board-tab-panel" data-tab="tab1">
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--bottom-line">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>업무</th>
+                      <th class="align-center">업무처리 및 참고사항</th>
+                      <th>처리여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>이동경로 확인 및 분석</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">일일감독 소견</button>
+                      </td>
+                      <td>미처리</td>
+                    </tr>
+                    <tr>
+                      <td>야간 귀가지도</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">이동패턴보기</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="dayWorkNightReturn" id="dayWorkNightReturn1" />
+                                <label for="dayWorkNightReturn1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="dayWorkNightReturn" id="dayWorkNightReturn2" />
+                                <label for="dayWorkNightReturn2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>범죄징후 예측시스템의 활용</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">종합평가결과</button>
+                      </td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //당일업무 -->
+
+            <!-- 주간업무 -->
+            <div class="board-tab-panel" data-tab="tab2">
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--bottom-line">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>업무</th>
+                      <th class="align-center">업무처리 및 참고사항</th>
+                      <th>처리여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>대면지도 감독</td>
+                      <td class="align-center">
+                        <div class="input-row">K-PIS에 면담 결과 등록</div>
+                        <div class="input-row">
+                          <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">이동 경로 시연</button>
+                        </div>
+                      </td>
+                      <td>미처리</td>
+                    </tr>
+                    <tr>
+                      <td>생활계획서 접수</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">생활계획서 서식</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="weeklyWorkLifePlan" id="weeklyWorkLifePlan1" />
+                                <label for="weeklyWorkLifePlan1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="weeklyWorkLifePlan" id="weeklyWorkLifePlan2" />
+                                <label for="weeklyWorkLifePlan2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //주간업무 -->
+
+            <!-- 월간업무 -->
+            <div class="board-tab-panel" data-tab="tab3">
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--bottom-line">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>업무</th>
+                      <th class="align-center">업무처리 및 참고사항</th>
+                      <th>처리여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        여권조회<br />
+                        (여권소지 확인 시 출국금지 즉시신청)
+                      </td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">출국금지 요청 의뢰서</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkPassport" id="monthlyWorkPassport1" />
+                                <label for="monthlyWorkPassport1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkPassport" id="monthlyWorkPassport2" />
+                                <label for="monthlyWorkPassport2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>특이 이동경로 현장점검(성폭력범)</td>
+                      <td class="align-center">직접 현장 점검 후 완료 처리</td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkSpecialRoute" id="monthlyWorkSpecialRoute1" />
+                                <label for="monthlyWorkSpecialRoute1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkSpecialRoute" id="monthlyWorkSpecialRoute2" />
+                                <label for="monthlyWorkSpecialRoute2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>일시분리 대장 관리</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">전자장치 일시분리 대장</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkTemporarilySeparate" id="monthlyWorkTemporarilySeparate1" />
+                                <label for="monthlyWorkTemporarilySeparate1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkTemporarilySeparate" id="monthlyWorkTemporarilySeparate2" />
+                                <label for="monthlyWorkTemporarilySeparate2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>임시해제자 대면감독</td>
+                      <td class="align-center">K-PIS에 면담 결과 등록</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>출국자 출입국 사실 조회</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">대상자 기본 정보</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkDepartureImmigration" id="monthlyWorkDepartureImmigration1" />
+                                <label for="monthlyWorkDepartureImmigration1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="monthlyWorkDepartureImmigration" id="monthlyWorkDepartureImmigration2" />
+                                <label for="monthlyWorkDepartureImmigration2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //월간업무 -->
+
+            <!-- 기타업무 -->
+            <div class="board-tab-panel board-tab-panel--last" data-tab="tab4">
+              <div class="board-detail-table board-detail-table--vertical-line">
+                <table>
+                  <colgroup>
+                    <col />
+                    <col style="width: 255px" />
+                    <col style="width: 170px" />
+                    <col style="width: 160px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>업무</th>
+                      <th class="align-center">업무처리 및 참고사항</th>
+                      <th>최근 처리일</th>
+                      <th>다음 기한</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>지도감독 전문성 교육</td>
+                      <td class="align-center">반기 1회 교육 이수 후 날짜 등록</td>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="최근 처리일" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>피해자정보 변경 확인</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">피해자 정보</button>
+                      </td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>부착상태 사진 점검(사진 현행화)</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">부착/분리</button>
+                      </td>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="최근 처리일" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>가종료, 가출소자, 약물복용 여부 검사</td>
+                      <td class="align-center">약물검사 동의서를 받아 약물검사 실시</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>재범위험성 평가</td>
+                      <td class="align-center">
+                        처우계획의 적절성 평가 후,<br />
+                        필요 시 처우 계획 변경
+                      </td>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="최근 처리일" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>출국금지자 재신청</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">출금금지 요청 의뢰서</button>
+                      </td>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="최근 처리일" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>부착장치 체결상태 점검</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">부착장치 체결 상태 자체 점검 내역</button>
+                      </td>
+                      <td>
+                        <div class="ui-input-block ui-input-block--date input-width-date">
+                          <input type="text" class="ui-input js-datepicker" title="최근 처리일" value="2021-12-10" />
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //기타업무 -->
+
+            <!-- 개시/종료 -->
+            <div class="board-tab-panel" data-tab="tab5">
+              <div class="board-detail-table board-detail-table--vertical-line board-detail-table--bottom-line">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>업무</th>
+                      <th class="align-center">업무처리 및 참고사항</th>
+                      <th>처리여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>준수사항 등록</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">준수사항 등록</button>
+                      </td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="startEndCompliance" id="startEndCompliance1" />
+                                <label for="startEndCompliance1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="startEndCompliance" id="startEndCompliance2" />
+                                <label for="startEndCompliance2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>장치배정</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">장치배정</button>
+                      </td>
+                      <td>미처리</td>
+                    </tr>
+                    <tr>
+                      <td>장치부착</td>
+                      <td class="align-center">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">부착/분리</button>
+                      </td>
+                      <td>미처리</td>
+                    </tr>
+                    <tr>
+                      <td>치우계획</td>
+                      <td class="align-center">집행 개시 후 20일 이내</td>
+                      <td>
+                        <div class="ui-check-list">
+                          <ul class="ui-check-list__list">
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="startEndClearPlan" id="startEndClearPlan1" />
+                                <label for="startEndClearPlan1" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">미처리</span>
+                                </label>
+                              </div>
+                            </li>
+                            <li class="ui-check-list__item">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="startEndClearPlan" id="startEndClearPlan2" />
+                                <label for="startEndClearPlan2" class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">처리완료</span>
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>출국금지자 출국금지 해제 신청</td>
+                      <td class="align-center">종료 : 2027-03-01 (종료5일전 해제 신청)</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- //개시/종료 -->
+          </div>
+        </div>
+
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">취소</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button">저장</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

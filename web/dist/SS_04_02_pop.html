@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">성범죄 발생 분포도</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="tile-layout">
+            <div class="tile-layout__inner">
+              <div class="tile-layout__row tile-layout__row--side-list-popup">
+                <!-- 목록 -->
+                <div class="tile-layout__cell">
+                  <!-- 2021.11.26 : mod : ui-board-table--12-rows -> ui-board-table--17-rows 클래스 값 변경 -->
+                  <div class="ui-board-table ui-board-table--17-rows" id="boardGrid"></div>
+                </div>
+                <!-- //목록 -->
+              </div>
+              <div class="tile-layout__row">
+                <!-- 컨텐츠 -->
+                <div class="tile-layout__cell">
+                  <div class="tile-layout__contents">
+                    <div class="ui-chart ui-chart--height-499" id="chartArea"></div>
+                  </div>
+                </div>
+                <div class="tile-layout__cell">
+                  <div class="notice-box">
+                    <p class="notice-box__item">
+                      이 분포도는 입력된 범죄사실의 데이터를 분석하여 작성된 성범죄 발생분포도(피부착자 범행장소 기준)입니다.<br />
+                      기타로 분류된 건은 범죄사실에서 지역을 분류할 수 없는 건을 나타냅니다.
+                    </p>
+                  </div>
+                </div>
+                <!-- //컨텐츠 -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2021.11.26 : add : 하단 버튼 추가 -->
+        <div class="window-popup__foot">
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-eye">전국 보기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //2021.11.26 : add : 하단 버튼 추가 -->
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // Data
+      var grid_data = [
+        {
+          id: '17',
+          cell_1: '서울특별시',
+          cell_2: 1777,
+        },
+        {
+          id: '16',
+          cell_1: '부산광역시',
+          cell_2: 576,
+        },
+        {
+          id: '15',
+          cell_1: '대구광역시',
+          cell_2: 490,
+        },
+        {
+          id: '14',
+          cell_1: '인천광역시',
+          cell_2: 426,
+        },
+        {
+          id: '13',
+          cell_1: '광주광역시',
+          cell_2: 299,
+        },
+        {
+          id: '12',
+          cell_1: '대전광역시',
+          cell_2: 325,
+        },
+        {
+          id: '11',
+          cell_1: '울산광역시',
+          cell_2: 211,
+        },
+        {
+          id: '10',
+          cell_1: '경기도',
+          cell_2: 1769,
+        },
+        {
+          id: '9',
+          cell_1: '강원도',
+          cell_2: 311,
+        },
+        {
+          id: '8',
+          cell_1: '충청북도',
+          cell_2: 275,
+        },
+        {
+          id: '7',
+          cell_1: '충청남도',
+          cell_2: 486,
+        },
+        {
+          id: '6',
+          cell_1: '전라북도',
+          cell_2: 479,
+        },
+        {
+          id: '5',
+          cell_1: '전라남도',
+          cell_2: 394,
+        },
+        {
+          id: '4',
+          cell_1: '경상북도',
+          cell_2: 624,
+        },
+        {
+          id: '3',
+          cell_1: '경상남도',
+          cell_2: 530,
+        },
+        {
+          id: '2',
+          cell_1: '제주특별자치도',
+          cell_2: 252,
+        },
+        {
+          id: '1',
+          cell_1: '기타',
+          cell_2: 736,
+        },
+      ];
+
+      function createGrid(properties, callback) {
+        var datagrid;
+        datagrid = _SBGrid.create(properties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        callback(datagrid);
+      }
+
+      var columns = [
+        // 2021.11.26 : add : 컬럼 추가 : start
+        {
+          caption: ['번호'],
+          ref: 'id',
+          width: '65px',
+          sortable: false,
+        },
+        // 2021.11.26 : add : 컬럼 추가 : end
+        {
+          caption: ['구분'],
+          ref: 'cell_1',
+          width: '120px', // 2021.11.26 : mod : 너비 수정
+        },
+        {
+          caption: ['범죄수'],
+          ref: 'cell_2',
+          width: '120px', // 2021.11.26 : mod : 너비 수정
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return strValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+          },
+        },
+      ];
+
+      $(function () {
+        createGrid(
+          $.extend({}, SBGridProperties, {
+            id: 'datagrid',
+            parentid: 'boardGrid',
+            jsonref: 'grid_data',
+            columns: columns,
+          }),
+          function (datagrid) {
+            //datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+          }
+        );
+
+        // Chart
+        AmCharts.makeChart('chartArea', {
+          type: 'serial',
+          dataProvider: grid_data,
+          categoryField: 'cell_1',
+          categoryAxis: {
+            title: '전국',
+            titleColor: '#9199a3',
+            titleBold: false,
+            axisAlpha: 1,
+            axisColor: '#dfe5eb',
+            gridAlpha: 1,
+            gridColor: '#dfe5eb',
+            labelRotation: 45,
+            gridPosition: 'start',
+          },
+          valueAxes: [
+            {
+              title: '성범죄자 발생건수',
+              titleColor: '#9199a3',
+              titleBold: false,
+              axisAlpha: 1,
+              axisColor: '#dfe5eb',
+              gridAlpha: 1,
+              gridColor: '#dfe5eb',
+            },
+          ],
+          colors: ['#4264d0'],
+          fontSize: 13,
+          color: '#111',
+          fontFamily: '"SpoqaHanSansNeo", "맑은고딕", "Malgun Gothic", "돋움", Dotum, "Apple Gothic", sans-serif',
+          marginTop: 35,
+          marginBottom: 125,
+          marginRight: 30,
+          marginLeft: 95,
+          autoMargins: false,
+          graphs: [
+            {
+              title: '범죄수',
+              valueField: 'cell_2',
+              type: 'column',
+              fillAlphas: 1,
+              fixedColumnWidth: 20,
+            },
+          ],
+        });
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

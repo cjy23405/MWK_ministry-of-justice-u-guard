@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="layout-wrap">
+        <!-- fix top area -->
+        <div class="fix-top-wrap">
+          <!-- header -->
+          <header class="header">
+            <h1 class="header__logo">
+              <a href="" class="header__logo-link">
+                <span class="for-a11y">법무부 - u Guard</span>
+              </a>
+            </h1>
+
+            <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+            <nav class="header__nav">
+              <h2 class="for-a11y">주요 메뉴</h2>
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">관제현황</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">경보현황</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">경보통계</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">원격지원</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+
+            <div class="header__right">
+              <div class="header-search">
+                <form action="">
+                  <div class="ui-input-block header-search__input">
+                    <input type="text" class="ui-input" title="피부착자 검색" placeholder="피부착자 검색" />
+                  </div>
+                  <button type="submit" class="ui-button header-search__submit">
+                    <span class="for-a11y">검색</span>
+                  </button>
+                </form>
+              </div>
+
+              <p class="header__hello"><strong>홍길동</strong>님 안녕하세요.</p>
+
+              <div class="header-dropdown header-dropdown--my js-ui-dropdown">
+                <div class="header-dropdown__head">
+                  <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                    <span class="for-a11y">
+                      마이 메뉴
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-dropdown__layer js-ui-dropdown__layer">
+                  <section class="header-dropdown__contents">
+                    <div class="header-dropdown__contents-head">
+                      <h2 class="for-a11y">마이 메뉴</h2>
+                      <p class="header-dropdown__name">시스템 관리자</p>
+                      <p class="header-dropdown__latest-date">
+                        최근 접속
+                        <em>2021-07-16 14:53:20</em>
+                      </p>
+                    </div>
+                    <div class="header-dropdown__body ui-scroller">
+                      <div class="header-dropdown__body-inner">
+                        <ul class="header-my">
+                          <li class="header-my__item header-my__item--profile">
+                            <a href="" class="header-my__link">나의 정보</a>
+                          </li>
+                          <li class="header-my__item header-my__item--password">
+                            <a href="" class="header-my__link">비밀번호 변경</a>
+                          </li>
+                          <li class="header-my__item header-my__item--logout">
+                            <a href="" class="header-my__link">로그아웃</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <div class="header-dropdown header-dropdown--alarm js-ui-dropdown">
+                <div class="header-dropdown__head">
+                  <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                    <span class="for-a11y">
+                      알림 센터
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                    <span class="header-dropdown__count">10</span>
+                  </button>
+                </div>
+                <div class="header-dropdown__layer js-ui-dropdown__layer">
+                  <section class="header-dropdown__contents">
+                    <div class="header-dropdown__contents-head">
+                      <h2 class="header-dropdown__title">알림센터</h2>
+                    </div>
+                    <div class="header-dropdown__body ui-scroller">
+                      <div class="header-dropdown__body-inner">
+                        <!-- Case : 내용 없을 때 -->
+                        <div class="header-dropdown__empty">
+                          <p class="header-dropdown__empty-text">새로운 알림이 없습니다.</p>
+                        </div>
+                        <!-- //Case : 내용 없을 때 -->
+
+                        <!-- Case : 내용 있을 때 -->
+                        <ul class="header-alarm">
+                          <li class="header-alarm__item">
+                            <div class="header-alarm__block">
+                              <div class="header-alarm__title">홍길동 면담정보</div>
+                              <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요</div>
+                              <div class="header-alarm__date">2021-07-30 00:00</div>
+                            </div>
+                            <button type="button" class="ui-button header-alarm__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-alarm__item">
+                            <div class="header-alarm__block">
+                              <div class="header-alarm__title">위하여 미묘한 구하지 그와 위하여서. 같지 이상은 소금이라 방황하여도, 만천하의 것은 보라.</div>
+                              <div class="header-alarm__discription">위하여 미묘한 구하지 그와 위하여서. 같지 이상은 소금이라 방황하여도, 만천하의 것은 보라.</div>
+                              <div class="header-alarm__date">2021-07-30 00:00</div>
+                            </div>
+                            <button type="button" class="ui-button header-alarm__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-alarm__item">
+                            <div class="header-alarm__block">
+                              <div class="header-alarm__title">홍길동 면담정보</div>
+                              <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요</div>
+                              <div class="header-alarm__date">2021-07-30 00:00</div>
+                            </div>
+                            <button type="button" class="ui-button header-alarm__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-alarm__item">
+                            <div class="header-alarm__block">
+                              <div class="header-alarm__title">홍길동 면담정보</div>
+                              <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요</div>
+                              <div class="header-alarm__date">2021-07-30 00:00</div>
+                            </div>
+                            <button type="button" class="ui-button header-alarm__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-alarm__item">
+                            <div class="header-alarm__block">
+                              <div class="header-alarm__title">홍길동 면담정보</div>
+                              <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요</div>
+                              <div class="header-alarm__date">2021-07-30 00:00</div>
+                            </div>
+                            <button type="button" class="ui-button header-alarm__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                        </ul>
+                        <!-- //Case : 내용 있을 때 -->
+                      </div>
+                    </div>
+                    <div class="header-dropdown__foot">
+                      <div class="header-dropdown__foot-left">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">전체삭제</button>
+                      </div>
+                      <div class="header-dropdown__foot-right">
+                        <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-alarm">알림설정</a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <div class="header-dropdown header-dropdown--bookmark js-ui-dropdown">
+                <div class="header-dropdown__head">
+                  <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                    <span class="for-a11y">
+                      즐겨찾기 메뉴
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-dropdown__layer js-ui-dropdown__layer">
+                  <section class="header-dropdown__contents">
+                    <div class="header-dropdown__contents-head">
+                      <h2 class="header-dropdown__title">즐겨찾기 메뉴</h2>
+                    </div>
+                    <div class="header-dropdown__body ui-scroller">
+                      <div class="header-dropdown__body-inner">
+                        <!-- Case : 내용 없을 때 -->
+                        <div class="header-dropdown__empty">
+                          <p class="header-dropdown__empty-text">등록된 즐겨찾기가 없습니다.</p>
+                        </div>
+                        <!-- //Case : 내용 없을 때 -->
+
+                        <!-- Case : 내용 있을 때 -->
+                        <ul class="header-bookmark">
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">Dashboard</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">피부착자 관리</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">전자장치 사용기간 현황</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">배터리 상태</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">전자장치 이관 현황 (중앙)</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">전자장치 수령 확인</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">주변기기 입고관리</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">충전팩/젠더 이관</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">충전팩/젠더 수령</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                          <li class="header-bookmark__item">
+                            <a href="" class="header-bookmark__link">충전팩/젠더 현황</a>
+                            <button type="button" class="ui-button header-bookmark__delete">
+                              <span class="for-a11y">삭제</span>
+                            </button>
+                          </li>
+                        </ul>
+                        <!-- //Case : 내용 있을 때 -->
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- //header -->
+        </div>
+        <!-- //fix top area -->
+
+        <!-- GNB -->
+        <nav class="gnb">
+          <h2 class="for-a11y">Global Navigation Bar</h2>
+
+          <div class="gnb__scroller ui-scroller">
+            <ul class="gnb__list">
+              <li class="gnb__item gnb__item--1" data-gnb="대시보드">
+                <a href="" class="gnb__link">대시보드</a>
+              </li>
+              <li class="gnb__item gnb__item--2" data-gnb="피부착자">
+                <a href="" class="gnb__link">피부착자</a>
+              </li>
+              <li class="gnb__item gnb__item--3" data-gnb="상황관리">
+                <a href="" class="gnb__link">상황관리</a>
+              </li>
+              <li class="gnb__item gnb__item--4" data-gnb="집중관제">
+                <a href="" class="gnb__link">집중관제</a>
+              </li>
+              <li class="gnb__item gnb__item--5" data-gnb="상황관제">
+                <a href="" class="gnb__link">상황관제</a>
+              </li>
+              <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+              <li class="gnb__item gnb__item--6 is-active" data-gnb="범죄예방">
+                <a href="" class="gnb__link">범죄예방</a>
+              </li>
+              <li class="gnb__item gnb__item--7" data-gnb="AI보호관찰">
+                <a href="" class="gnb__link">AI보호관찰</a>
+              </li>
+              <li class="gnb__item gnb__item--8" data-gnb="정보관리">
+                <a href="" class="gnb__link">정보관리</a>
+              </li>
+              <li class="gnb__item gnb__item--9" data-gnb="게시판">
+                <a href="" class="gnb__link">게시판</a>
+              </li>
+              <li class="gnb__item gnb__item--10" data-gnb="시스템">
+                <a href="" class="gnb__link">시스템</a>
+              </li>
+              <!-- 2022.01.07 : add : 메뉴 추가 -->
+              <li class="gnb__item gnb__item--11" data-gnb="접근보호관리">
+                <a href="" class="gnb__link">접근보호<br />관리</a>
+              </li>
+              <li class="gnb__item gnb__item--12" data-gnb="전자 장치">
+                <a href="" class="gnb__link">전자 장치</a>
+              </li>
+              <li class="gnb__item gnb__item--13" data-gnb="모바일 Uguard">
+                <a href="" class="gnb__link">모바일<br />Uguard</a>
+              </li>
+              <!-- //2022.01.07 : add : 메뉴 추가 -->
+            </ul>
+          </div>
+
+          <div class="gnb-depth">
+            <div class="gnb-depth__scroller ui-scroller">
+              <section class="gnb-depth__section" data-gnb-contents="대시보드">
+                <h3 class="gnb-depth__title gnb-depth__title--1">대시보드</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">대시보드 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="피부착자">
+                <h3 class="gnb-depth__title gnb-depth__title--2">피부착자</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">피부착자 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="상황관리">
+                <h3 class="gnb-depth__title gnb-depth__title--3">상황관리</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">상황관리 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="집중관제">
+                <h3 class="gnb-depth__title gnb-depth__title--4">집중관제</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">집중관제 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="상황관제">
+                <h3 class="gnb-depth__title gnb-depth__title--5">상황관제</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">상황관제 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">상황관제 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">상황관제 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="범죄예방">
+                <h3 class="gnb-depth__title gnb-depth__title--6">범죄예방</h3>
+                <ul class="gnb-depth__list">
+                  <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                  <li class="gnb-depth__item is-active">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">전자장치 관리</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                        <li class="gnb-depth__sub-item is-active">
+                          <a href="" class="gnb-depth__sub-link">장치관리 </a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">배정현황</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">배터리 상태</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 상태보고</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 사용기간현황</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">상황근무일지 전자장치현황</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">개통/해지 관리</a>
+                    </div>
+                  </li>
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">전자장치 이관</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 재고관리</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 이관 처리 (중앙) </a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 이관 현황 (중앙)</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 수령 확인</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">주변기기 입고관리</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">주변기기 요청</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">주변기기 출고관리</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">충전팩/젠더 이관</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">충전팩/젠더 이관</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">충전팩/젠더 수령</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">충전팩/젠더 현황</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">전자장치 현황</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치 관리</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치/충전팩 현황</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치/충전팩 입출고 현황</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자장치/충전팩 점검내역서</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="AI보호관찰">
+                <h3 class="gnb-depth__title gnb-depth__title--7">AI보호관찰</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">AI보호관찰 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">AI보호관찰 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">AI보호관찰 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="정보관리">
+                <h3 class="gnb-depth__title gnb-depth__title--8">정보관리</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">정보관리 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">정보관리 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">정보관리 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="게시판">
+                <h3 class="gnb-depth__title gnb-depth__title--9">게시판</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">게시판 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">게시판 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">게시판 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="시스템">
+                <h3 class="gnb-depth__title gnb-depth__title--10">시스템</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">시스템 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">시스템 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">시스템 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- 2022.01.07 : add : 메뉴 추가 -->
+              <section class="gnb-depth__section" data-gnb-contents="접근보호관리">
+                <h3 class="gnb-depth__title gnb-depth__title--11">접근보호관리</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">접근보호관리 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">접근보호관리 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">접근보호관리 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="전자 장치">
+                <h3 class="gnb-depth__title gnb-depth__title--12">전자 장치</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">전자 장치 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자 장치 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">전자 장치 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="gnb-depth__section" data-gnb-contents="모바일 Uguard">
+                <h3 class="gnb-depth__title gnb-depth__title--13">모바일 Uguard</h3>
+                <ul class="gnb-depth__list">
+                  <li class="gnb-depth__item">
+                    <div class="gnb-depth__head">
+                      <a href="" class="gnb-depth__link">모바일 Uguard 메뉴 1</a>
+                      <button class="ui-button gnb-depth__opener">
+                        <span class="for-a11y">
+                          하위 메뉴
+                          <span class="open-text">열기</span>
+                          <span class="close-text">닫기</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="gnb-depth__sub">
+                      <ul class="gnb-depth__sub-list">
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">모바일 Uguard 메뉴 1 - 1</a>
+                        </li>
+                        <li class="gnb-depth__sub-item">
+                          <a href="" class="gnb-depth__sub-link">모바일 Uguard 메뉴 1 - 2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <!-- //2022.01.07 : add : 메뉴 추가 -->
+            </div>
+          </div>
+        </nav>
+        <!-- //GNB -->
+
+        <div class="contents-wrap">
+          <!-- 2021.09.27 : add : 히스토리 탭 추가 -->
+          <!-- History Tab -->
+          <nav class="history-tab">
+            <h2 class="for-a11y">History Tab</h2>
+            <div class="history-tab__scroller">
+              <ul class="history-tab__list">
+                <li class="history-tab__item history-tab__item--home">
+                  <div class="history-tab__block">
+                    <a href="" class="history-tab__link">
+                      <span class="for-a11y">홈</span>
+                    </a>
+                  </div>
+                </li>
+                <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                <li class="history-tab__item is-active">
+                  <div class="history-tab__block">
+                    <a href="" class="history-tab__link">관제화면</a>
+                    <button type="button" class="ui-button history-tab__delete">
+                      <span class="for-a11y">삭제</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="history-tab__item">
+                  <div class="history-tab__block">
+                    <a href="" class="history-tab__link">상황근무일지</a>
+                    <button type="button" class="ui-button history-tab__delete">
+                      <span class="for-a11y">삭제</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="history-tab__item">
+                  <div class="history-tab__block">
+                    <a href="" class="history-tab__link">접근보호다생자관리</a>
+                    <button type="button" class="ui-button history-tab__delete">
+                      <span class="for-a11y">삭제</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="history-tab__item">
+                  <div class="history-tab__block">
+                    <a href="" class="history-tab__link">피부착자 관리</a>
+                    <button type="button" class="ui-button history-tab__delete">
+                      <span class="for-a11y">삭제</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="history-tab__arrow">
+              <button type="button" class="ui-button history-tab__prev" disabled>
+                <span class="for-a11y">이전</span>
+              </button>
+              <button type="button" class="ui-button history-tab__next">
+                <span class="for-a11y">다음</span>
+              </button>
+            </div>
+          </nav>
+          <!-- //History Tab -->
+          <!-- //2021.09.27 : add : 히스토리 탭 추가 -->
+
+          <div class="page-contents">
+            <div class="page-head">
+              <div class="page-head__left">
+                <h2 class="page-head__title">Q&A(모바일)</h2>
+                <button type="button" class="ui-button page-head__add-bookmark">
+                  <span class="for-a11y">
+                    즐겨찾기
+                    <span class="add-text">추가</span>
+                    <span class="remove-text">제거</span>
+                  </span>
+                </button>
+              </div>
+              <div class="page-head__right">
+                <p class="page-head__location">
+                  <span class="page-head__location__item">
+                    <a href="" class="page-head__location__link">HOME</a>
+                  </span>
+                  <span class="page-head__location__arrow">&gt;</span>
+                  <span class="page-head__location__item">
+                    <a href="" class="page-head__location__link">모바일Uguard</a>
+                  </span>
+                  <span class="page-head__location__arrow">&gt;</span>
+                  <span class="page-head__location__item">Q&A(모바일)</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="board-detail-wrap">
+              <div class="board-detail-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>답변여부</th>
+                      <td>답변 완료</td>
+                      <th>등록일시</th>
+                      <td>2021-08-15 11:20</td>
+                    </tr>
+                    <tr>
+                      <th>문의유형</th>
+                      <td>장치</td>
+                      <th>작성자</th>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr>
+                      <th>제목</th>
+                      <td>입력된 내용이 출력됩니다.</td>
+                      <th>조회수</th>
+                      <td>56</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="board-detail-contents">
+                <section class="board-detail-contents__body">
+                  안녕하세요 관리부서 홍길동 주임입니다.<br /><br />
+
+                  2020년 위치추적 전자장치 손해배상 청구 가액 기준 송부(위치추적중앙관제센터-1684, 2020. 5. 29.)<br />
+                  관련 위치추적 전자장치 손해배상 청구 가액 기준표(2020)입니다.<br />
+                  첨부된 운영자 매뉴얼을 확인하시고 해당 양식에 맞추어 기준표를 작성해주세요.<br /><br />
+
+                  자세한 사항이나 궁금하신 점이 있으시면 답변 달아주십시오.<br /><br />
+
+                  -적용기간 : 2020. 6. 1 ~ 2021. 5. 31
+                </section>
+
+                <section class="addition">
+                  <div class="addition__head">
+                    <h3 class="addition__title">첨부파일&nbsp;&nbsp;<span class="addition__title-count">2</span>개</h3>
+                  </div>
+                  <div class="files">
+                    <ul class="files__list">
+                      <li class="files__item">
+                        <a href="" class="files__block files__block--download">
+                          <span class="files__name">위치추적 전자장치 운영자 매뉴얼.pdf</span>
+                          <span class="files__size">2.3MB</span>
+                        </a>
+                      </li>
+                      <li class="files__item">
+                        <a href="" class="files__block files__block--download">
+                          <span class="files__name">위치추적 전자장치 손해배상 청구 가액 기준표(2020).xl</span>
+                          <span class="files__size">624KB</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <form action="">
+              <section class="board-detail-wrap board-detail-wrap--reply">
+                <div class="board-detail-head">
+                  <h3 class="board-detail-head__title">답변</h3>
+                </div>
+
+                <div class="board-detail-table">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>
+                          답변내용<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                        </th>
+                        <td>
+                          <div class="ui-input-block">
+                            <textarea class="ui-input input-height-regular" title="답변내용" placeholder="답변내용을 입력해주세요."></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>첨부파일</th>
+                        <td>
+                          <div class="form-row">
+                            <div class="form-flex form-flex--medium">
+                              <div class="form-flex-cell">
+                                <div class="ui-file-input">
+                                  <div class="ui-file-input__inner">
+                                    <input type="file" class="ui-file-input__input" id="file" />
+                                    <label for="file" class="ui-file-input__label">찾아보기</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell form-flex-cell--flexible">
+                                <p class="basic-text color-gray">※ 개별 파일 용량 최대 <strong>5MB</strong>, 최대 <strong>5개</strong>까지 지원</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="files">
+                              <ul class="files__list">
+                                <li class="files__item">
+                                  <div class="files__block">
+                                    <span class="files__name">위치추적 전자장치 운영자 매뉴얼.pdf</span>
+                                    <span class="files__size">2.3MB</span>
+                                    <button type="button" class="ui-button files__delete">
+                                      <span class="for-a11y">제거</span>
+                                    </button>
+                                  </div>
+                                </li>
+                                <li class="files__item">
+                                  <div class="files__block">
+                                    <span class="files__name">위치추적 전자장치 손해배상 청구 가액 기준표(2020).xl</span>
+                                    <span class="files__size">624KB</span>
+                                    <button type="button" class="ui-button files__delete">
+                                      <span class="for-a11y">제거</span>
+                                    </button>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="board-bottom">
+                <div class="board-bottom__right">
+                  <div class="ui-buttons ui-buttons--right">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                      </li>
+                      <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button">저장</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>
